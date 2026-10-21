@@ -1,62 +1,62 @@
 {
-  "derniereCollecte": "2026-10-21T08:31:49.096Z",
-  "ajouts": 107,
-  "nbElements": 583,
+  "derniereCollecte": "2026-10-21T09:50:23.282Z",
+  "ajouts": 29,
+  "nbElements": 589,
   "sources": {
     "CERT-FR alertes": {
       "ok": true,
       "detail": "7 récents, 1 lus en détail",
-      "le": "2026-10-21T08:31:49.096Z"
+      "le": "2026-10-21T09:50:23.282Z"
     },
     "CERT-FR avis": {
       "ok": true,
-      "detail": "227 récents, 85 lus en détail",
-      "le": "2026-10-21T08:31:49.096Z"
+      "detail": "227 récents, 1 lus en détail",
+      "le": "2026-10-21T09:50:23.282Z"
     },
     "CERT-FR cti": {
       "ok": true,
       "detail": "40 éléments",
-      "le": "2026-10-21T08:31:49.096Z"
+      "le": "2026-10-21T09:50:23.282Z"
     },
     "CERT-FR actualite": {
       "ok": true,
       "detail": "40 éléments",
-      "le": "2026-10-21T08:31:49.096Z"
+      "le": "2026-10-21T09:50:23.282Z"
     },
     "CERT-FR durcissement": {
       "ok": true,
       "detail": "5 éléments",
-      "le": "2026-10-21T08:31:49.096Z"
+      "le": "2026-10-21T09:50:23.282Z"
     },
     "CERT Santé": {
       "ok": true,
       "detail": "111 éléments",
-      "le": "2026-10-21T08:31:49.096Z"
+      "le": "2026-10-21T09:50:23.282Z"
     },
     "CISA KEV": {
       "ok": true,
       "detail": "catalogue 2026.10.20 : 1754 entrées, 101 dans la période",
-      "le": "2026-10-21T08:31:49.096Z"
+      "le": "2026-10-21T09:50:23.282Z"
     },
     "ZATAZ": {
       "ok": true,
       "detail": "10 éléments",
-      "le": "2026-10-21T08:31:49.096Z"
+      "le": "2026-10-21T09:50:23.282Z"
     },
     "BleepingComputer": {
       "ok": true,
       "detail": "15 éléments",
-      "le": "2026-10-21T08:31:49.096Z"
+      "le": "2026-10-21T09:50:23.282Z"
     },
     "The Hacker News": {
       "ok": true,
       "detail": "50 éléments",
-      "le": "2026-10-21T08:31:49.096Z"
+      "le": "2026-10-21T09:50:23.282Z"
     },
     "EPSS": {
       "ok": true,
       "detail": "3000 CVE mises à jour",
-      "le": "2026-10-21T08:31:49.096Z"
+      "le": "2026-10-21T09:50:23.282Z"
     }
   }
 }
