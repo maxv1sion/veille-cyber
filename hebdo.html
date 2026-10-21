@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Synthèse hebdo cyber</title>
+<meta name="description" content="Synthèse hebdomadaire des vulnérabilités et menaces cyber.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='4' y='2' width='6' height='28' rx='2' fill='%23C1272D'/><rect x='13' y='8' width='6' height='22' rx='2' fill='%23C9761E'/><rect x='22' y='14' width='6' height='16' rx='2' fill='%232F6FA8'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,600..800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Atkinson+Hyperlegible+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="page">
+  <header class="entete">
+    <h1><a href="./">Veille cyber</a></h1>
+    <nav aria-label="Pages">
+      <a href="./">Au quotidien</a>
+      <a href="hebdo.html" aria-current="page">Synthèse de la semaine</a>
+    </nav>
+  </header>
+  <p class="fraicheur">Produite chaque lundi pour la semaine précédente (du lundi au dimanche).</p>
+
+  <div class="hebdo-outils">
+    <label for="semaine">Semaine</label>
+    <select id="semaine"></select>
+    <button type="button" class="principal" id="imprimer">Imprimer ou enregistrer en PDF</button>
+    <button type="button" id="copier">Copier le texte pour un mail</button>
+    <span class="confirmation" id="confirmation" aria-live="polite"></span>
+  </div>
+
+  <article class="rapport" id="rapport"><p>Chargement…</p></article>
+</div>
+
+<script src="assets/commun.js"></script>
+<script>
+(() => {
+  const V = Veille, $ = (id) => document.getElementById(id);
+  let courant = null;
+  const pluriel = (n, s, p) => `${n} ${n > 1 ? (p || s + 's') : s}`;
+
+  function chapeau(h) {
+    const c = h.chiffres;
+    const morceaux = [
+      pluriel(c.alertes, 'alerte CERT-FR', 'alertes CERT-FR'),
+      pluriel(c.avisCertFr, 'avis CERT-FR', 'avis CERT-FR'),
+      pluriel(c.avisCertSante, 'avis CERT Santé', 'avis CERT Santé'),
+      pluriel(c.kevAjoutees, 'nouvelle faille exploitée', 'nouvelles failles exploitées') + ' (CISA KEV)',
+    ];
+    return `Du ${V.dateCourte(h.debut)} au ${V.dateCourte(h.fin)} : ${morceaux.join(', ')}. ` +
+      `${pluriel(c.critiques, 'publication est critique', 'publications sont critiques')} et ${c.surParcSuivi} ${c.surParcSuivi > 1 ? 'concernent' : 'concerne'} les éditeurs du parc suivi.`;
+  }
+
+  const SECTIONS = [
+    ['alertes', 'Alertes CERT-FR', 'Danger immédiat signalé par l\'ANSSI : exploitations constatées, à traiter sans attendre.'],
+    ['kev', 'Nouvelles failles exploitées activement', 'Ajoutées cette semaine au catalogue de la CISA, qui ne retient que les failles dont l\'exploitation est confirmée.'],
+    ['parcSuivi', 'Vulnérabilités sur le parc suivi', 'Avis concernant les éditeurs suivis, du plus urgent au moins urgent.'],
+    ['autresCritiques', 'Autres vulnérabilités critiques', 'Hors parc suivi, à vérifier si le produit est présent ailleurs.'],
+    ['menaces', 'Menaces et recommandations', 'Rapports d\'analyse de la menace, bulletins d\'actualité et guides de durcissement du CERT-FR.'],
+  ];
+
+  function rendre(h) {
+    courant = h;
+    $('rapport').innerHTML = `<h2>Semaine du ${V.dateCourte(h.debut)} au ${V.dateCourte(h.fin)}</h2>
+      <p class="chapeau">${V.echapper(chapeau(h))}</p>` +
+      SECTIONS.map(([cle, titre, aide]) => `<h3>${titre}</h3><p class="aide">${aide}</p>` +
+        ((h[cle] || []).length ? `<ul class="elements">${h[cle].map((i) => V.element(i, { avecDate: true, nbCvesMax: 5 })).join('')}</ul>` : '<p class="rien">Rien cette semaine.</p>')).join('');
+  }
+
+  function texteMail(h) {
+    const lignes = [`Veille cyber : semaine du ${V.dateCourte(h.debut)} au ${V.dateCourte(h.fin)}`, '', chapeau(h)];
+    for (const [cle, titre] of SECTIONS) {
+      const liste = h[cle] || [];
+      if (!liste.length) continue;
+      lignes.push('', titre, '');
+      for (const i of liste) {
+        const r = V.raisons(i);
+        lignes.push(`- ${i.titre} (${V.dateCourte(i.date)}${i.suivis?.length ? ', parc : ' + i.suivis.join(', ') : ''})`);
+        if (r.length) lignes.push(`  Pourquoi : ${r.join(', ')}`);
+        lignes.push(`  ${i.lien}`);
+      }
+    }
+    lignes.push('', `Détail et historique : ${location.href.replace(/hebdo\.html.*$/, '')}`);
+    return lignes.join('\n');
+  }
+
+  async function chargerSemaine(code) {
+    try {
+      rendre(await V.charger(`data/hebdo/${code}.json`));
+      history.replaceState(null, '', '#' + code);
+    } catch (e) {
+      $('rapport').innerHTML = `<p>Impossible de charger la semaine ${V.echapper(code)} (${V.echapper(e.message)}).</p>`;
+    }
+  }
+
+  async function demarrer() {
+    try {
+      const { semaines } = await V.charger('data/hebdo/index.json');
+      if (!semaines.length) throw new Error('aucune semaine');
+      $('semaine').innerHTML = semaines.map((s) => `<option value="${V.echapper(s)}">${V.echapper(s.replace('-S', ', semaine '))}</option>`).join('');
+      const voulu = location.hash.slice(1);
+      $('semaine').value = semaines.includes(voulu) ? voulu : semaines[0];
+      chargerSemaine($('semaine').value);
+    } catch {
+      $('rapport').innerHTML = '<p>Aucune synthèse pour l\'instant. La première sera produite automatiquement le lundi suivant la mise en ligne.</p>';
+    }
+  }
+
+  $('semaine').addEventListener('change', (e) => chargerSemaine(e.target.value));
+  $('imprimer').addEventListener('click', () => window.print());
+  $('copier').addEventListener('click', async () => {
+    if (!courant) return;
+    try { await navigator.clipboard.writeText(texteMail(courant)); $('confirmation').textContent = 'Texte copié.'; }
+    catch { $('confirmation').textContent = 'Copie impossible depuis ce navigateur.'; }
+    setTimeout(() => ($('confirmation').textContent = ''), 3000);
+  });
+  demarrer();
+})();
+</script>
+</body>
+</html>

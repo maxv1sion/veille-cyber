@@ -1,0 +1,47 @@
+name: Collecte veille cyber
+
+on:
+  schedule:
+    # Toutes les 3 heures (heure UTC), décalé de quelques minutes pour éviter les pics
+    - cron: '17 */3 * * *'
+  workflow_dispatch:
+    inputs:
+      forcer_hebdo:
+        description: "Régénérer la synthèse de la semaine précédente"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collecte
+  cancel-in-progress: false
+
+jobs:
+  collecte:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Collecter les sources
+        env:
+          VEILLE_FORCER_HEBDO: ${{ inputs.forcer_hebdo && '1' || '' }}
+        run: node scripts/collecte.mjs
+
+      - name: Enregistrer les données
+        run: |
+          git config user.name "veille-cyber[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "Aucune nouveauté."
+          else
+            git commit -m "Collecte du $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git push
+          fi

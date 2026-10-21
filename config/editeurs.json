@@ -1,0 +1,27 @@
+{
+  "_aide": "Éditeurs suivis (ton parc). Chaque éditeur a des mots-clés cherchés dans l'éditeur, le produit et le titre des bulletins. Ajoute, retire ou modifie librement.",
+  "editeurs": [
+    { "nom": "Microsoft", "motsCles": ["microsoft", "windows", "exchange", "sharepoint", "office", "outlook", "azure", "entra", "intune", "teams", "edge", "hyper-v", ".net"] },
+    { "nom": "Fortinet", "motsCles": ["fortinet", "fortigate", "fortios", "fortimanager", "fortianalyzer", "fortiweb", "fortimail", "forticlient", "fortipam"] },
+    { "nom": "Cisco", "motsCles": ["cisco"] },
+    { "nom": "VMware / Broadcom", "motsCles": ["vmware", "esxi", "vcenter", "broadcom"] },
+    { "nom": "Citrix / NetScaler", "motsCles": ["citrix", "netscaler"] },
+    { "nom": "Ivanti", "motsCles": ["ivanti", "pulse secure"] },
+    { "nom": "Palo Alto Networks", "motsCles": ["palo alto", "pan-os", "globalprotect", "cortex"] },
+    { "nom": "Stormshield", "motsCles": ["stormshield"] },
+    { "nom": "SonicWall", "motsCles": ["sonicwall"] },
+    { "nom": "Check Point", "motsCles": ["check point", "checkpoint"] },
+    { "nom": "Veeam", "motsCles": ["veeam"] },
+    { "nom": "QNAP", "motsCles": ["qnap"] },
+    { "nom": "Synology", "motsCles": ["synology"] },
+    { "nom": "HPE / Aruba", "motsCles": ["hpe", "hewlett packard", "aruba", "ilo", "clearpass"] },
+    { "nom": "Dell", "motsCles": ["dell", "idrac"] },
+    { "nom": "Alcatel-Lucent Enterprise", "motsCles": ["alcatel", "omnipcx", "omniswitch", "oxe", "opentouch"] },
+    { "nom": "AudioCodes", "motsCles": ["audiocodes"] },
+    { "nom": "Google Chrome", "motsCles": ["google chrome", "chrome", "chromium"] },
+    { "nom": "Mozilla", "motsCles": ["mozilla", "firefox", "thunderbird"] },
+    { "nom": "Apple", "motsCles": ["apple", "macos", "ipados", "iphone", "safari"] },
+    { "nom": "Linux", "motsCles": ["noyau linux", "linux kernel", "debian", "ubuntu", "red hat", "suse"] },
+    { "nom": "TeamViewer / AnyDesk", "motsCles": ["teamviewer", "anydesk"] }
+  ]
+}

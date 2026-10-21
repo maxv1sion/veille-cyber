@@ -1,0 +1,37 @@
+{
+  "_aide": "Sources de la veille. Mettre \"actif\": false pour couper une source sans la supprimer.",
+  "conservation": {
+    "vulnerabilitesJours": 730,
+    "actualitesJours": 90
+  },
+  "certfr": {
+    "actif": true,
+    "base": "https://cert.cyber.gouv.fr",
+    "fenetreDetailJours": 45,
+    "detailsMaxParPassage": 150,
+    "flux": [
+      { "type": "cti", "url": "https://cert.cyber.gouv.fr/cti/feed/" },
+      { "type": "actualite", "url": "https://cert.cyber.gouv.fr/actualite/feed/" },
+      { "type": "durcissement", "url": "https://cert.cyber.gouv.fr/dur/feed/" }
+    ]
+  },
+  "certsante": {
+    "actif": true,
+    "url": "https://cyberveille.esante.gouv.fr/alertes-et-vulnerabilites/rss.xml"
+  },
+  "kev": {
+    "actif": true,
+    "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+  },
+  "epss": {
+    "actif": true,
+    "url": "https://api.first.org/data/v1/epss",
+    "fenetreJours": 60,
+    "cveMaxParPassage": 3000
+  },
+  "actualites": [
+    { "nom": "ZATAZ", "url": "https://www.zataz.com/feed/", "actif": true },
+    { "nom": "BleepingComputer", "url": "https://www.bleepingcomputer.com/feed/", "actif": true },
+    { "nom": "The Hacker News", "url": "https://feeds.feedburner.com/TheHackersNews", "actif": true }
+  ]
+}

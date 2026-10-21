@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veille cyber</title>
+<meta name="description" content="Veille quotidienne des vulnérabilités et menaces : CERT-FR, CERT Santé, CISA KEV, EPSS et presse spécialisée.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='4' y='2' width='6' height='28' rx='2' fill='%23C1272D'/><rect x='13' y='8' width='6' height='22' rx='2' fill='%23C9761E'/><rect x='22' y='14' width='6' height='16' rx='2' fill='%232F6FA8'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,600..800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Atkinson+Hyperlegible+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="page">
+  <header class="entete">
+    <h1><a href="./">Veille cyber</a></h1>
+    <nav aria-label="Pages">
+      <a href="./" aria-current="page">Au quotidien</a>
+      <a href="hebdo.html">Synthèse de la semaine</a>
+    </nav>
+  </header>
+  <p class="fraicheur" id="fraicheur">Chargement des données…</p>
+
+  <section class="urgent" aria-labelledby="titre-urgent">
+    <h2 id="titre-urgent">À traiter en priorité</h2>
+    <p class="sous">Alertes CERT-FR en cours et failles exploitées activement ces 30 derniers jours, celles de ton parc en premier.</p>
+    <ol id="urgent"></ol>
+  </section>
+
+  <section aria-label="Toutes les publications">
+    <div class="filtres">
+      <div class="onglets" role="group" aria-label="Type de publication" id="onglets"></div>
+      <div class="criteres">
+        <input type="search" id="q" placeholder="Rechercher un produit, une CVE, un éditeur…" aria-label="Rechercher">
+        <select id="periode" aria-label="Période">
+          <option value="7">7 derniers jours</option>
+          <option value="30" selected>30 derniers jours</option>
+          <option value="90">3 derniers mois</option>
+          <option value="365">12 derniers mois</option>
+          <option value="tout">Tout l'historique</option>
+          <option value="perso">Dates précises…</option>
+        </select>
+        <span class="periode-perso" id="periode-perso">
+          <input type="date" id="du" aria-label="Du"> <span>au</span> <input type="date" id="au" aria-label="Au">
+        </span>
+        <select id="priorite" aria-label="Priorité">
+          <option value="">Toutes priorités</option>
+          <option value="haute">Haute et critique</option>
+          <option value="critique">Critique seulement</option>
+        </select>
+        <select id="editeur" aria-label="Éditeur suivi"><option value="">Tous les éditeurs</option></select>
+        <select id="source" aria-label="Source"><option value="">Toutes les sources</option></select>
+        <label class="bascule"><input type="checkbox" id="parc"> Mon parc uniquement</label>
+        <label class="bascule"><input type="checkbox" id="exploitees"> Exploitées seulement</label>
+      </div>
+      <p class="resultat" id="resultat" aria-live="polite"></p>
+    </div>
+    <div id="liste"></div>
+  </section>
+
+  <footer class="pied">
+    <h2>Sources</h2>
+    <ul id="sources"></ul>
+    <p class="legende"><strong>Comment la priorité est calculée.</strong> Critique : alerte CERT-FR en cours, faille présente dans le catalogue CISA KEV (exploitation active confirmée) ou score EPSS d'au moins 50 %. Haute : exécution de code à distance, EPSS d'au moins 10 % ou alerte clôturée. Moyenne : autres avis de sécurité. Les rapports, bulletins et articles de presse sont en information. Données mises à jour automatiquement toutes les 3 heures.</p>
+  </footer>
+</div>
+
+<script src="assets/commun.js"></script>
+<script>
+(() => {
+  const V = Veille, $ = (id) => document.getElementById(id);
+  const ONGLETS = [
+    ['tout', 'Tout', () => true],
+    ['alerte', 'Alertes', (i) => i.type === 'alerte'],
+    ['avis', 'Avis de sécurité', (i) => i.type === 'avis'],
+    ['kev', 'Failles exploitées', (i) => i.type === 'kev'],
+    ['menaces', 'Rapports et recommandations', (i) => ['cti', 'actualite', 'durcissement'].includes(i.type)],
+    ['actu', 'Presse', (i) => i.type === 'actu'],
+  ];
+  const RANG = { critique: 0, haute: 1, moyenne: 2, info: 3 };
+  const PAS = 60;
+  let items = [], onglet = 'tout', affiches = PAS;
+
+  const jour = (n) => new Date(Date.now() - n * 86400000).toISOString().slice(0, 10);
+
+  function lireUrl() {
+    const p = new URLSearchParams(location.hash.slice(1));
+    onglet = ONGLETS.some((o) => o[0] === p.get('vue')) ? p.get('vue') : 'tout';
+    $('q').value = p.get('q') || '';
+    if (p.get('periode')) $('periode').value = p.get('periode');
+    $('du').value = p.get('du') || ''; $('au').value = p.get('au') || '';
+    $('priorite').value = p.get('prio') || '';
+    $('parc').checked = p.get('parc') === '1';
+    $('exploitees').checked = p.get('kev') === '1';
+    return p;
+  }
+  function ecrireUrl() {
+    const p = new URLSearchParams();
+    if (onglet !== 'tout') p.set('vue', onglet);
+    if ($('q').value) p.set('q', $('q').value);
+    if ($('periode').value !== '30') p.set('periode', $('periode').value);
+    if ($('periode').value === 'perso') { if ($('du').value) p.set('du', $('du').value); if ($('au').value) p.set('au', $('au').value); }
+    if ($('priorite').value) p.set('prio', $('priorite').value);
+    if ($('editeur').value) p.set('editeur', $('editeur').value);
+    if ($('source').value) p.set('source', $('source').value);
+    if ($('parc').checked) p.set('parc', '1');
+    if ($('exploitees').checked) p.set('kev', '1');
+    history.replaceState(null, '', p.toString() ? '#' + p : location.pathname);
+  }
+
+  function filtrerHorsOnglet() {
+    const per = $('periode').value;
+    $('periode-perso').classList.toggle('visible', per === 'perso');
+    let du = '', au = '9999';
+    if (per === 'perso') { du = $('du').value || ''; au = $('au').value || '9999'; }
+    else if (per !== 'tout') du = jour(+per);
+    const q = $('q').value.trim().toLowerCase();
+    const prio = $('priorite').value, ed = $('editeur').value, src = $('source').value;
+    return items.filter((i) =>
+      i.date >= du && i.date <= au &&
+      (!prio || RANG[i.priorite] <= RANG[prio]) &&
+      (!ed || (i.suivis || []).includes(ed)) &&
+      (!src || i.source === src) &&
+      (!$('parc').checked || (i.suivis || []).length) &&
+      (!$('exploitees').checked || i.kev) &&
+      (!q || i._texte.includes(q)));
+  }
+
+  function afficher(reinit = true) {
+    if (reinit) affiches = PAS;
+    const base = filtrerHorsOnglet();
+    $('onglets').innerHTML = ONGLETS.map(([id, nom, f]) =>
+      `<button type="button" data-vue="${id}" aria-pressed="${id === onglet}">${nom}<span class="nb">${base.filter(f).length}</span></button>`).join('');
+    const liste = base.filter(ONGLETS.find((o) => o[0] === onglet)[2]);
+    $('resultat').innerHTML = `${liste.length} publication${liste.length > 1 ? 's' : ''}` +
+      (location.hash ? ' <button type="button" id="raz">Effacer les filtres</button>' : '');
+    if (!liste.length) {
+      $('liste').innerHTML = '<p class="vide-liste">Aucune publication ne correspond. Élargis la période ou retire un filtre.</p>';
+      return;
+    }
+    let html = '', jourCourant = '';
+    for (const i of liste.slice(0, affiches)) {
+      if (i.date !== jourCourant) {
+        if (jourCourant) html += '</ul>';
+        jourCourant = i.date;
+        html += `<h2 class="jour">${V.dateLongue(i.date)}</h2><ul class="elements">`;
+      }
+      html += V.element(i);
+    }
+    html += '</ul>';
+    if (liste.length > affiches) html += `<button type="button" class="plus" id="plus">Afficher ${Math.min(PAS, liste.length - affiches)} de plus</button>`;
+    $('liste').innerHTML = html;
+  }
+
+  function urgents() {
+    const limite = jour(30);
+    const ORDRE = { alerte: 0, kev: 1, avis: 2 };
+    const candidats = items.filter((i) => i.date >= limite && ['alerte', 'kev', 'avis'].includes(i.type) &&
+      ((i.type === 'alerte' && !i.cloturee) || i.kev))
+      .sort((a, b) => ((a.type === 'alerte' && !a.cloturee) ? 0 : 1) - ((b.type === 'alerte' && !b.cloturee) ? 0 : 1) ||
+        ((b.suivis || []).length > 0) - ((a.suivis || []).length > 0) || ORDRE[a.type] - ORDRE[b.type] || b.date.localeCompare(a.date));
+    const vues = new Set(), retenus = [];
+    for (const i of candidats) {
+      if (i.cves.length && i.cves.every((c) => vues.has(c))) continue;
+      i.cves.forEach((c) => vues.add(c));
+      retenus.push(i);
+      if (retenus.length >= 8) break;
+    }
+    $('urgent').innerHTML = retenus.length ? retenus.map((i) => {
+      const r = V.raisons(i).filter((x) => !['alerte CERT-FR en cours', 'exploitation active confirmée par la CISA'].includes(x));
+      return `<li>
+        <a class="titre" href="${V.echapper(V.lienSur(i.lien))}" target="_blank" rel="noopener">${V.echapper(i.titre)}</a>
+        <span class="date">${V.dateCourte(i.date)}</span>
+        <span class="raison">${(i.suivis || []).length ? `<span class="marque parc">${V.echapper(i.suivis.join(', '))}</span> ` : ''}${V.echapper(V.TYPES[i.type])}${r.length ? ' : ' + V.echapper(r.join(', ')) : ''}</span>
+      </li>`;
+    }).join('') : '<li class="vide">Rien d\'urgent sur les 30 derniers jours. Bonne nouvelle.</li>';
+  }
+
+  async function demarrer() {
+    try {
+      const [registre, etat, conf] = await Promise.all([
+        V.charger('data/registre.json'),
+        V.charger('data/etat.json').catch(() => null),
+        V.charger('config/editeurs.json').catch(() => ({ editeurs: [] })),
+      ]);
+      items = registre.items.map((i) => ({ ...i, _texte: [i.titre, i.resume, i.reference, i.source, ...(i.cves || []), ...(i.editeurs || []), ...(i.produits || [])].join(' ').toLowerCase() }));
+      const ko = etat ? Object.entries(etat.sources).filter(([, e]) => !e.ok).map(([n]) => n) : [];
+      $('fraicheur').innerHTML = `<span class="pastille${ko.length ? ' ko' : ''}"></span>Mis à jour le ${V.dateHeure(registre.genere)}` +
+        (ko.length ? `, source${ko.length > 1 ? 's' : ''} indisponible${ko.length > 1 ? 's' : ''} : ${V.echapper(ko.join(', '))}` : '');
+      V.etatSources(etat, $('sources'));
+      $('editeur').innerHTML += conf.editeurs.map((e) => `<option>${V.echapper(e.nom)}</option>`).join('');
+      $('source').innerHTML += [...new Set(items.map((i) => i.source))].sort().map((s) => `<option>${V.echapper(s)}</option>`).join('');
+      const p = lireUrl();
+      if (p.get('editeur')) $('editeur').value = p.get('editeur');
+      if (p.get('source')) $('source').value = p.get('source');
+      urgents();
+      afficher();
+    } catch (e) {
+      $('fraicheur').textContent = `Impossible de charger les données (${e.message}). La première collecte n'a peut-être pas encore tourné.`;
+      $('liste').innerHTML = '';
+    }
+  }
+
+  let minuteur;
+  $('q').addEventListener('input', () => { clearTimeout(minuteur); minuteur = setTimeout(() => { ecrireUrl(); afficher(); }, 200); });
+  for (const id of ['periode', 'du', 'au', 'priorite', 'editeur', 'source', 'parc', 'exploitees'])
+    $(id).addEventListener('change', () => { ecrireUrl(); afficher(); });
+  $('onglets').addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; onglet = b.dataset.vue; ecrireUrl(); afficher(); });
+  document.addEventListener('click', (e) => {
+    if (e.target.id === 'plus') { affiches += PAS; afficher(false); }
+    if (e.target.id === 'raz') { history.replaceState(null, '', location.pathname); $('editeur').value = ''; $('source').value = ''; $('periode').value = '30'; lireUrl(); afficher(); }
+  });
+  demarrer();
+})();
+</script>
+</body>
+</html>
