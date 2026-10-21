@@ -9,6 +9,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { regrouper, signauxPresse, RE_SECURITE } from './sujets.mjs';
 
 const RACINE = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(RACINE, 'data');
@@ -226,8 +227,11 @@ async function collecterActualites(sources) {
   for (const s of sources.filter((x) => x.actif !== false)) {
     try {
       const items = analyserFlux(await telecharger(s.url));
+      let gardes = 0;
       for (const it of items) {
         if (!it.lien || !it.titre) continue;
+        if (s.filtreSecurite && !RE_SECURITE.test(`${it.titre} ${sansHtml(it.description).slice(0, 300)}`)) continue;
+        gardes++;
         sortie.push({
           id: `actu:${it.lien.replace(/[?#].*$/, '')}`, source: s.nom, type: 'actu',
           titre: it.titre, resume: couper(sansHtml(it.description), 280), lien: it.lien,
@@ -235,7 +239,7 @@ async function collecterActualites(sources) {
           editeurs: [], produits: [], cves: extraireCves(it.titre + ' ' + it.description), risques: [],
         });
       }
-      noter(s.nom, true, `${items.length} éléments`);
+      noter(s.nom, true, s.filtreSecurite ? `${gardes} articles cyber sur ${items.length}` : `${items.length} éléments`);
     } catch (e) {
       noter(s.nom, false, e.message);
     }
@@ -284,7 +288,8 @@ function prioriser(it, kevSet, epss) {
   it.epssCve = cveMax;
   it.rce = it.risques.some((r) => RE_RCE.test(r)) || RE_RCE.test(it.titre);
 
-  if (['cti', 'actualite', 'durcissement', 'actu'].includes(it.type)) it.priorite = it.kev ? 'haute' : 'info';
+  if (it.type === 'actu') it.priorite = it.kev || it.signaux?.length ? 'haute' : 'info';
+  else if (['cti', 'actualite', 'durcissement'].includes(it.type)) it.priorite = it.kev ? 'haute' : 'info';
   else if ((it.type === 'alerte' && !it.cloturee) || it.kev || max >= 0.5) it.priorite = 'critique';
   else if (it.type === 'alerte' || it.rce || max >= 0.1) it.priorite = 'haute';
   else it.priorite = 'moyenne';
@@ -308,7 +313,7 @@ function bornesSemainePrecedente() {
   return { debut: iso(lundi), fin: iso(dimanche), code: semaineIso(lundi) };
 }
 const RANG = { critique: 0, haute: 1, moyenne: 2, info: 3 };
-const allege = (i) => ({ id: i.id, source: i.source, type: i.type, reference: i.reference, titre: i.titre, resume: i.resume, lien: i.lien, date: i.date, editeurs: i.editeurs, suivis: i.suivis, cves: i.cves.slice(0, 12), nbCves: i.cves.length, kev: i.kev, cvesKev: i.cvesKev, epssMax: i.epssMax, epssCve: i.epssCve, rce: i.rce, priorite: i.priorite, cloturee: i.cloturee || null, rancongiciel: i.rancongiciel || false });
+const allege = (i) => ({ id: i.id, source: i.source, type: i.type, reference: i.reference, titre: i.titre, resume: i.resume, lien: i.lien, date: i.date, editeurs: i.editeurs, suivis: i.suivis, cves: i.cves.slice(0, 12), nbCves: i.cves.length, kev: i.kev, cvesKev: i.cvesKev, epssMax: i.epssMax, epssCve: i.epssCve, rce: i.rce, priorite: i.priorite, cloturee: i.cloturee || null, rancongiciel: i.rancongiciel || false, signaux: i.signaux, relais: i.relais, presse: i.presse, officiel: i.officiel || null, officielInfo: i.officielInfo || null, principal: i.principal, aussi: i.aussi, doublonDe: i.doublonDe || null });
 
 async function produireHebdo(items) {
   const { debut, fin, code } = bornesSemainePrecedente();
@@ -318,15 +323,16 @@ async function produireHebdo(items) {
 
   const sem = items.filter((i) => i.date >= debut && i.date <= fin);
   const tri = (a, b) => RANG[a.priorite] - RANG[b.priorite] || (b.suivis.length > 0) - (a.suivis.length > 0) || (b.epssMax || 0) - (a.epssMax || 0) || b.date.localeCompare(a.date);
-  const vulns = sem.filter((i) => ['alerte', 'avis', 'kev'].includes(i.type));
+  const vulns = sem.filter((i) => ['alerte', 'avis', 'kev'].includes(i.type) && !i.doublonDe);
   const hebdo = {
     semaine: code, debut, fin, genere: MAINTENANT.toISOString(),
     chiffres: {
       alertes: sem.filter((i) => i.type === 'alerte').length,
       avisCertFr: sem.filter((i) => i.type === 'avis' && i.source === 'CERT-FR').length,
-      avisCertSante: sem.filter((i) => i.type === 'avis' && i.source === 'CERT Santé').length,
+      avisCertSante: sem.filter((i) => i.type === 'avis' && i.source === 'CERT Santé' && !i.doublonDe).length,
       kevAjoutees: sem.filter((i) => i.type === 'kev').length,
       critiques: vulns.filter((i) => i.priorite === 'critique').length,
+      signauxPresse: sem.filter((i) => i.type === 'actu' && i.principal && i.signaux?.length && !i.officiel).length,
       surParcSuivi: vulns.filter((i) => i.suivis.length).length,
     },
     alertes: sem.filter((i) => i.type === 'alerte').sort(tri).map(allege),
@@ -334,6 +340,7 @@ async function produireHebdo(items) {
     parcSuivi: vulns.filter((i) => i.suivis.length && i.type === 'avis').sort(tri).slice(0, 25).map(allege),
     autresCritiques: vulns.filter((i) => !i.suivis.length && i.priorite === 'critique' && i.type === 'avis').sort(tri).slice(0, 15).map(allege),
     menaces: sem.filter((i) => ['cti', 'actualite', 'durcissement'].includes(i.type)).sort(tri).map(allege),
+    signauxPresse: sem.filter((i) => i.type === 'actu' && i.principal && i.signaux?.length && !i.officiel).sort(tri).slice(0, 15).map(allege),
   };
   await ecrireJson(chemin, hebdo);
   index.semaines = [...new Set([code, ...index.semaines])].sort().reverse();
@@ -377,6 +384,24 @@ async function principal() {
   let items = [...existants.values()].filter((i) => i.date >= (i.type === 'actu' ? limActu : i.type === 'kev' ? limKev : limVuln));
 
   const epss = sources.epss?.actif ? await enrichirEpss(sources.epss, items) : {};
+  const courants = new Set((await readFile(join(RACINE, 'config', 'mots-courants.txt'), 'utf8').catch(() => '')).split('\n').filter((l) => l && !l.startsWith('#')));
+  for (const i of items) if (i.type === 'actu') i.signaux = signauxPresse(i.titre, i.resume);
+  regrouper(items, { courants });
+
+  // Doublons entre sources officielles : un avis CERT Santé dont toutes les CVE figurent
+  // dans un avis ou une alerte CERT-FR proche est replié sous celui-ci
+  const certfr = items.filter((i) => i.source === 'CERT-FR' && ['avis', 'alerte'].includes(i.type) && i.cves.length);
+  for (const i of certfr) delete i.aussi;
+  for (const i of items) {
+    delete i.doublonDe;
+    if (i.source !== 'CERT Santé' || !i.cves.length) continue;
+    const cible = certfr
+      .filter((c) => i.cves.every((v) => c.cves.includes(v)) && Math.abs(new Date(c.date) - new Date(i.date)) <= 30 * JOUR)
+      .sort((a, b) => (a.type === 'alerte' ? -1 : 0) - (b.type === 'alerte' ? -1 : 0) || a.date.localeCompare(b.date))[0];
+    if (!cible) continue;
+    i.doublonDe = { source: cible.source, titre: cible.titre, lien: cible.lien, reference: cible.reference };
+    (cible.aussi ||= []).push({ source: i.source, titre: i.titre, lien: i.lien });
+  }
   items = items.map((i) => {
     i.suivis = editeursSuivis(suivis, i.editeurs, i.produits, i.titre, i.type === 'actu' ? '' : i.resume.slice(0, 200));
     return prioriser(i, kevSet, epss);

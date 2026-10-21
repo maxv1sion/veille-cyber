@@ -1,5 +1,5 @@
 {
-  "_aide": "Sources de la veille. Mettre \"actif\": false pour couper une source sans la supprimer.",
+  "_aide": "Sources de la veille. Mettre \"actif\": false pour couper une source sans la supprimer. \"filtreSecurite\": true ne garde que les articles qui parlent de cybersécurité (pour les médias généralistes).",
   "conservation": {
     "vulnerabilitesJours": 730,
     "failleExploiteesJours": 90,
@@ -33,6 +33,8 @@
   "actualites": [
     { "nom": "ZATAZ", "url": "https://www.zataz.com/feed/", "actif": true },
     { "nom": "BleepingComputer", "url": "https://www.bleepingcomputer.com/feed/", "actif": true },
-    { "nom": "The Hacker News", "url": "https://feeds.feedburner.com/TheHackersNews", "actif": true }
+    { "nom": "The Hacker News", "url": "https://feeds.feedburner.com/TheHackersNews", "actif": true },
+    { "nom": "Clubic", "url": "https://www.clubic.com/feed/rss", "actif": true, "filtreSecurite": true },
+    { "nom": "LeMagIT", "url": "https://www.lemagit.fr/rss/ContentSyndication.xml", "actif": true, "filtreSecurite": true }
   ]
 }

@@ -26,6 +26,11 @@ const Veille = (() => {
     if (i.epssMax >= 0.1) r.push(`probabilité d'exploitation ${pct(i.epssMax)} sous 30 jours`);
     if (i.rce) r.push('exécution de code à distance');
     if (i.echeance) r.push(`correctif exigé par la CISA avant le ${dateCourte(i.echeance)}`);
+    if (i.type === 'actu') {
+      for (const sg of i.signaux || []) if (!(sg === 'exécution de code à distance' && i.rce)) r.push(sg);
+      const nb = new Set([i.source, ...(i.relais || []).map((x) => x.source)]).size;
+      if (r.length && nb > 1) r.push(`relayé par ${nb} médias`);
+    }
     return r;
   }
 
@@ -42,6 +47,15 @@ const Veille = (() => {
       reste > 0 ? `<span class="marque">+ ${reste} CVE</span>` : '',
     ].join('');
     const r = raisons(i);
+    const lienArticle = (x) => `<a href="${echapper(lienSur(x.lien))}" target="_blank" rel="noopener" title="${echapper(x.titre)}">${echapper(x.source)}</a>`;
+    const parSource = (liste) => [...new Map(liste.map((x) => [x.source, x])).values()];
+    const liens = [
+      i.relais?.length ? `Aussi relayé par ${parSource(i.relais.filter((x) => x.source !== i.source)).map(lienArticle).join(', ') || 'le même média'}` : '',
+      i.officielInfo ? `Avis officiel : <a href="${echapper(lienSur(i.officielInfo.lien))}" target="_blank" rel="noopener">${echapper(i.officielInfo.source)}, ${echapper(i.officielInfo.titre)}</a>` : '',
+      i.aussi?.length ? `Aussi publié par ${parSource(i.aussi).map(lienArticle).join(', ')}` : '',
+      i.doublonDe ? `Également couvert par <a href="${echapper(lienSur(i.doublonDe.lien))}" target="_blank" rel="noopener">${echapper(i.doublonDe.source)} ${echapper(i.doublonDe.reference || '')}</a>` : '',
+      i.presse?.length ? `Dans la presse : ${parSource(i.presse).map(lienArticle).join(', ')}` : '',
+    ].filter(Boolean);
     return `<li class="el p-${echapper(i.priorite)}">
       <h3><a href="${echapper(lienSur(i.lien))}" target="_blank" rel="noopener">${echapper(i.titre)}</a></h3>
       <div class="meta">
@@ -54,6 +68,7 @@ const Veille = (() => {
       ${r.length ? `<p><strong>Pourquoi c'est prioritaire :</strong> ${echapper(r.join(', '))}.</p>` : ''}
       ${i.resume ? `<p>${echapper(i.resume)}</p>` : ''}
       ${marques ? `<div class="marques">${marques}</div>` : ''}
+      ${liens.length ? `<p class="liens">${liens.join('<br>')}</p>` : ''}
     </li>`;
   }
 

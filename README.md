@@ -15,6 +15,7 @@ Veille automatique des vulnérabilités et menaces utiles à un RSSI, publiée a
 | CISA KEV | Catalogue des failles dont l'exploitation est confirmée | JSON |
 | FIRST EPSS | Probabilité d'exploitation d'une CVE sous 30 jours | API |
 | ZATAZ, BleepingComputer, The Hacker News | Actualité cyber | Flux RSS |
+| Clubic, LeMagIT | Actualité cyber (articles filtrés sur les sujets sécurité) | Flux RSS |
 
 ## Fonctionnement
 
@@ -34,7 +35,16 @@ Aucun outil à installer sur le poste : tout tourne chez GitHub.
 - **Critique** : alerte CERT-FR en cours, CVE présente dans le catalogue KEV, ou EPSS d'au moins 50 %
 - **Haute** : exécution de code à distance, EPSS d'au moins 10 %, ou alerte clôturée
 - **Moyenne** : autres avis de sécurité
-- **Information** : rapports, bulletins, recommandations et presse (passent en haute s'ils citent une faille exploitée)
+- **Information** : rapports, bulletins, recommandations et presse
+
+Un article de presse passe en **haute** s'il cite une faille exploitée ou s'il annonce une faille critique, un zero-day, une exécution de code à distance, un correctif d'urgence ou une faille non corrigée. S'il n'existe pas encore d'avis officiel, il apparaît dans « À traiter en priorité » sous « Signalé par la presse, en attente d'avis officiel ». Les récapitulatifs hebdomadaires de la presse ne déclenchent pas de signal.
+
+## Doublons
+
+- **Entre médias** : les articles qui parlent du même sujet à 3 jours d'écart sont regroupés sous un seul, avec la mention « Aussi relayé par ». Le rapprochement se fait sur les CVE communes et les noms propres communs (produits, éditeurs, campagnes), repérés grâce à la liste `config/mots-courants.txt`
+- **Presse et sources officielles** : quand un avis CERT-FR, CERT Santé ou une fiche KEV traite du même sujet, l'article y est rattaché (« Dans la presse ») et quitte la rubrique « Signalé par la presse »
+- **CERT-FR et CERT Santé** : un avis CERT Santé dont toutes les CVE figurent dans un avis ou une alerte CERT-FR est replié sous celui-ci (« Aussi publié par »)
+- **Bloc « À traiter »** : une même CVE n'y apparaît qu'une fois, même si plusieurs sources la publient
 
 ## Personnaliser
 

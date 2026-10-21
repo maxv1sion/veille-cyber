@@ -27,6 +27,11 @@
     <h2 id="titre-urgent">À traiter en priorité</h2>
     <p class="sous">Alertes CERT-FR en cours et failles exploitées activement ces 30 derniers jours, celles de ton parc en premier.</p>
     <ol id="urgent"></ol>
+    <div id="bloc-presse" hidden>
+      <h3>Signalé par la presse, en attente d'avis officiel</h3>
+      <p class="sous">Failles critiques, zero-day ou correctifs d'urgence annoncés ces 7 derniers jours, pas encore couverts par le CERT-FR, le CERT Santé ou la CISA.</p>
+      <ol id="urgent-presse"></ol>
+    </div>
   </section>
 
   <section aria-label="Toutes les publications">
@@ -63,7 +68,7 @@
   <footer class="pied">
     <h2>Sources</h2>
     <ul id="sources"></ul>
-    <p class="legende"><strong>Comment la priorité est calculée.</strong> Critique : alerte CERT-FR en cours, faille présente dans le catalogue CISA KEV (exploitation active confirmée) ou score EPSS d'au moins 50 %. Haute : exécution de code à distance, EPSS d'au moins 10 % ou alerte clôturée. Moyenne : autres avis de sécurité. Les rapports, bulletins et articles de presse sont en information. Données mises à jour automatiquement toutes les 3 heures.</p>
+    <p class="legende"><strong>Comment la priorité est calculée.</strong> Critique : alerte CERT-FR en cours, faille présente dans le catalogue CISA KEV (exploitation active confirmée) ou score EPSS d'au moins 50 %. Haute : exécution de code à distance, EPSS d'au moins 10 % ou alerte clôturée. Moyenne : autres avis de sécurité. Les rapports et bulletins sont en information. Un article de presse passe en haute s'il annonce une faille critique, un zero-day, une exécution de code à distance, un correctif d'urgence ou une exploitation active. <strong>Doublons.</strong> Les articles qui traitent du même sujet sont regroupés sous un seul (« Aussi relayé par »), et rattachés à l'avis officiel quand il existe (« Dans la presse »). Un avis CERT Santé qui reprend les mêmes failles qu'un avis CERT-FR est replié sous ce dernier. Données mises à jour automatiquement toutes les 3 heures.</p>
   </footer>
 </div>
 
@@ -72,12 +77,12 @@
 (() => {
   const V = Veille, $ = (id) => document.getElementById(id);
   const ONGLETS = [
-    ['tout', 'Tout', () => true],
+    ['tout', 'Tout', (i) => !i.doublonDe && (i.type !== 'actu' || (i.principal !== false && !i.officiel))],
     ['alerte', 'Alertes', (i) => i.type === 'alerte'],
-    ['avis', 'Avis de sécurité', (i) => i.type === 'avis'],
+    ['avis', 'Avis de sécurité', (i) => i.type === 'avis' && !i.doublonDe],
     ['kev', 'Failles exploitées', (i) => i.type === 'kev'],
     ['menaces', 'Rapports et recommandations', (i) => ['cti', 'actualite', 'durcissement'].includes(i.type)],
-    ['actu', 'Presse', (i) => i.type === 'actu'],
+    ['actu', 'Presse', (i) => i.type === 'actu' && i.principal !== false],
   ];
   const RANG = { critique: 0, haute: 1, moyenne: 2, info: 3 };
   const PAS = 60;
@@ -176,6 +181,21 @@
         <span class="raison">${(i.suivis || []).length ? `<span class="marque parc">${V.echapper(i.suivis.join(', '))}</span> ` : ''}${V.echapper(V.TYPES[i.type])}${r.length ? ' : ' + V.echapper(r.join(', ')) : ''}</span>
       </li>`;
     }).join('') : '<li class="vide">Rien d\'urgent sur les 30 derniers jours. Bonne nouvelle.</li>';
+
+    const nbMedias = (i) => new Set([i.source, ...(i.relais || []).map((x) => x.source)]).size;
+    const presse = items.filter((i) => i.type === 'actu' && i.principal !== false && !i.officiel && (i.signaux || []).length && i.date >= jour(7) &&
+      !(i.cves.length && i.cves.every((c) => vues.has(c))))
+      .sort((a, b) => ((b.suivis || []).length > 0) - ((a.suivis || []).length > 0) || nbMedias(b) - nbMedias(a) || b.date.localeCompare(a.date))
+      .slice(0, 6);
+    $('bloc-presse').hidden = !presse.length;
+    $('urgent-presse').innerHTML = presse.map((i) => {
+      const n = nbMedias(i);
+      return `<li>
+        <a class="titre" href="${V.echapper(V.lienSur(i.lien))}" target="_blank" rel="noopener">${V.echapper(i.titre)}</a>
+        <span class="date">${V.dateCourte(i.date)}</span>
+        <span class="raison">${(i.suivis || []).length ? `<span class="marque parc">${V.echapper(i.suivis.join(', '))}</span> ` : ''}${V.echapper(i.source)}${n > 1 ? ` et ${n - 1} autre${n > 2 ? 's' : ''} média${n > 2 ? 's' : ''}` : ''} : ${V.echapper(i.signaux.join(', '))}</span>
+      </li>`;
+    }).join('');
   }
 
   async function demarrer() {

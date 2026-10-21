@@ -4,7 +4,7 @@
     { "nom": "Microsoft", "motsCles": ["microsoft", "windows", "exchange", "sharepoint", "office", "outlook", "azure", "entra", "intune", "teams", "edge", "hyper-v", ".net"] },
     { "nom": "Fortinet", "motsCles": ["fortinet", "fortigate", "fortios", "fortimanager", "fortianalyzer", "fortiweb", "fortimail", "forticlient", "fortipam"] },
     { "nom": "Cisco", "motsCles": ["cisco"] },
-    { "nom": "VMware / Broadcom", "motsCles": ["vmware", "esxi", "vcenter", "broadcom"] },
+    { "nom": "VMware / Broadcom", "motsCles": ["vmware", "esxi", "vcenter"] },
     { "nom": "Citrix / NetScaler", "motsCles": ["citrix", "netscaler"] },
     { "nom": "Ivanti", "motsCles": ["ivanti", "pulse secure"] },
     { "nom": "Palo Alto Networks", "motsCles": ["palo alto", "pan-os", "globalprotect", "cortex"] },

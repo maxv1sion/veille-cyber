@@ -70,6 +70,8 @@ a:hover { color: var(--moyenne); }
 .urgent li a.titre:hover { text-decoration: underline; }
 .urgent .raison { grid-column: 1 / -1; color: var(--encre-2); font-size: .9rem; }
 .urgent .date { color: var(--encre-2); font-size: .9rem; white-space: nowrap; }
+.urgent h3 { font: 700 1.05rem/1.2 var(--titre); font-stretch: 90%; margin: 20px 0 2px; }
+.urgent h3 + .sous { margin-bottom: 8px; }
 .urgent .vide { padding: 12px 0 16px; color: var(--encre-2); border-top: 1px solid var(--ligne); }
 
 /* Filtres */
@@ -116,6 +118,8 @@ a:hover { color: var(--moyenne); }
 .marque.kev { background: var(--kev-fond); color: var(--critique); border-color: transparent; font-weight: 700; }
 .marque.cve { font-family: var(--mono); font-size: .8rem; text-decoration: none; }
 .marque.cve.exploitee { border-color: var(--critique); color: var(--critique); }
+.el p.liens { margin: 8px 0 0; font-size: .9rem; color: var(--encre-2); }
+.el p.liens a { color: var(--encre); }
 .plus { display: block; margin: 20px auto; font: inherit; background: var(--surface); border: 1px solid var(--ligne); border-radius: 4px; padding: 8px 20px; cursor: pointer; color: var(--encre); }
 .vide-liste { background: var(--surface); border: 1px dashed var(--ligne); border-radius: 4px; padding: 24px; color: var(--encre-2); }
 

@@ -46,11 +46,12 @@
     const morceaux = [
       pluriel(c.alertes, 'alerte CERT-FR', 'alertes CERT-FR'),
       pluriel(c.avisCertFr, 'avis CERT-FR', 'avis CERT-FR'),
-      pluriel(c.avisCertSante, 'avis CERT Santé', 'avis CERT Santé'),
+      pluriel(c.avisCertSante, 'avis CERT Santé', 'avis CERT Santé') + ' (hors doublons CERT-FR)',
       pluriel(c.kevAjoutees, 'nouvelle faille exploitée', 'nouvelles failles exploitées') + ' (CISA KEV)',
     ];
     return `Du ${V.dateCourte(h.debut)} au ${V.dateCourte(h.fin)} : ${morceaux.join(', ')}. ` +
-      `${pluriel(c.critiques, 'publication est critique', 'publications sont critiques')} et ${c.surParcSuivi} ${c.surParcSuivi > 1 ? 'concernent' : 'concerne'} les éditeurs du parc suivi.`;
+      `${pluriel(c.critiques, 'publication est critique', 'publications sont critiques')} et ${c.surParcSuivi} ${c.surParcSuivi > 1 ? 'concernent' : 'concerne'} les éditeurs du parc suivi.` +
+      (c.signauxPresse ? ` La presse signale aussi ${pluriel(c.signauxPresse, 'sujet', 'sujets')} sans avis officiel à ce stade.` : '');
   }
 
   const SECTIONS = [
@@ -58,6 +59,7 @@
     ['kev', 'Nouvelles failles exploitées activement', 'Ajoutées cette semaine au catalogue de la CISA, qui ne retient que les failles dont l\'exploitation est confirmée.'],
     ['parcSuivi', 'Vulnérabilités sur le parc suivi', 'Avis concernant les éditeurs suivis, du plus urgent au moins urgent.'],
     ['autresCritiques', 'Autres vulnérabilités critiques', 'Hors parc suivi, à vérifier si le produit est présent ailleurs.'],
+    ['signauxPresse', 'Signalé par la presse, sans avis officiel', 'Failles critiques, zero-day ou correctifs d\'urgence annoncés dans la presse et pas encore couverts par une source officielle. À vérifier.'],
     ['menaces', 'Menaces et recommandations', 'Rapports d\'analyse de la menace, bulletins d\'actualité et guides de durcissement du CERT-FR.'],
   ];
 
