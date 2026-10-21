@@ -60,7 +60,7 @@ export function signauxPresse(titre = '', resume = '') {
   return SIGNAUX.filter(([, re]) => re.test(t)).map(([nom]) => nom);
 }
 
-export const RE_SECURITE = /cyber|s[ée]curit|faille|vuln[ée]rab|ran[çc]ongiciel|ransomware|pirat|hacker|malware|logiciel malveillant|phishing|hame[çc]onnage|fuite de donn|cyberattaque|\bCVE-|ANSSI|CERT|zero.?day|exploit|espionn|botnet|ddos|chiffrement|mot de passe|authentification|patch tuesday/i;
+export const RE_SECURITE = /(?<![a-zà-ÿ])(cyber|s[ée]curit|faille|vuln[ée]rab|ran[çc]ongiciel|ransomware|pirat|hack|malware|logiciel malveillant|phishing|hame[çc]onnage|fuite de donn|cyberattaque|CVE-|ANSSI|CERT(?![a-z])|z[ée]ro.?day|exploit|espion|botnet|ddos|chiffrement|mot de passe|authentification|patch tuesday|backdoor|porte d[ée]rob|spyware|infostealer|arnaque)/i;
 
 // ---------- Regroupement ----------
 const JOUR = 86400000;
