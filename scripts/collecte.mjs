@@ -354,7 +354,7 @@ async function principal() {
   if (sources.certsante?.actif) nouveaux.push(...(await collecterCertSante(sources.certsante)));
   let kevSet = new Set(registre.kevCatalogue || []);
   if (sources.kev?.actif) {
-    const { items, tous } = await collecterKev(sources.kev, sources.conservation.vulnerabilitesJours);
+    const { items, tous } = await collecterKev(sources.kev, sources.conservation.failleExploiteesJours || 90);
     nouveaux.push(...items);
     if (tous) kevSet = new Set(tous.keys());
   }
@@ -373,7 +373,8 @@ async function principal() {
   // Conservation
   const limVuln = ilYa(sources.conservation.vulnerabilitesJours);
   const limActu = ilYa(sources.conservation.actualitesJours);
-  let items = [...existants.values()].filter((i) => i.date >= (i.type === 'actu' ? limActu : limVuln));
+  const limKev = ilYa(sources.conservation.failleExploiteesJours || 90);
+  let items = [...existants.values()].filter((i) => i.date >= (i.type === 'actu' ? limActu : i.type === 'kev' ? limKev : limVuln));
 
   const epss = sources.epss?.actif ? await enrichirEpss(sources.epss, items) : {};
   items = items.map((i) => {

@@ -2,6 +2,7 @@
   "_aide": "Sources de la veille. Mettre \"actif\": false pour couper une source sans la supprimer.",
   "conservation": {
     "vulnerabilitesJours": 730,
+    "failleExploiteesJours": 90,
     "actualitesJours": 90
   },
   "certfr": {

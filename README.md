@@ -39,7 +39,7 @@ Aucun outil à installer sur le poste : tout tourne chez GitHub.
 ## Personnaliser
 
 - **Éditeurs suivis** : `config/editeurs.json`. Chaque éditeur a une liste de mots-clés cherchés dans l'éditeur, le produit et le titre des bulletins
-- **Sources et conservation** : `config/sources.json`. Mettre `"actif": false` pour couper une source. Conservation par défaut : 2 ans pour les vulnérabilités, 90 jours pour la presse
+- **Sources et conservation** : `config/sources.json`. Mettre `"actif": false` pour couper une source. Conservation par défaut : 2 ans pour les avis et alertes, 90 jours pour les fiches de failles exploitées (KEV) et pour la presse. Le croisement avec le catalogue KEV complet reste actif quelle que soit cette durée
 
 Les modifications se font directement dans GitHub (crayon « Edit this file »), elles sont prises en compte au passage suivant.
 
