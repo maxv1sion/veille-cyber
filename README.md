@@ -18,6 +18,8 @@ Veille automatique des vulnérabilités et menaces utiles à un RSSI, publiée a
 
 Dans la presse, seuls les articles dont le titre parle d'une faille sont gardés (vulnérabilité, CVE, zero-day, correctif, exploit…). Les arrestations, fuites de données, campagnes d'espionnage, annonces produits et récapitulatifs hebdomadaires sont écartés. Pour revenir à toute l'actualité cyber : `"presseFaillesSeulement": false` dans `config/sources.json`.
 
+Exception volontaire : les publications officielles du CERT-FR qui ne sont pas des vulnérabilités (rapports sur la menace, bulletins d'actualité, guides de durcissement) sont conservées, dans l'onglet « Rapports et recommandations ».
+
 ## Fonctionnement
 
 GitHub Actions lance `scripts/collecte.mjs` toutes les 3 heures (fichier `.github/workflows/collecte.yml`). Le script :
