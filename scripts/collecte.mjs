@@ -384,6 +384,9 @@ async function principal() {
   const limActu = ilYa(sources.conservation.actualitesJours);
   const limKev = ilYa(sources.conservation.failleExploiteesJours || 90);
   let items = [...existants.values()].filter((i) => i.date >= (i.type === 'actu' ? limActu : i.type === 'kev' ? limKev : limVuln));
+  // Médias généralistes : on ne garde que les articles dont le titre parle de cyber (y compris ceux déjà enregistrés)
+  const filtres = new Set((sources.actualites || []).filter((x) => x.filtreSecurite).map((x) => x.nom));
+  items = items.filter((i) => !(i.type === 'actu' && filtres.has(i.source) && !RE_SECURITE.test(i.titre)));
 
   const epss = sources.epss?.actif ? await enrichirEpss(sources.epss, items) : {};
   const courants = new Set((await readFile(join(RACINE, 'config', 'mots-courants.txt'), 'utf8').catch(() => '')).split('\n').filter((l) => l && !l.startsWith('#')));
