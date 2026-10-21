@@ -49,8 +49,6 @@ Onglet **Actions** du dépôt, workflow « Collecte veille cyber », bouton **Ru
 
 ## Mise en ligne (une seule fois)
 
-1. **Settings > Actions > General** : dans « Workflow permissions », choisir **Read and write permissions**
-2. **Actions** : lancer « Collecte veille cyber » une première fois avec **Run workflow**
-3. **Settings > Pages** : source **Deploy from a branch**, branche `main`, dossier `/ (root)`
+**Settings > Pages** : source **Deploy from a branch**, branche `main`, dossier `/ (root)`, puis **Save**.
 
-Le site est ensuite accessible à l'adresse `https://<compte>.github.io/veille-cyber/`.
+Le site est ensuite accessible à l'adresse https://maxv1sion.github.io/veille-cyber/ (compter une à deux minutes pour la première publication).
