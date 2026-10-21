@@ -2,7 +2,7 @@
   "_aide": "Éditeurs suivis (ton parc). Chaque éditeur a des mots-clés cherchés dans l'éditeur, le produit et le titre des bulletins. Ajoute, retire ou modifie librement.",
   "editeurs": [
     { "nom": "Microsoft", "motsCles": ["microsoft", "windows", "exchange", "sharepoint", "office", "outlook", "azure", "entra", "intune", "teams", "edge", "hyper-v", ".net"] },
-    { "nom": "Fortinet", "motsCles": ["fortinet", "fortigate", "fortios", "fortimanager", "fortianalyzer", "fortiweb", "fortimail", "forticlient", "fortipam"] },
+    { "nom": "Fortinet", "motsCles": ["fortinet", "fortigate", "fortios", "fortimanager", "fortianalyzer", "fortiweb", "fortimail", "forticlient", "fortipam", "fortisiem", "fortiproxy", "fortiswitch", "fortiedr", "fortisandbox", "fortinac", "fortiauthenticator", "fortitoken"] },
     { "nom": "Cisco", "motsCles": ["cisco"] },
     { "nom": "VMware / Broadcom", "motsCles": ["vmware", "esxi", "vcenter"] },
     { "nom": "Citrix / NetScaler", "motsCles": ["citrix", "netscaler"] },
