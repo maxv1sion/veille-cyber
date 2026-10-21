@@ -23,10 +23,12 @@ GitHub Actions lance `scripts/collecte.mjs` toutes les 3 heures (fichier `.githu
 
 1. récupère les sources et ne relit en détail que les avis CERT-FR nouveaux ou modifiés
 2. croise les CVE avec le catalogue KEV et les scores EPSS
-3. repère les éditeurs du parc suivi
-4. calcule une priorité (critique, haute, moyenne, information)
-5. met à jour `data/registre.json`, purge selon la conservation et produit la synthèse hebdo dans `data/hebdo/`
-6. enregistre les changements dans le dépôt, ce qui met le site à jour
+3. repère les signaux dans la presse (faille critique, zero-day, correctif d'urgence…)
+4. regroupe les doublons : articles sur un même sujet, presse rattachée à l'avis officiel, avis CERT Santé repris par le CERT-FR (voir « Doublons »)
+5. repère les éditeurs du parc suivi
+6. calcule une priorité (critique, haute, moyenne, information)
+7. met à jour `data/registre.json`, purge selon la conservation et produit la synthèse hebdo dans `data/hebdo/`
+8. enregistre les changements dans le dépôt, ce qui met le site à jour
 
 Aucun outil à installer sur le poste : tout tourne chez GitHub.
 
@@ -45,6 +47,18 @@ Un article de presse passe en **haute** s'il cite une faille exploitée ou s'il 
 - **Presse et sources officielles** : quand un avis CERT-FR, CERT Santé ou une fiche KEV traite du même sujet, l'article y est rattaché (« Dans la presse ») et quitte la rubrique « Signalé par la presse »
 - **CERT-FR et CERT Santé** : un avis CERT Santé dont toutes les CVE figurent dans un avis ou une alerte CERT-FR est replié sous celui-ci (« Aussi publié par »)
 - **Bloc « À traiter »** : une même CVE n'y apparaît qu'une fois, même si plusieurs sources la publient
+
+## Fichiers
+
+| Fichier | Rôle |
+|---|---|
+| `index.html`, `hebdo.html`, `assets/` | Le site (page quotidienne et synthèse hebdo) |
+| `scripts/collecte.mjs` | Collecte, croisement KEV et EPSS, priorités, synthèse hebdo |
+| `scripts/sujets.mjs` | Signaux presse et regroupement des doublons |
+| `config/editeurs.json` | Éditeurs du parc suivi et leurs mots-clés |
+| `config/sources.json` | Sources, durées de conservation, filtres |
+| `config/mots-courants.txt` | Mots courants français et anglais, pour repérer les noms propres dans les titres |
+| `data/` | Données produites automatiquement, à ne pas modifier à la main |
 
 ## Personnaliser
 
