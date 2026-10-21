@@ -1,72 +1,72 @@
 {
-  "derniereCollecte": "2026-10-21T13:01:58.665Z",
-  "ajouts": 33,
-  "nbElements": 618,
+  "derniereCollecte": "2026-10-21T14:09:18.957Z",
+  "ajouts": 26,
+  "nbElements": 621,
   "sources": {
     "CERT-FR alertes": {
       "ok": true,
-      "detail": "8 récents, 2 lus en détail",
-      "le": "2026-10-21T13:01:58.665Z"
+      "detail": "8 récents, 1 lus en détail",
+      "le": "2026-10-21T14:09:18.957Z"
     },
     "CERT-FR avis": {
       "ok": true,
       "detail": "227 récents, 1 lus en détail",
-      "le": "2026-10-21T13:01:58.665Z"
+      "le": "2026-10-21T14:09:18.957Z"
     },
     "CERT-FR cti": {
       "ok": true,
       "detail": "40 éléments",
-      "le": "2026-10-21T13:01:58.665Z"
+      "le": "2026-10-21T14:09:18.957Z"
     },
     "CERT-FR actualite": {
       "ok": true,
       "detail": "40 éléments",
-      "le": "2026-10-21T13:01:58.665Z"
+      "le": "2026-10-21T14:09:18.957Z"
     },
     "CERT-FR durcissement": {
       "ok": true,
       "detail": "5 éléments",
-      "le": "2026-10-21T13:01:58.665Z"
+      "le": "2026-10-21T14:09:18.957Z"
     },
     "CERT Santé": {
       "ok": true,
       "detail": "111 éléments",
-      "le": "2026-10-21T13:01:58.665Z"
+      "le": "2026-10-21T14:09:18.957Z"
     },
     "CISA KEV": {
       "ok": true,
       "detail": "catalogue 2026.10.20 : 1754 entrées, 101 dans la période",
-      "le": "2026-10-21T13:01:58.665Z"
+      "le": "2026-10-21T14:09:18.957Z"
     },
     "ZATAZ": {
       "ok": true,
       "detail": "10 éléments",
-      "le": "2026-10-21T13:01:58.665Z"
+      "le": "2026-10-21T14:09:18.957Z"
     },
     "BleepingComputer": {
       "ok": true,
       "detail": "15 éléments",
-      "le": "2026-10-21T13:01:58.665Z"
+      "le": "2026-10-21T14:09:18.957Z"
     },
     "The Hacker News": {
       "ok": true,
       "detail": "50 éléments",
-      "le": "2026-10-21T13:01:58.665Z"
+      "le": "2026-10-21T14:09:18.957Z"
     },
     "Clubic": {
       "ok": true,
-      "detail": "9 articles cyber sur 50",
-      "le": "2026-10-21T13:01:58.665Z"
+      "detail": "3 articles cyber sur 50",
+      "le": "2026-10-21T14:09:18.957Z"
     },
     "LeMagIT": {
       "ok": true,
-      "detail": "8 articles cyber sur 20",
-      "le": "2026-10-21T13:01:58.665Z"
+      "detail": "5 articles cyber sur 20",
+      "le": "2026-10-21T14:09:18.957Z"
     },
     "EPSS": {
       "ok": true,
-      "detail": "874 CVE mises à jour",
-      "le": "2026-10-21T13:01:58.665Z"
+      "detail": "0 CVE mises à jour",
+      "le": "2026-10-21T14:09:18.957Z"
     }
   }
 }
