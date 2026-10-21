@@ -1,0 +1,1414 @@
+{
+  "semaine": "2026-S42",
+  "debut": "2026-10-12",
+  "fin": "2026-10-18",
+  "genere": "2026-10-21T08:27:29.942Z",
+  "chiffres": {
+    "alertes": 2,
+    "avisCertFr": 45,
+    "avisCertSante": 25,
+    "kevAjoutees": 9,
+    "critiques": 27,
+    "surParcSuivi": 39
+  },
+  "alertes": [
+    {
+      "id": "certfr:CERTFR-2026-ALE-013",
+      "source": "CERT-FR",
+      "type": "alerte",
+      "reference": "CERTFR-2026-ALE-013",
+      "titre": "Vulnérabilité dans Ivanti Connect Secure (ICS)",
+      "resume": "Une vulnérabilité a été découverte dans Ivanti Connect Secure (ICS). Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un contournement de la politique de sécurité. Ivanti indique que cette vulnérabilité CVE-2026-104935 est activement exploitée.",
+      "lien": "https://cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-013/",
+      "date": "2026-10-14",
+      "editeurs": [
+        "Ivanti"
+      ],
+      "suivis": [
+        "Ivanti"
+      ],
+      "cves": [
+        "CVE-2026-104935"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-104935"
+      ],
+      "epssMax": 0.2598,
+      "epssCve": "CVE-2026-104935",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-ALE-012",
+      "source": "CERT-FR",
+      "type": "alerte",
+      "reference": "CERTFR-2026-ALE-012",
+      "titre": "Incident de sécurité ciblant les contrôleurs à distance des installations de réfrigération",
+      "resume": "Le CERT-FR a connaissance de nombreuses compromissions des controleurs à distance d'installation de réfrigération Danfoss série AK-SM, AK-SC ainsi que Copeland xweb et Dixell xweb. De manière générale l'exposition d'une interface de gestion sur Internet est contraire aux bonnes pratiques.",
+      "lien": "https://cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-012/",
+      "date": "2026-10-12",
+      "editeurs": [
+        "Danfoss",
+        "Copeland",
+        "Dixell"
+      ],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    }
+  ],
+  "kev": [
+    {
+      "id": "kev:CVE-2026-104935",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-104935",
+      "titre": "Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability",
+      "resume": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-104935",
+      "date": "2026-10-13",
+      "editeurs": [
+        "Ivanti"
+      ],
+      "suivis": [
+        "Ivanti"
+      ],
+      "cves": [
+        "CVE-2026-104935"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-104935"
+      ],
+      "epssMax": 0.2598,
+      "epssCve": "CVE-2026-104935",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "kev:CVE-2025-61624",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2025-61624",
+      "titre": "Fortinet Multiple Products Path Traversal Vulnerability",
+      "resume": "FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager contain a path traversal vulnerability that may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2025-61624",
+      "date": "2026-10-16",
+      "editeurs": [
+        "Fortinet"
+      ],
+      "suivis": [
+        "Fortinet"
+      ],
+      "cves": [
+        "CVE-2025-61624"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2025-61624"
+      ],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "kev:CVE-2026-76519",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-76519",
+      "titre": "Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
+      "resume": "Cisco Secure Email Gateway contains a relative path traversal vulnerability that could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-76519",
+      "date": "2026-10-14",
+      "editeurs": [
+        "Cisco"
+      ],
+      "suivis": [
+        "Cisco"
+      ],
+      "cves": [
+        "CVE-2026-76519"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-76519"
+      ],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "kev:CVE-2026-0322",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-0322",
+      "titre": "Palo Alto Networks PAN-OS Code Injection Vulnerability",
+      "resume": "Palo Alto Networks PAN-OS contains a code injection vulnerability that could allow an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-0322",
+      "date": "2026-10-14",
+      "editeurs": [
+        "Palo Alto Networks"
+      ],
+      "suivis": [
+        "Palo Alto Networks"
+      ],
+      "cves": [
+        "CVE-2026-0322"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-0322"
+      ],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "kev:CVE-2026-96951",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-96951",
+      "titre": "Microsoft Windows Command Injection Vulnerability",
+      "resume": "Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-96951",
+      "date": "2026-10-13",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-96951"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-96951"
+      ],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "kev:CVE-2026-102764",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-102764",
+      "titre": "BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability",
+      "resume": "BeyondTrust Remote Support contains an authentication bypass by spoofing vulnerability that could allow a remote attacker to perform file operations on the appliance. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764",
+      "date": "2026-10-16",
+      "editeurs": [
+        "BeyondTrust"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-102764"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-102764"
+      ],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "kev:CVE-2026-21589",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-21589",
+      "titre": "Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability",
+      "resume": "Multiple Atlassian products (Bitbucket Data Center ,Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center, Crowd Data Center, Crucible and Fisheye) contain a files or directories accessible to external parties vulnerability which could allow an unauthenticated attacker to access specific files within the web application root directory in affected versions. Action requise : Apply mitigations in accordance with vendor instructions, ensuring…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-21589",
+      "date": "2026-10-15",
+      "editeurs": [
+        "Atlassian"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-21589"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-21589"
+      ],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "kev:CVE-2026-105134",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-105134",
+      "titre": "Ahsay AhsayCBS Command Injection Vulnerability",
+      "resume": "Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceivers.do endpoint. This vulnerability can be chained with CVE-2026-105133. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-105134",
+      "date": "2026-10-14",
+      "editeurs": [
+        "Ahsay"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-105134"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-105134"
+      ],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "kev:CVE-2026-105133",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-105133",
+      "titre": "Ahsay AhsayCBS Improper Authentication Vulnerability",
+      "resume": "Ahsay AhsayCBS contains an improper authentication vulnerability that could allow a remote attacker to bypass authentication via manipulation of the random parameter in the API component’s checkSysPwd function. This vulnerability can be chained with CVE-2026-105134. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements”…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-105133",
+      "date": "2026-10-14",
+      "editeurs": [
+        "Ahsay"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-105133"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-105133"
+      ],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    }
+  ],
+  "parcSuivi": [
+    {
+      "id": "certfr:CERTFR-2026-AVI-1311",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1311",
+      "titre": "Multiples vulnérabilités dans les produits Ivanti",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Ivanti. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une atteinte à la confidentialité des données. Ivanti indique que la vulnérabilité CVE-2026-104935 est activement exploitée.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1311/",
+      "date": "2026-10-14",
+      "editeurs": [
+        "Ivanti"
+      ],
+      "suivis": [
+        "Ivanti"
+      ],
+      "cves": [
+        "CVE-2026-104935",
+        "CVE-2026-106047",
+        "CVE-2026-106035",
+        "CVE-2026-106042",
+        "CVE-2026-106043",
+        "CVE-2026-106034",
+        "CVE-2026-109412"
+      ],
+      "nbCves": 7,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-104935"
+      ],
+      "epssMax": 0.2598,
+      "epssCve": "CVE-2026-104935",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certsante:10240",
+      "source": "CERT Santé",
+      "type": "avis",
+      "titre": "Ivanti - CVE-2026-104935",
+      "resume": "Il s’agit d’une vulnérabilité dans le mécanisme d’authentification d’Ivanti Connect Secure. Ivanti Connect Secure est une passerelle d’accès distant de type VPN SSL. Elle...",
+      "lien": "https://cyberveille.esante.gouv.fr/alertes/ivanti-cve-2026-104935-2026-10-14",
+      "date": "2026-10-14",
+      "editeurs": [
+        "Ivanti"
+      ],
+      "suivis": [
+        "Ivanti"
+      ],
+      "cves": [
+        "CVE-2026-104935"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-104935"
+      ],
+      "epssMax": 0.2598,
+      "epssCve": "CVE-2026-104935",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1333",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1333",
+      "titre": "Multiples vulnérabilités dans le noyau Linux d'Ubuntu",
+      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux d'Ubuntu. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une atteinte à la confidentialité des données.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1333/",
+      "date": "2026-10-16",
+      "editeurs": [
+        "Ubuntu"
+      ],
+      "suivis": [
+        "Linux"
+      ],
+      "cves": [
+        "CVE-2026-72407",
+        "CVE-2026-72436",
+        "CVE-2026-68116",
+        "CVE-2026-74371",
+        "CVE-2026-74649",
+        "CVE-2026-72157",
+        "CVE-2026-72330",
+        "CVE-2026-72392",
+        "CVE-2026-43095",
+        "CVE-2026-72252",
+        "CVE-2026-68459",
+        "CVE-2026-64376"
+      ],
+      "nbCves": 1922,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-53266",
+        "CVE-2026-53362"
+      ],
+      "epssMax": 0.0232,
+      "epssCve": "CVE-2018-13100",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1335",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1335",
+      "titre": "Multiples vulnérabilités dans le noyau Linux de SUSE",
+      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de SUSE. Certaines d'entre elles permettent à un attaquant de provoquer une élévation de privilèges, un déni de service à distance et une atteinte à la confidentialité des données.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1335/",
+      "date": "2026-10-16",
+      "editeurs": [
+        "SUSE"
+      ],
+      "suivis": [
+        "Linux"
+      ],
+      "cves": [
+        "CVE-2026-72436",
+        "CVE-2026-74632",
+        "CVE-2026-89702",
+        "CVE-2026-89580",
+        "CVE-2026-72157",
+        "CVE-2026-72330",
+        "CVE-2026-72392",
+        "CVE-2026-64046",
+        "CVE-2026-72325",
+        "CVE-2026-68343",
+        "CVE-2026-74283",
+        "CVE-2026-92509"
+      ],
+      "nbCves": 605,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-53266",
+        "CVE-2025-39964"
+      ],
+      "epssMax": 0.0147,
+      "epssCve": "CVE-2026-74469",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1326",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1326",
+      "titre": "Multiples vulnérabilités dans les produits Palo Alto Networks",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Palo Alto Networks. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance. Palo Alto Networks indique que la vulnérabilité CVE-2026-0322 est activement exploitée.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1326/",
+      "date": "2026-10-15",
+      "editeurs": [
+        "Palo Alto Networks"
+      ],
+      "suivis": [
+        "Palo Alto Networks"
+      ],
+      "cves": [
+        "CVE-2026-87464",
+        "CVE-2026-87646",
+        "CVE-2026-87445",
+        "CVE-2026-87643",
+        "CVE-2026-85053",
+        "CVE-2026-87619",
+        "CVE-2026-87567",
+        "CVE-2026-95284",
+        "CVE-2026-95286",
+        "CVE-2026-102299",
+        "CVE-2026-87486",
+        "CVE-2026-87541"
+      ],
+      "nbCves": 461,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-85046",
+        "CVE-2026-0322",
+        "CVE-2026-87491"
+      ],
+      "epssMax": 0.0034,
+      "epssCve": "CVE-2026-106401",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1325",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1325",
+      "titre": "Vulnérabilité dans Cisco AsyncOS Software pour Secure Email Gateway",
+      "resume": "Une vulnérabilité a été découverte dans Cisco AsyncOS Software pour Secure Email Gateway. Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance et une atteinte à l'intégrité des données. Cisco indique que la vulnérabilité CVE-2026-76519 est activement exploitée.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1325/",
+      "date": "2026-10-15",
+      "editeurs": [
+        "Cisco"
+      ],
+      "suivis": [
+        "Cisco"
+      ],
+      "cves": [
+        "CVE-2026-76519"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-76519"
+      ],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certsante:10244",
+      "source": "CERT Santé",
+      "type": "avis",
+      "titre": "Palo Alto Networks - CVE-2026-0322",
+      "resume": "Il s’agit d’une vulnérabilité dans l’interface de gestion de PAN-OS. PAN-OS est le système d’exploitation des pare-feux Palo Alto Networks. Il équipe les gammes PA-Series et VM...",
+      "lien": "https://cyberveille.esante.gouv.fr/alertes/palo-alto-networks-cve-2026-0322-2026-10-15",
+      "date": "2026-10-15",
+      "editeurs": [
+        "Palo Alto Networks"
+      ],
+      "suivis": [
+        "Palo Alto Networks"
+      ],
+      "cves": [
+        "CVE-2026-0322"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-0322"
+      ],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certsante:10243",
+      "source": "CERT Santé",
+      "type": "avis",
+      "titre": "Cisco - CVE-2026-76519",
+      "resume": "Il s’agit d’une vulnérabilité dans la fonctionnalité Advanced Malware Protection (AMP) de Cisco Secure Email Gateway. Cisco Secure Email Gateway est une passerelle de sécurité de...",
+      "lien": "https://cyberveille.esante.gouv.fr/alertes/cisco-cve-2026-76519-2026-10-15",
+      "date": "2026-10-15",
+      "editeurs": [
+        "Cisco"
+      ],
+      "suivis": [
+        "Cisco"
+      ],
+      "cves": [
+        "CVE-2026-76519"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-76519"
+      ],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1312",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1312",
+      "titre": "Multiples vulnérabilités dans Microsoft Office",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Microsoft Office. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une atteinte à la confidentialité des données. Microsoft indique que la vulnérabilité CVE-2026-96951 est activement exploitée.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1312/",
+      "date": "2026-10-14",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-102857",
+        "CVE-2026-97742",
+        "CVE-2026-102855",
+        "CVE-2026-77902",
+        "CVE-2026-94506",
+        "CVE-2026-105715",
+        "CVE-2026-88197",
+        "CVE-2026-97760",
+        "CVE-2026-70268",
+        "CVE-2026-88167",
+        "CVE-2026-97771",
+        "CVE-2026-97753"
+      ],
+      "nbCves": 139,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-96951"
+      ],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1314",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1314",
+      "titre": "Multiples vulnérabilités dans Microsoft Windows",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Microsoft Windows. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance. Microsoft indique que la vulnérabilité CVE-2026-96951 est activement exploitée.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1314/",
+      "date": "2026-10-14",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-70096",
+        "CVE-2026-100200",
+        "CVE-2026-100201",
+        "CVE-2026-100202",
+        "CVE-2026-100203",
+        "CVE-2026-100205",
+        "CVE-2026-100215",
+        "CVE-2026-100216",
+        "CVE-2026-100217",
+        "CVE-2026-100218",
+        "CVE-2026-100219",
+        "CVE-2026-100220"
+      ],
+      "nbCves": 1121,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-96951"
+      ],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certsante:10239",
+      "source": "CERT Santé",
+      "type": "avis",
+      "titre": "Microsoft - CVE-2026-96951",
+      "resume": "Il s’agit d’une vulnérabilité dans le composant Windows Shell, qui traite l’ouverture des fichiers et des raccourcis dans l’explorateur. Windows est une famille de systèmes d...",
+      "lien": "https://cyberveille.esante.gouv.fr/alertes/microsoft-cve-2026-96951-2026-10-14",
+      "date": "2026-10-14",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-96951"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-96951"
+      ],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1334",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1334",
+      "titre": "Multiples vulnérabilités dans le noyau Linux de Red Hat",
+      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de Red Hat. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1334/",
+      "date": "2026-10-16",
+      "editeurs": [
+        "Red Hat"
+      ],
+      "suivis": [
+        "Linux"
+      ],
+      "cves": [
+        "CVE-2026-80887",
+        "CVE-2026-63974",
+        "CVE-2026-53002",
+        "CVE-2026-63921",
+        "CVE-2026-68245",
+        "CVE-2026-64385",
+        "CVE-2026-72130",
+        "CVE-2026-46319",
+        "CVE-2026-68404",
+        "CVE-2026-89526",
+        "CVE-2026-72320",
+        "CVE-2026-93207"
+      ],
+      "nbCves": 58,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.008,
+      "epssCve": "CVE-2026-89970",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1332",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1332",
+      "titre": "Multiples vulnérabilités dans les produits Microsoft",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Microsoft. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1332/",
+      "date": "2026-10-16",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-109461",
+        "CVE-2026-80092",
+        "CVE-2026-108452",
+        "CVE-2026-109468"
+      ],
+      "nbCves": 4,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0065,
+      "epssCve": "CVE-2026-109468",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1331",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1331",
+      "titre": "Multiples vulnérabilités dans Microsoft Office",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Microsoft Office. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une atteinte à la confidentialité des données et un contournement de la politique de sécurité.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1331/",
+      "date": "2026-10-16",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-108446",
+        "CVE-2026-108429",
+        "CVE-2026-108434",
+        "CVE-2026-108437",
+        "CVE-2026-108450",
+        "CVE-2026-108445",
+        "CVE-2026-108440",
+        "CVE-2026-108427",
+        "CVE-2026-108432",
+        "CVE-2026-108447",
+        "CVE-2026-108454",
+        "CVE-2026-108430"
+      ],
+      "nbCves": 29,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0051,
+      "epssCve": "CVE-2026-108434",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1320",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1320",
+      "titre": "Multiples vulnérabilités dans Sonicwall Network Security Manager",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Sonicwall Network Security Manager. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance et un contournement de la politique de sécurité.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1320/",
+      "date": "2026-10-15",
+      "editeurs": [
+        "Sonicwall"
+      ],
+      "suivis": [
+        "SonicWall"
+      ],
+      "cves": [
+        "CVE-2026-100232",
+        "CVE-2026-96540"
+      ],
+      "nbCves": 2,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1313",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1313",
+      "titre": "Multiples vulnérabilités dans Microsoft .Net",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Microsoft .Net. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1313/",
+      "date": "2026-10-14",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-70007",
+        "CVE-2026-105016",
+        "CVE-2026-96234",
+        "CVE-2026-96960",
+        "CVE-2026-96233",
+        "CVE-2026-70183",
+        "CVE-2026-70190",
+        "CVE-2026-66822",
+        "CVE-2026-96225",
+        "CVE-2026-85363",
+        "CVE-2026-96959",
+        "CVE-2026-70181"
+      ],
+      "nbCves": 43,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1315",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1315",
+      "titre": "Multiples vulnérabilités dans Microsoft Azure",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Microsoft Azure. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une atteinte à la confidentialité des données.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1315/",
+      "date": "2026-10-14",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-88094",
+        "CVE-2026-100207",
+        "CVE-2026-88132",
+        "CVE-2026-96204",
+        "CVE-2026-85922",
+        "CVE-2026-85925",
+        "CVE-2026-85891",
+        "CVE-2026-69877"
+      ],
+      "nbCves": 8,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1316",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1316",
+      "titre": "Multiples vulnérabilités dans les produits Microsoft",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Microsoft. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1316/",
+      "date": "2026-10-14",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-88086",
+        "CVE-2026-70007",
+        "CVE-2026-70179",
+        "CVE-2026-105016",
+        "CVE-2026-70298",
+        "CVE-2026-96234",
+        "CVE-2026-85790",
+        "CVE-2026-88081",
+        "CVE-2026-102238",
+        "CVE-2026-96960",
+        "CVE-2026-92707",
+        "CVE-2026-69370"
+      ],
+      "nbCves": 144,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1306",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1306",
+      "titre": "Multiples vulnérabilités dans les produits Fortinet",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Fortinet. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1306/",
+      "date": "2026-10-14",
+      "editeurs": [
+        "Fortinet"
+      ],
+      "suivis": [
+        "Fortinet"
+      ],
+      "cves": [
+        "CVE-2026-106171",
+        "CVE-2026-23705",
+        "CVE-2026-23706",
+        "CVE-2026-106172",
+        "CVE-2026-106174",
+        "CVE-2026-106170",
+        "CVE-2026-106175",
+        "CVE-2026-107656",
+        "CVE-2026-23707",
+        "CVE-2025-46773"
+      ],
+      "nbCves": 10,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1308",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1308",
+      "titre": "Multiples vulnérabilités dans Google Chrome",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Google Chrome. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1308/",
+      "date": "2026-10-14",
+      "editeurs": [
+        "Google"
+      ],
+      "suivis": [
+        "Google Chrome"
+      ],
+      "cves": [
+        "CVE-2026-110167",
+        "CVE-2026-110139",
+        "CVE-2026-110145",
+        "CVE-2026-106200",
+        "CVE-2026-110159",
+        "CVE-2026-110149",
+        "CVE-2026-110168",
+        "CVE-2026-110137",
+        "CVE-2026-110150",
+        "CVE-2026-110138",
+        "CVE-2026-106383",
+        "CVE-2026-110140"
+      ],
+      "nbCves": 47,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.005,
+      "epssCve": "CVE-2026-106358",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certsante:10247",
+      "source": "CERT Santé",
+      "type": "avis",
+      "titre": "Google - CVE-2026-110152",
+      "resume": "Il s’agit d’une vulnérabilité dans ANGLE, la couche de traduction graphique de Google Chrome. Google Chrome est un navigateur Internet développé par Google et basé sur le projet...",
+      "lien": "https://cyberveille.esante.gouv.fr/alertes/google-cve-2026-110152-2026-10-15",
+      "date": "2026-10-15",
+      "editeurs": [
+        "Google"
+      ],
+      "suivis": [
+        "Google Chrome"
+      ],
+      "cves": [
+        "CVE-2026-110152"
+      ],
+      "nbCves": 1,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0041,
+      "epssCve": "CVE-2026-110152",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1329",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1329",
+      "titre": "Multiples vulnérabilités dans Google Chrome",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Google Chrome. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1329/",
+      "date": "2026-10-16",
+      "editeurs": [
+        "Google"
+      ],
+      "suivis": [
+        "Google Chrome"
+      ],
+      "cves": [
+        "CVE-2026-110915",
+        "CVE-2026-110914",
+        "CVE-2026-110159",
+        "CVE-2026-110920",
+        "CVE-2026-110922",
+        "CVE-2026-110144",
+        "CVE-2026-110916",
+        "CVE-2026-110172",
+        "CVE-2026-110918",
+        "CVE-2026-110913",
+        "CVE-2026-110919",
+        "CVE-2026-110151"
+      ],
+      "nbCves": 15,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0034,
+      "epssCve": "CVE-2026-110916",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certsante:10251",
+      "source": "CERT Santé",
+      "type": "avis",
+      "titre": "Linux - CVE-2026-99999",
+      "resume": "Il s’agit d’une vulnérabilité dans la pile réseau IPv4 du noyau Linux, au niveau de l’offload de somme de contrôle. Le noyau Linux est le composant central des systèmes d...",
+      "lien": "https://cyberveille.esante.gouv.fr/alertes/linux-cve-2026-99999-2026-10-16",
+      "date": "2026-10-16",
+      "editeurs": [
+        "Linux"
+      ],
+      "suivis": [
+        "Linux"
+      ],
+      "cves": [
+        "CVE-2026-99999"
+      ],
+      "nbCves": 1,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1323",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1323",
+      "titre": "Vulnérabilité dans les produits Microsoft",
+      "resume": "Une vulnérabilité a été découverte dans les produits Microsoft. Elle permet à un attaquant de provoquer une élévation de privilèges.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1323/",
+      "date": "2026-10-15",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-88164"
+      ],
+      "nbCves": 1,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1305",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1305",
+      "titre": "Multiples vulnérabilités dans les produits Mozilla",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Mozilla. Certaines d'entre elles permettent à un attaquant de provoquer une élévation de privilèges, un déni de service à distance et une atteinte à la confidentialité des données.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1305/",
+      "date": "2026-10-14",
+      "editeurs": [
+        "Mozilla"
+      ],
+      "suivis": [
+        "Mozilla"
+      ],
+      "cves": [
+        "CVE-2026-109779",
+        "CVE-2026-109710",
+        "CVE-2026-109719",
+        "CVE-2026-109735",
+        "CVE-2026-109730",
+        "CVE-2026-109721",
+        "CVE-2026-109715",
+        "CVE-2026-109727",
+        "CVE-2026-109775",
+        "CVE-2026-109717",
+        "CVE-2026-109761",
+        "CVE-2026-109772"
+      ],
+      "nbCves": 82,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false
+    }
+  ],
+  "autresCritiques": [
+    {
+      "id": "certfr:CERTFR-2026-AVI-1336",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1336",
+      "titre": "Multiples vulnérabilités dans les produits IBM",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits IBM. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1336/",
+      "date": "2026-10-16",
+      "editeurs": [
+        "IBM"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-14671",
+        "CVE-2026-11548",
+        "CVE-2022-22950",
+        "CVE-2026-15955",
+        "CVE-2026-47886",
+        "CVE-2026-53091",
+        "CVE-2026-28420",
+        "CVE-2026-93565",
+        "CVE-2026-53192",
+        "CVE-2026-59651",
+        "CVE-2026-68343",
+        "CVE-2026-87795"
+      ],
+      "nbCves": 493,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2021-44228"
+      ],
+      "epssMax": 1,
+      "epssCve": "CVE-2021-44228",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1298",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1298",
+      "titre": "Multiples vulnérabilités dans les produits Siemens",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Siemens. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1298/",
+      "date": "2026-10-13",
+      "editeurs": [
+        "Siemens"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2021-41617",
+        "CVE-2023-28531",
+        "CVE-2023-51384",
+        "CVE-2024-26982",
+        "CVE-2024-27056",
+        "CVE-2024-26783",
+        "CVE-2025-38322",
+        "CVE-2025-38614",
+        "CVE-2025-38681",
+        "CVE-2025-38721",
+        "CVE-2025-38725",
+        "CVE-2025-38727"
+      ],
+      "nbCves": 719,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2025-39964",
+        "CVE-2026-53362"
+      ],
+      "epssMax": 0.0136,
+      "epssCve": "CVE-2025-39964",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certsante:10250",
+      "source": "CERT Santé",
+      "type": "avis",
+      "titre": "BeyondTrust - CVE-2026-102764",
+      "resume": "Il s’agit d’une vulnérabilité dans les composants internes de messagerie de BeyondTrust Remote Support. Remote Support est une solution d’assistance et de prise en main à distance...",
+      "lien": "https://cyberveille.esante.gouv.fr/alertes/beyondtrust-cve-2026-102764-2026-10-16",
+      "date": "2026-10-16",
+      "editeurs": [
+        "BeyondTrust"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-102764"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-102764"
+      ],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certsante:10249",
+      "source": "CERT Santé",
+      "type": "avis",
+      "titre": "JetBrains - CVE-2026-63077",
+      "resume": "Il s’agit d’une vulnérabilité dans le protocole de polling des agents de TeamCity On-Premises. TeamCity est un serveur d’intégration et de livraison continues (CI/CD) édité par...",
+      "lien": "https://cyberveille.esante.gouv.fr/alertes/jetbrains-cve-2026-63077-2026-10-16",
+      "date": "2026-10-16",
+      "editeurs": [
+        "JetBrains"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-63077"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-63077"
+      ],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1301",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1301",
+      "titre": "Multiples vulnérabilités dans les produits Adobe",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Adobe. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1301/",
+      "date": "2026-10-14",
+      "editeurs": [
+        "Adobe"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-71385",
+        "CVE-2026-92911",
+        "CVE-2026-95631",
+        "CVE-2026-76001",
+        "CVE-2026-106617",
+        "CVE-2026-105900",
+        "CVE-2026-92464",
+        "CVE-2026-90530",
+        "CVE-2026-95630",
+        "CVE-2026-105898",
+        "CVE-2026-75650",
+        "CVE-2026-106614"
+      ],
+      "nbCves": 44,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-75650"
+      ],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false
+    }
+  ],
+  "menaces": [
+    {
+      "id": "certfr:CERTFR-2026-ACT-043",
+      "source": "CERT-FR",
+      "type": "actualite",
+      "reference": "CERTFR-2026-ACT-043",
+      "titre": "Bulletin d'actualité CERTFR-2026-ACT-043 (12 octobre 2026)",
+      "resume": "Ce bulletin d'actualité du CERT-FR revient sur les vulnérabilités significatives de la semaine passée pour souligner leurs criticités. Il ne remplace pas l'analyse de l'ensemble des avis et alertes publiés par le CERT-FR dans le cadre d'une analyse de risques pour prioriser l'application des...",
+      "lien": "https://www.cert.ssi.gouv.fr/actualite/CERTFR-2026-ACT-043/",
+      "date": "2026-10-12",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "info",
+      "cloturee": null,
+      "rancongiciel": false
+    }
+  ]
+}
