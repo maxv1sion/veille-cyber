@@ -6,6 +6,7 @@ const sansAccents = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '');
 // Mots trop génériques pour distinguer un sujet d'un autre
 const MOTS_VIDES = new Set(`
 le la les un une des du de d l au aux et ou en dans sur pour par avec sans sous vers chez ce cet cette ces son sa ses leur leurs
+vos votre notre nos mes mon ton tes vous nous ils elles lui eux quand comment pourquoi your our you they them
 qui que quoi dont est sont ete etre a ont avoir fait faire plus moins tres tout tous toute toutes deux trois cinq dix cent mille millions milliers
 nouveau nouvelle nouveaux nouvelles premier premiere apres avant depuis encore deja aussi alors comme mais donc car pas ne se sa
 the a an of to in on for and or with by from at as is are was were be been has have had its it this that these those their
@@ -32,6 +33,11 @@ espion espionnage spyware stealer infostealer loader shellcode trojan troyen bot
 `.split(/\s+/).filter(Boolean));
 
 const singulier = (m) => (m.length > 4 && m.endsWith('s') && !m.endsWith('ss') ? m.slice(0, -1) : m);
+// Expressions de deux mots consécutifs (hors mots vides), ex. « rank math », « cloud backup »
+export function bigrammes(texte = '') {
+  const mots = sansAccents(texte.toLowerCase()).split(/[^a-z0-9]+/).map(singulier).filter((m) => m.length >= 3 && !MOTS_VIDES.has(m) && !/^\d+$/.test(m));
+  return [...new Set(mots.slice(1).map((m, k) => `${mots[k]} ${m}`))];
+}
 export function jetons(texte = '') {
   const t = sansAccents(texte.toLowerCase());
   const mots = [...t.split(/[^a-z0-9]+/), ...t.split(/[^a-z]+/)].map(singulier);
@@ -40,7 +46,7 @@ export function jetons(texte = '') {
 
 // ---------- Signaux presse ----------
 const SIGNAUX = [
-  ['exploitation active', /exploit[ée]e?s? activement|activement exploit|exploitation active|actively exploited|exploited in (the wild|attacks)|under active exploitation|exploited as a zero.?day/i],
+  ['exploitation active', /exploit[ée]e?s? activement|activement exploit|exploitation active|d[ée]j[àa] exploit|exploit[ée]e?s? dans la nature|en cours d'exploitation|actively exploited|exploited in (the wild|attacks)|under active exploitation|exploited as a zero.?day/i],
   ['zero-day', /z[ée]ro.?day|0.?day/i],
   ['exécution de code à distance', /ex[ée]cution de code (arbitraire )?[àa] distance|remote code execution|\bRCE\b/i],
   ["correctif d'urgence", /(mise [àa] jour|correctif|patch)s? d'urgence|emergency (patch|update|security update|fix)|out.of.band/i],
@@ -61,6 +67,11 @@ const JOUR = 86400000;
 const ecartJours = (a, b) => Math.abs(new Date(a) - new Date(b)) / JOUR;
 const FRANCAIS = new Set(['ZATAZ', 'Clubic', 'LeMagIT']);
 const OFFICIELS = ['alerte', 'avis', 'kev'];
+// Grands éditeurs et plateformes : un seul de ces noms en commun ne suffit pas à dire que deux articles parlent du même sujet
+export const GRANDS_NOMS = ['openai', 'anthropic', 'google', 'apple', 'microsoft', 'amazon', 'aws', 'meta', 'facebook', 'instagram', 'whatsapp',
+  'nvidia', 'intel', 'amd', 'samsung', 'oracle', 'ibm', 'sap', 'adobe', 'wordpress', 'android', 'linux', 'windows', 'chrome', 'firefox',
+  'cloudflare', 'okta', 'salesforce', 'slack', 'zoom', 'telegram', 'discord', 'tiktok', 'gemini', 'chatgpt', 'copilot', 'claude',
+  'cisa', 'anssi', 'fbi', 'europol', 'nsa', 'otan', 'nato', 'ukraine', 'russie', 'chine', 'iran', 'israel'];
 const RANG_OFFICIEL = (i) => (i.type === 'alerte' ? 0 : i.source === 'CERT-FR' ? 1 : i.source === 'CERT Santé' ? 2 : 3);
 
 /**
@@ -68,11 +79,11 @@ const RANG_OFFICIEL = (i) => (i.type === 'alerte' ? 0 : i.source === 'CERT-FR' ?
  *  - presse : sujet (id du groupe), principal (bool), relais [{source, titre, lien}], officiel (id ou null)
  *  - officiels : presse [{source, titre, lien}] des articles rattachés
  */
-export function regrouper(items, { courants = new Set(), seuil = 6, seuilOfficiel = 9, rare = 3, fenetrePresse = 3, fenetreOfficiel = 10 } = {}) {
+export function regrouper(items, { courants = new Set(), generiques = new Set(), seuil = 6, seuilOfficiel = 9, rare = 3, frequent = 8, fenetrePresse = 3, fenetreOfficiel = 10 } = {}) {
   const presse = items.filter((i) => i.type === 'actu').sort((a, b) => a.date.localeCompare(b.date));
   const officiels = items.filter((i) => OFFICIELS.includes(i.type));
 
-  for (const d of presse) d._jetons = jetons(d.titre);
+  for (const d of presse) { d._jetons = jetons(d.titre); d._bigrammes = bigrammes(d.titre); }
   for (const d of officiels) d._jetons = jetons(`${d.titre} ${(d.produits || []).join(' ')} ${(d.editeurs || []).join(' ')} ${(d.resume || '').slice(0, 200)}`);
   const docs = [...presse, ...officiels];
   const df = new Map();
@@ -86,10 +97,20 @@ export function regrouper(items, { courants = new Set(), seuil = 6, seuilOfficie
   // Noms propres : mots absents de la liste des mots courants (produits, éditeurs, campagnes…)
   const dfPresse = new Map();
   for (const d of presse) for (const j of d._jetons) dfPresse.set(j, (dfPresse.get(j) || 0) + 1);
+  // Marqueur de sujet : mot repris par 2 ou 3 articles seulement (ex. « Rank Math »)
+  const marqueur = (m) => { const n = dfPresse.get(m) || 0; return n >= 2 && n <= rare; };
   const procheP = (a, b) => {
     if (memeCve(a, b)) return true;
-    const noms = communs(a, b).filter((j) => !courants.has(j));
-    return noms.some((j) => (dfPresse.get(j) || 0) <= rare) || noms.length >= 2 || (noms.length === 1 && score(a, b) >= seuil + 2);
+    const noms = [...communs(a, b).filter((m) => !courants.has(m)), ...a._bigrammes.filter((x) => b._bigrammes.includes(x))];
+    if (!noms.length) return false;
+    if (noms.length >= 2) return true;
+    // Même signal d'alerte (faille critique, zero-day…) : un nom commun suffit
+    if ((a.signaux || []).some((x) => (b.signaux || []).includes(x))) return true;
+    // Un seul nom commun : pas s'il s'agit d'un grand éditeur ou d'une plateforme citée dans plein d'histoires
+    if (generiques.has(noms[0]) || (dfPresse.get(noms[0]) || 0) > frequent) return false;
+    // ni si chaque article a son propre nom distinctif (ex. deux extensions WordPress différentes)
+    const propres = (x, y) => x._jetons.filter((m) => !y._jetons.includes(m) && !courants.has(m) && marqueur(m));
+    return !(propres(a, b).length && propres(b, a).length);
   };
   const procheO = (p, o) => memeCve(p, o) || score(p, o) >= seuilOfficiel;
 
@@ -122,7 +143,7 @@ export function regrouper(items, { courants = new Set(), seuil = 6, seuilOfficie
     }
     if (meilleur) meilleur.presse.push(...membres.map((m) => ({ source: m.source, titre: m.titre, lien: m.lien })));
   }
-  for (const d of docs) delete d._jetons;
+  for (const d of docs) { delete d._jetons; delete d._bigrammes; }
   for (const o of officiels) if (!o.presse.length) delete o.presse;
   return groupes;
 }

@@ -9,7 +9,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { regrouper, signauxPresse, RE_SECURITE } from './sujets.mjs';
+import { regrouper, signauxPresse, RE_SECURITE, GRANDS_NOMS, jetons } from './sujets.mjs';
 
 const RACINE = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(RACINE, 'data');
@@ -230,7 +230,7 @@ async function collecterActualites(sources) {
       let gardes = 0;
       for (const it of items) {
         if (!it.lien || !it.titre) continue;
-        if (s.filtreSecurite && !RE_SECURITE.test(`${it.titre} ${sansHtml(it.description).slice(0, 300)}`)) continue;
+        if (s.filtreSecurite && !RE_SECURITE.test(it.titre)) continue;
         gardes++;
         sortie.push({
           id: `actu:${it.lien.replace(/[?#].*$/, '')}`, source: s.nom, type: 'actu',
@@ -352,7 +352,9 @@ async function produireHebdo(items) {
 async function principal() {
   const sources = await lireJson(join(RACINE, 'config', 'sources.json'), null);
   if (!sources) throw new Error('config/sources.json illisible');
-  const suivis = preparerEditeurs(await lireJson(join(RACINE, 'config', 'editeurs.json'), { editeurs: [] }));
+  const confEditeurs = await lireJson(join(RACINE, 'config', 'editeurs.json'), { editeurs: [] });
+  const suivis = preparerEditeurs(confEditeurs);
+  const suivisMotsCles = (confEditeurs.editeurs || []).flatMap((e) => e.motsCles);
   const registre = await lireJson(join(DATA, 'registre.json'), { items: [] });
   const existants = new Map(registre.items.map((i) => [i.id, i]));
 
@@ -386,7 +388,8 @@ async function principal() {
   const epss = sources.epss?.actif ? await enrichirEpss(sources.epss, items) : {};
   const courants = new Set((await readFile(join(RACINE, 'config', 'mots-courants.txt'), 'utf8').catch(() => '')).split('\n').filter((l) => l && !l.startsWith('#')));
   for (const i of items) if (i.type === 'actu') i.signaux = signauxPresse(i.titre, i.resume);
-  regrouper(items, { courants });
+  const generiques = new Set([...GRANDS_NOMS, ...suivisMotsCles.flatMap((k) => jetons(k))]);
+  regrouper(items, { courants, generiques });
 
   // Doublons entre sources officielles : un avis CERT Santé dont toutes les CVE figurent
   // dans un avis ou une alerte CERT-FR proche est replié sous celui-ci
