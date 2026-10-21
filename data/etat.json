@@ -1,72 +1,72 @@
 {
-  "derniereCollecte": "2026-10-21T15:52:19.453Z",
-  "ajouts": 37,
-  "nbElements": 548,
+  "derniereCollecte": "2026-10-21T18:57:49.055Z",
+  "ajouts": 27,
+  "nbElements": 552,
   "sources": {
     "CERT-FR alertes": {
       "ok": true,
       "detail": "8 récents, 1 lus en détail",
-      "le": "2026-10-21T15:52:19.453Z"
+      "le": "2026-10-21T18:57:49.055Z"
     },
     "CERT-FR avis": {
       "ok": true,
-      "detail": "234 récents, 8 lus en détail",
-      "le": "2026-10-21T15:52:19.453Z"
+      "detail": "236 récents, 3 lus en détail",
+      "le": "2026-10-21T18:57:49.055Z"
     },
     "CERT-FR cti": {
       "ok": true,
       "detail": "40 éléments",
-      "le": "2026-10-21T15:52:19.453Z"
+      "le": "2026-10-21T18:57:49.055Z"
     },
     "CERT-FR actualite": {
       "ok": true,
       "detail": "40 éléments",
-      "le": "2026-10-21T15:52:19.453Z"
+      "le": "2026-10-21T18:57:49.055Z"
     },
     "CERT-FR durcissement": {
       "ok": true,
       "detail": "5 éléments",
-      "le": "2026-10-21T15:52:19.453Z"
+      "le": "2026-10-21T18:57:49.055Z"
     },
     "CERT Santé": {
       "ok": true,
       "detail": "116 éléments",
-      "le": "2026-10-21T15:52:19.453Z"
+      "le": "2026-10-21T18:57:49.055Z"
     },
     "CISA KEV": {
       "ok": true,
       "detail": "catalogue 2026.10.21 : 1754 entrées, 101 dans la période",
-      "le": "2026-10-21T15:52:19.453Z"
+      "le": "2026-10-21T18:57:49.055Z"
     },
     "ZATAZ": {
       "ok": true,
       "detail": "1 articles sur des failles, sur 10",
-      "le": "2026-10-21T15:52:19.453Z"
+      "le": "2026-10-21T18:57:49.055Z"
     },
     "BleepingComputer": {
       "ok": true,
-      "detail": "2 articles sur des failles, sur 15",
-      "le": "2026-10-21T15:52:19.453Z"
+      "detail": "3 articles sur des failles, sur 15",
+      "le": "2026-10-21T18:57:49.055Z"
     },
     "The Hacker News": {
       "ok": true,
-      "detail": "14 articles sur des failles, sur 50",
-      "le": "2026-10-21T15:52:19.453Z"
+      "detail": "13 articles sur des failles, sur 50",
+      "le": "2026-10-21T18:57:49.055Z"
     },
     "Clubic": {
       "ok": true,
-      "detail": "4 articles sur des failles, sur 50",
-      "le": "2026-10-21T15:52:19.453Z"
+      "detail": "5 articles sur des failles, sur 50",
+      "le": "2026-10-21T18:57:49.055Z"
     },
     "LeMagIT": {
       "ok": true,
       "detail": "2 articles sur des failles, sur 20",
-      "le": "2026-10-21T15:52:19.453Z"
+      "le": "2026-10-21T18:57:49.055Z"
     },
     "EPSS": {
       "ok": true,
-      "detail": "373 CVE mises à jour",
-      "le": "2026-10-21T15:52:19.453Z"
+      "detail": "16 CVE mises à jour",
+      "le": "2026-10-21T18:57:49.055Z"
     }
   }
 }
