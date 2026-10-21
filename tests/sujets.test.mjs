@@ -2,7 +2,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { regrouper, signauxPresse, GRANDS_NOMS, jetons } from '../scripts/sujets.mjs';
+import { regrouper, signauxPresse, GRANDS_NOMS, jetons, parleDeFaille } from '../scripts/sujets.mjs';
 
 const courants = new Set(readFileSync(new URL('../config/mots-courants.txt', import.meta.url), 'utf8').split('\n').filter((l) => l && !l.startsWith('#')));
 const conf = JSON.parse(readFileSync(new URL('../config/editeurs.json', import.meta.url), 'utf8'));
@@ -62,4 +62,12 @@ test('pas de rapprochement sur des mots banals', () => {
 test('signaux presse', () => {
   assert.ok(signauxPresse('PHP : deux vulnérabilités critiques déjà exploitées en cours de correction').includes('exploitation active'));
   assert.deepEqual(signauxPresse('⚡ Weekly Recap: 98 Zero-Days, Rogue AI Agents'), []);
+});
+test('presse : seuls les articles sur des failles sont gardés', () => {
+  for (const t of ['PHP : deux vulnérabilités critiques déjà exploitées en cours de correction', 'NordVPN corrige une faille permettant à des pirates de désactiver des services Windows',
+    'Critical FortiSIEM Flaw Gets Public Exploit PoC for Unauthenticated Remote Code Execution', 'Palo Alto Networks Patches PAN-OS Authenticated RCE Flaw Amid Active Exploitation'])
+    assert.ok(parleDeFaille(t), t);
+  for (const t of ['Des arrestations autour d’un SMS blaster', 'Une ministre française ciblée par un logiciel espion', 'Ventes Flash Amazon : 10 promos tech, toutes sous la barre des 300€',
+    'ChatGPT lance les conversations verrouillées : une nouvelle option de confidentialité très attendue', '⚡ Weekly Recap: 98 Zero-Days, Rogue AI Agents, $100M Crypto Theft'])
+    assert.ok(!parleDeFaille(t), t);
 });

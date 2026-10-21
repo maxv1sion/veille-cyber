@@ -9,7 +9,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { regrouper, signauxPresse, RE_SECURITE, GRANDS_NOMS, jetons } from './sujets.mjs';
+import { regrouper, signauxPresse, RE_SECURITE, GRANDS_NOMS, jetons, parleDeFaille } from './sujets.mjs';
 
 const RACINE = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(RACINE, 'data');
@@ -222,7 +222,7 @@ async function collecterKev(conf, retentionJours) {
   }
 }
 
-async function collecterActualites(sources) {
+async function collecterActualites(sources, failleSeulement) {
   const sortie = [];
   for (const s of sources.filter((x) => x.actif !== false)) {
     try {
@@ -230,7 +230,7 @@ async function collecterActualites(sources) {
       let gardes = 0;
       for (const it of items) {
         if (!it.lien || !it.titre) continue;
-        if (s.filtreSecurite && !RE_SECURITE.test(it.titre)) continue;
+        if (failleSeulement ? !parleDeFaille(it.titre) : s.filtreSecurite && !RE_SECURITE.test(it.titre)) continue;
         gardes++;
         sortie.push({
           id: `actu:${it.lien.replace(/[?#].*$/, '')}`, source: s.nom, type: 'actu',
@@ -239,7 +239,7 @@ async function collecterActualites(sources) {
           editeurs: [], produits: [], cves: extraireCves(it.titre + ' ' + it.description), risques: [],
         });
       }
-      noter(s.nom, true, s.filtreSecurite ? `${gardes} articles cyber sur ${items.length}` : `${items.length} éléments`);
+      noter(s.nom, true, failleSeulement ? `${gardes} articles sur des failles, sur ${items.length}` : s.filtreSecurite ? `${gardes} articles cyber sur ${items.length}` : `${items.length} éléments`);
     } catch (e) {
       noter(s.nom, false, e.message);
     }
@@ -367,7 +367,7 @@ async function principal() {
     nouveaux.push(...items);
     if (tous) kevSet = new Set(tous.keys());
   }
-  nouveaux.push(...(await collecterActualites(sources.actualites || [])));
+  nouveaux.push(...(await collecterActualites(sources.actualites || [], sources.presseFaillesSeulement !== false)));
 
   // Fusion : un nouvel élément remplace l'ancien, sauf détail CERT-FR plus riche déjà connu
   let ajouts = 0;
@@ -386,7 +386,7 @@ async function principal() {
   let items = [...existants.values()].filter((i) => i.date >= (i.type === 'actu' ? limActu : i.type === 'kev' ? limKev : limVuln));
   // Médias généralistes : on ne garde que les articles dont le titre parle de cyber (y compris ceux déjà enregistrés)
   const filtres = new Set((sources.actualites || []).filter((x) => x.filtreSecurite).map((x) => x.nom));
-  items = items.filter((i) => !(i.type === 'actu' && filtres.has(i.source) && !RE_SECURITE.test(i.titre)));
+  items = items.filter((i) => i.type !== 'actu' || (sources.presseFaillesSeulement !== false ? parleDeFaille(i.titre) : !filtres.has(i.source) || RE_SECURITE.test(i.titre)));
 
   const epss = sources.epss?.actif ? await enrichirEpss(sources.epss, items) : {};
   const courants = new Set((await readFile(join(RACINE, 'config', 'mots-courants.txt'), 'utf8').catch(() => '')).split('\n').filter((l) => l && !l.startsWith('#')));

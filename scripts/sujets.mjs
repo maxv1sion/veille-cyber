@@ -53,13 +53,16 @@ const SIGNAUX = [
   ['faille non corrigée', /non corrig[ée]e?s?|sans correctif|unpatched|no patch/i],
   ['faille critique', /(faille|vuln[ée]rabilit[ée])s? critique|critical (flaw|vulnerabilit|bug|security|rce)|CVSS[^0-9]{0,12}(9(\.\d)?|10(\.0)?)\b/i],
 ];
-const RE_RECAP = /weekly recap|threatsday|week in review|this week in|r[ée]cap(itulatif)? de la semaine|semaine en bref|newsletter|webinar|podcast/i;
+export const RE_RECAP = /weekly recap|threatsday|week in review|this week in|r[ée]cap(itulatif)? de la semaine|semaine en bref|newsletter|webinar|podcast/i;
 export function signauxPresse(titre = '', resume = '') {
   if (RE_RECAP.test(titre)) return [];
   const t = `${titre} ${resume}`;
   return SIGNAUX.filter(([, re]) => re.test(t)).map(([nom]) => nom);
 }
 
+// Presse : on ne garde que les articles dont le titre parle d'une faille (le reste est de l'actualité générale)
+export const RE_VULN = /(?<![a-zà-ÿ])(failles?|vuln[ée]rab|cve-|z[ée]ro.?days?|0.?days?|exploit|correctifs?|patch|mises? à jour de s[ée]curit|security updates?|flaws?|bugs?|rce|remote code|ex[ée]cution de code|injection|bypass|contournement|[ée]l[ée]vation de privil|privilege escalation|poc|advisory|advisories|kev|unpatched|non corrig)/i;
+export const parleDeFaille = (titre = '') => RE_VULN.test(titre) && !RE_RECAP.test(titre);
 export const RE_SECURITE = /(?<![a-zà-ÿ])(cyber|s[ée]curit|faille|vuln[ée]rab|ran[çc]ongiciel|ransomware|pirat|hack|malware|logiciel malveillant|phishing|hame[çc]onnage|fuite de donn|cyberattaque|CVE-|ANSSI|CERT(?![a-z])|z[ée]ro.?day|exploit|espion|botnet|ddos|chiffrement|mot de passe|authentification|patch tuesday|backdoor|porte d[ée]rob|spyware|infostealer|arnaque)/i;
 
 // ---------- Regroupement ----------

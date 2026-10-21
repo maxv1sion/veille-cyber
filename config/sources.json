@@ -1,5 +1,6 @@
 {
-  "_aide": "Sources de la veille. Mettre \"actif\": false pour couper une source sans la supprimer. \"filtreSecurite\": true ne garde que les articles qui parlent de cybersécurité (pour les médias généralistes).",
+  "_aide": "Sources de la veille. Mettre \"actif\": false pour couper une source sans la supprimer. \"presseFaillesSeulement\": true ne garde, dans la presse, que les articles dont le titre parle d'une faille ; false garde toute l'actualité cyber (\"filtreSecurite\" filtre alors les médias généralistes).",
+  "presseFaillesSeulement": true,
   "conservation": {
     "vulnerabilitesJours": 730,
     "failleExploiteesJours": 90,
