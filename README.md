@@ -2,8 +2,8 @@
 
 Veille automatique des vulnérabilités et menaces utiles à un RSSI, publiée avec GitHub Pages.
 
-- **Au quotidien** (`index.html`) : liste « à traiter en priorité », puis toutes les publications filtrables par période, type, priorité, éditeur, source, parc suivi et failles exploitées
-- **Synthèse de la semaine** (`hebdo.html`) : récapitulatif du lundi au dimanche, imprimable en PDF et copiable en texte pour un mail
+- **Au quotidien** (`index.html`), mise à jour chaque matin : liste « à traiter en priorité », puis toutes les publications filtrables par période, type, priorité, éditeur, source, parc suivi et failles exploitées
+- **Synthèse de la semaine** (`hebdo.html`) : récapitulatif du lundi au dimanche, produit le lundi matin, imprimable en PDF et copiable en texte pour un mail
 
 ## Sources
 
@@ -22,7 +22,7 @@ Exception volontaire : les publications officielles du CERT-FR qui ne sont pas d
 
 ## Fonctionnement
 
-GitHub Actions lance `scripts/collecte.mjs` toutes les 3 heures (fichier `.github/workflows/collecte.yml`). Le script :
+GitHub Actions lance `scripts/collecte.mjs` **une fois par jour, tôt le matin** : vers 4h20 en hiver et 5h20 en été, heure de Paris (fichier `.github/workflows/collecte.yml`). GitHub décale parfois le lancement de quelques minutes quand ses serveurs sont chargés. Le script :
 
 1. récupère les sources et ne relit en détail que les avis CERT-FR nouveaux ou modifiés
 2. croise les CVE avec le catalogue KEV et les scores EPSS
@@ -73,7 +73,11 @@ Les modifications se font directement dans GitHub (crayon « Edit this file »),
 
 ## Lancer une collecte à la main
 
-Onglet **Actions** du dépôt, workflow « Collecte veille cyber », bouton **Run workflow**. Cocher « Régénérer la synthèse » pour refaire celle de la semaine précédente.
+En dehors du passage du matin (par exemple quand une faille urgente sort dans la journée) : onglet **Actions** du dépôt, workflow « Collecte veille cyber », bouton **Run workflow**. Cocher « Régénérer la synthèse » pour refaire celle de la semaine précédente.
+
+## Changer l'heure de la collecte
+
+Dans `.github/workflows/collecte.yml`, ligne `cron: '17 3 * * *'` : le 2e nombre est l'heure **UTC** (heure de Paris moins 1 h en hiver, moins 2 h en été), le 1er les minutes. Exemple : `'17 5 * * *'` pour 6h17 en hiver. Pour plusieurs passages par jour : `'17 3,12 * * *'` (matin et midi).
 
 ## Mise en ligne (une seule fois)
 

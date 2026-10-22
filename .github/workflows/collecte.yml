@@ -2,8 +2,9 @@ name: Collecte veille cyber
 
 on:
   schedule:
-    # Toutes les 3 heures (heure UTC), décalé de quelques minutes pour éviter les pics
-    - cron: '17 */3 * * *'
+    # Une fois par jour, tôt le matin. GitHub raisonne en heure UTC :
+    # 3h17 UTC = 4h17 en hiver et 5h17 en été (heure de Paris)
+    - cron: '17 3 * * *'
   workflow_dispatch:
     inputs:
       forcer_hebdo:
