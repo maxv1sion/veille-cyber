@@ -1,0 +1,1677 @@
+{
+  "semaine": "2026-S43",
+  "debut": "2026-10-19",
+  "fin": "2026-10-25",
+  "genere": "2026-10-26T03:48:03.660Z",
+  "chiffres": {
+    "alertes": 1,
+    "avisCertFr": 41,
+    "avisCertSante": 16,
+    "kevAjoutees": 8,
+    "critiques": 18,
+    "signauxPresse": 10,
+    "surParcSuivi": 15
+  },
+  "alertes": [
+    {
+      "id": "certfr:CERTFR-2026-ALE-014",
+      "source": "CERT-FR",
+      "type": "alerte",
+      "reference": "CERTFR-2026-ALE-014",
+      "titre": "[Màj] Multiples vulnérabilités dans PHP",
+      "resume": "<span class=\"important-content\"[Mise à jour du 22 octobre 2026]</span<br/ Le CERT-FR a connaissance de preuves de concept pour les vulnérabilités CVE-2026-109618 et CVE-2026-109619 pour des déploiements spécifique de PHP. [Mise à jour du 21 octobre 2026]<br/ Les correctifs de sécurité sont disponibles sur le site de l'éditeur. PHP indique que les vulnérabilités CVE-2026-109618 et CVE-2026-109619…",
+      "lien": "https://cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-014/",
+      "date": "2026-10-21",
+      "editeurs": [
+        "PHP"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-109619",
+        "CVE-2026-109618"
+      ],
+      "nbCves": 2,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 1,
+      "epssCve": "CVE-2026-109619",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "Clubic",
+          "titre": "Deux failles critiques menacent des millions de sites PHP, une mise à jour d’urgence arrive ce mercredi après-midi",
+          "lien": "https://www.clubic.com/actualite-635179-deux-failles-critiques-menacent-des-millions-de-sites-php-une-mise-a-jour-d-urgence-arrive-ce-mercredi-apres-midi.html"
+        },
+        {
+          "source": "ZATAZ",
+          "titre": "PHP2Shell : deux failles critiques menacent les serveurs web",
+          "lien": "https://www.zataz.com/php2shell-deux-failles-critiques-menacent-les-serveurs-web/"
+        },
+        {
+          "source": "LeMagIT",
+          "titre": "PHP : deux vulnérabilités critiques déjà exploitées en cours de correction",
+          "lien": "https://www.lemagit.fr/actualites/366652404/PHP-deux-vulnerabilites-critiques-deja-exploitees-en-cours-de-correction"
+        },
+        {
+          "source": "Clubic",
+          "titre": "Ces failles critiques de PHP dormaient depuis des années : l'IA a permis de les exploiter",
+          "lien": "https://www.clubic.com/actualite-635362-ces-failles-critiques-de-php-dormaient-depuis-des-annees-l-ia-a-permis-de-les-exploiter.html"
+        },
+        {
+          "source": "Clubic",
+          "titre": "Failles PHP : les correctifs sont disponibles, mais votre hébergeur protège-t-il vraiment votre site ?",
+          "lien": "https://www.clubic.com/actualite-635374-failles-php-les-correctifs-sont-disponibles-mais-votre-hebergeur-protege-t-il-vraiment-votre-site.html"
+        },
+        {
+          "source": "Clubic",
+          "titre": "Ameli, CAF, impôts, URSSAF : pourquoi tant de sites publics sont hors service ? On vous explique les failles PHP",
+          "lien": "https://www.clubic.com/actualite-635455-ameli-caf-impots-urssaf-pourquoi-tant-de-sites-publics-sont-hors-service-on-vous-explique-les-failles-php.html"
+        },
+        {
+          "source": "BleepingComputer",
+          "titre": "PHP warns admins of two critical flaws, emergency patches coming tomorrow",
+          "lien": "https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "PHP2Shell: Two Unpatched Critical PHP RCE Flaws (CVSS 9.2) Trigger Emergency Security Alert",
+          "lien": "https://thehackernews.com/2026/10/php2shell-two-unpatched-critical-php.html"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "PHP2Shell: What Actually Protects You Before the 14:00 UTC PHP RCE Patch, and What Doesn't",
+          "lien": "https://thehackernews.com/2026/10/php2shell-what-actually-protects-you.html"
+        },
+        {
+          "source": "BleepingComputer",
+          "titre": "PHP ships emergency patches for critical PHP2Shell flaws",
+          "lien": "https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws/"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "PHP Issues Emergency Patches for Two Critical PHP2Shell RCE Flaws as Exploit Attempts Emerge",
+          "lien": "https://thehackernews.com/2026/10/php-issues-emergency-patches-for-two.html"
+        },
+        {
+          "source": "BleepingComputer",
+          "titre": "PHP shares mitigation for new RCE vulnerability with no patch",
+          "lien": "https://www.bleepingcomputer.com/news/security/php-shares-mitigation-for-new-and-unpatched-rce-vulnerability/"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "PHP Warns of Another Unpatched RCE Risk Two Days After Emergency PHP2Shell Patches",
+          "lien": "https://thehackernews.com/2026/10/urgent-php-warns-of-another-unpatched.html"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "Someone Tried to Exploit PHP2Shell 4 Days Before the Vulnerabilities Were Publicly Disclosed",
+          "lien": "https://thehackernews.com/2026/10/someone-tried-to-exploit-php2shell-4.html"
+        },
+        {
+          "source": "BleepingComputer",
+          "titre": "Amazon says PHP2Shell exploitation began 4 days before patches",
+          "lien": "https://www.bleepingcomputer.com/news/security/amazon-says-php2shell-exploitation-began-4-days-before-patches/"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "PHP2Shell Exploit Attempts Hit Millions as Attackers Try to Deploy Mirai Malware",
+          "lien": "https://thehackernews.com/2026/10/php2shell-exploit-attempts-hit-millions.html"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "PHP2Shell Exploitation Hits Government Entity Amid Global Scanning and Signs of AI-Assisted Hacking",
+          "lien": "https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "aussi": [
+        {
+          "source": "CERT Santé",
+          "titre": "PHP - CVE-2026-109618",
+          "lien": "https://cyberveille.esante.gouv.fr/alertes/php-cve-2026-109618-2026-10-21"
+        }
+      ],
+      "doublonDe": null
+    }
+  ],
+  "kev": [
+    {
+      "id": "kev:CVE-2026-110447",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-110447",
+      "titre": "Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
+      "resume": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-110447",
+      "date": "2026-10-23",
+      "editeurs": [
+        "Collabora"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-110447"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-110447"
+      ],
+      "epssMax": 0.1233,
+      "epssCve": "CVE-2026-110447",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-106931",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-106931",
+      "titre": "EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability",
+      "resume": "EG Secure Solutions SiteGuard Server Edition contains an OS command injection vulnerability which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-106931",
+      "date": "2026-10-20",
+      "editeurs": [
+        "EG Secure Solutions"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-106931"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-106931"
+      ],
+      "epssMax": 0.0117,
+      "epssCve": "CVE-2026-106931",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-114625",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-114625",
+      "titre": "Arista VeloCloud Orchestrator SQL Injection Vulnerability",
+      "resume": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-114625",
+      "date": "2026-10-23",
+      "editeurs": [
+        "Arista"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-114625"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-114625"
+      ],
+      "epssMax": 0.0103,
+      "epssCve": "CVE-2026-114625",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-96656",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-96656",
+      "titre": "Plex Media Server External Control of File Name or Path Vulnerability",
+      "resume": "Plex Media Server contains an external control of file name or path vulnerability which can allow an admin user to write arbitrary files that may be executed on load. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96655. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-96656",
+      "date": "2026-10-20",
+      "editeurs": [
+        "Plex"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-96656"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-96656"
+      ],
+      "epssMax": 0.0082,
+      "epssCve": "CVE-2026-96656",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-96655",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-96655",
+      "titre": "Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability",
+      "resume": "Plex Media Server contains a server-side request forgery (SSRF) vulnerability that could allow an authenticated user to request arbitrary internal or external addresses via the '/video/:/transcode/universal' path parameter. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96656. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes)…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-96655",
+      "date": "2026-10-20",
+      "editeurs": [
+        "Plex"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-96655"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-96655"
+      ],
+      "epssMax": 0.0046,
+      "epssCve": "CVE-2026-96655",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-96654",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-96654",
+      "titre": "Plex Media Server Improper Neutralization of Encoded URI Schemes in a Web Page Vulnerability",
+      "resume": "Plex Media Server contains an improper neutralization of encoded URI schemes in a web page vulnerability that could allow an attacker to call other plugins' functions and supply their own parameters. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96655, and CVE-2026-96656. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-96654",
+      "date": "2026-10-20",
+      "editeurs": [
+        "Plex"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-96654"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-96654"
+      ],
+      "epssMax": 0.0046,
+      "epssCve": "CVE-2026-96654",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-96652",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-96652",
+      "titre": "Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability",
+      "resume": "Plex Media Server contains a server-side request forgery (SSRF) vulnerability which could allow an attacker using any X-Plex-Token value to include a full URL in the 'protocol' parameter and force the Plex server to POST to the attacker's chosen destination. This vulnerability can be chained with CVE-2026-96654, CVE-2026-96655, and CVE-2026-96656.  Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-96652",
+      "date": "2026-10-20",
+      "editeurs": [
+        "Plex"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-96652"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-96652"
+      ],
+      "epssMax": 0.0046,
+      "epssCve": "CVE-2026-96652",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "The Hacker News",
+          "titre": "Hackers Exploit Plex2Shell Flaws to Install Crypto Miners and Linux Proxy Backdoor",
+          "lien": "https://thehackernews.com/2026/10/hackers-exploit-plex2shell-flaws-to.html"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "CISA Orders Federal Agencies to Patch Exploited Plex2Shell, Siemens, and SiteGuard Flaws",
+          "lien": "https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html"
+        },
+        {
+          "source": "BleepingComputer",
+          "titre": "CISA: Hackers chain Plex flaws in Plex2Shell attacks to breach servers",
+          "lien": "https://www.bleepingcomputer.com/news/security/cisa-hackers-chain-plex-flaws-in-plex2shell-attacks-to-breach-servers/"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-110936",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-110936",
+      "titre": "Siemens Software Center Uncontrolled Search Path Element Vulnerability",
+      "resume": "Siemens Software Center contains an uncontrolled search path element vulnerability that could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-110936",
+      "date": "2026-10-20",
+      "editeurs": [
+        "Siemens"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-110936"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-110936"
+      ],
+      "epssMax": 0.0024,
+      "epssCve": "CVE-2026-110936",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "The Hacker News",
+          "titre": "ClickFix Attackers Exploit Siemens Software Center Flaw to Deploy Remote Access Trojan",
+          "lien": "https://thehackernews.com/2026/10/clickfix-attackers-exploit-siemens.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    }
+  ],
+  "parcSuivi": [
+    {
+      "id": "certfr:CERTFR-2026-AVI-1369",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1369",
+      "titre": "Multiples vulnérabilités dans les produits HPE Aruba Networking",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits HPE Aruba Networking. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1369/",
+      "date": "2026-10-23",
+      "editeurs": [
+        "HPE Aruba Networking"
+      ],
+      "suivis": [
+        "HPE / Aruba"
+      ],
+      "cves": [
+        "CVE-2026-79890",
+        "CVE-2026-79868",
+        "CVE-2026-79862",
+        "CVE-2026-79867",
+        "CVE-2026-79850",
+        "CVE-2026-79879",
+        "CVE-2026-79888",
+        "CVE-2026-109619",
+        "CVE-2026-79872",
+        "CVE-2026-95710",
+        "CVE-2026-79858",
+        "CVE-2026-95704"
+      ],
+      "nbCves": 74,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 1,
+      "epssCve": "CVE-2026-109619",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "aussi": [
+        {
+          "source": "CERT Santé",
+          "titre": "HPE - CVE-2026-79847",
+          "lien": "https://cyberveille.esante.gouv.fr/alertes/hpe-cve-2026-79847-2026-10-23"
+        }
+      ],
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1360",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1360",
+      "titre": "Multiples vulnérabilités dans les produits Cisco",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Cisco. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1360/",
+      "date": "2026-10-22",
+      "editeurs": [
+        "Cisco"
+      ],
+      "suivis": [
+        "Cisco"
+      ],
+      "cves": [
+        "CVE-2026-20356",
+        "CVE-2026-76481",
+        "CVE-2026-76524",
+        "CVE-2026-76494",
+        "CVE-2026-109619",
+        "CVE-2026-109618",
+        "CVE-2026-76462",
+        "CVE-2026-76475",
+        "CVE-2026-76477",
+        "CVE-2026-76490",
+        "CVE-2026-76473",
+        "CVE-2026-76491"
+      ],
+      "nbCves": 26,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 1,
+      "epssCve": "CVE-2026-109619",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "aussi": [
+        {
+          "source": "CERT Santé",
+          "titre": "Cisco - CVE-2026-76466",
+          "lien": "https://cyberveille.esante.gouv.fr/alertes/cisco-cve-2026-76466-2026-10-22"
+        }
+      ],
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1376",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1376",
+      "titre": "Multiples vulnérabilités dans le noyau Linux d'Ubuntu",
+      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux d'Ubuntu. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1376/",
+      "date": "2026-10-23",
+      "editeurs": [
+        "Ubuntu"
+      ],
+      "suivis": [
+        "Linux"
+      ],
+      "cves": [
+        "CVE-2026-74222",
+        "CVE-2026-13321",
+        "CVE-2026-19667",
+        "CVE-2026-87863",
+        "CVE-2026-11721",
+        "CVE-2026-67238",
+        "CVE-2026-97687",
+        "CVE-2026-67236",
+        "CVE-2026-86414",
+        "CVE-2026-10723",
+        "CVE-2026-81736",
+        "CVE-2026-106585"
+      ],
+      "nbCves": 75,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.1074,
+      "epssCve": "CVE-2025-8677",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1372",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1372",
+      "titre": "Multiples vulnérabilités dans les produits SUSE",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits SUSE. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une atteinte à la confidentialité des données.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1372/",
+      "date": "2026-10-23",
+      "editeurs": [
+        "SUSE"
+      ],
+      "suivis": [
+        "Linux"
+      ],
+      "cves": [
+        "CVE-2026-72436",
+        "CVE-2026-74632",
+        "CVE-2026-89702",
+        "CVE-2026-89580",
+        "CVE-2026-72157",
+        "CVE-2026-72330",
+        "CVE-2026-72392",
+        "CVE-2026-64046",
+        "CVE-2026-72325",
+        "CVE-2026-74745",
+        "CVE-2026-68343",
+        "CVE-2026-74283"
+      ],
+      "nbCves": 619,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0147,
+      "epssCve": "CVE-2026-74469",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1342",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1342",
+      "titre": "Multiples vulnérabilités dans Microsoft Edge",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Microsoft Edge. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance et un problème de sécurité non spécifié par l'éditeur.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1342/",
+      "date": "2026-10-19",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-106348",
+        "CVE-2026-106208",
+        "CVE-2026-106232",
+        "CVE-2026-106281",
+        "CVE-2026-106384",
+        "CVE-2026-106375",
+        "CVE-2026-106191",
+        "CVE-2026-106407",
+        "CVE-2026-106268",
+        "CVE-2026-106376",
+        "CVE-2026-106391",
+        "CVE-2026-110167"
+      ],
+      "nbCves": 253,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0052,
+      "epssCve": "CVE-2026-106357",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1375",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1375",
+      "titre": "Multiples vulnérabilités dans le noyau Linux de Debian LTS",
+      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de Debian LTS. Certaines d'entre elles permettent à un attaquant de provoquer une élévation de privilèges, une atteinte à la confidentialité des données et un déni de service.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1375/",
+      "date": "2026-10-23",
+      "editeurs": [
+        "Debian"
+      ],
+      "suivis": [
+        "Linux"
+      ],
+      "cves": [
+        "CVE-2026-80967",
+        "CVE-2026-43198",
+        "CVE-2026-98532",
+        "CVE-2026-98190",
+        "CVE-2026-98672",
+        "CVE-2026-98499",
+        "CVE-2026-89596",
+        "CVE-2026-97415",
+        "CVE-2026-98302",
+        "CVE-2026-89980",
+        "CVE-2026-98591",
+        "CVE-2026-89797"
+      ],
+      "nbCves": 1380,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.078,
+      "epssCve": "CVE-2025-21759",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1345",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1345",
+      "titre": "Multiples vulnérabilités dans les produits StormShield",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits StormShield. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire, un déni de service à distance et une atteinte à la confidentialité des données.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1345/",
+      "date": "2026-10-21",
+      "editeurs": [
+        "Stormshield"
+      ],
+      "suivis": [
+        "Stormshield"
+      ],
+      "cves": [
+        "CVE-2026-56850",
+        "CVE-2026-34181",
+        "CVE-2026-113808",
+        "CVE-2026-58040",
+        "CVE-2026-78124",
+        "CVE-2026-18408",
+        "CVE-2026-113810",
+        "CVE-2026-58045",
+        "CVE-2026-48931",
+        "CVE-2026-45447",
+        "CVE-2026-78129",
+        "CVE-2026-15741"
+      ],
+      "nbCves": 19,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.04,
+      "epssCve": "CVE-2026-45447",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1374",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1374",
+      "titre": "Multiples vulnérabilités dans le noyau Linux de Debian",
+      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de Debian. Certaines d'entre elles permettent à un attaquant de provoquer une élévation de privilèges, une atteinte à la confidentialité des données et un déni de service.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1374/",
+      "date": "2026-10-23",
+      "editeurs": [
+        "Debian"
+      ],
+      "suivis": [
+        "Linux"
+      ],
+      "cves": [
+        "CVE-2026-98190",
+        "CVE-2026-98302",
+        "CVE-2026-89797",
+        "CVE-2026-98311",
+        "CVE-2026-97536",
+        "CVE-2026-98179",
+        "CVE-2026-93199",
+        "CVE-2026-98325",
+        "CVE-2026-98266",
+        "CVE-2026-98187",
+        "CVE-2026-97537",
+        "CVE-2026-98287"
+      ],
+      "nbCves": 273,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0079,
+      "epssCve": "CVE-2026-99999",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "The Hacker News",
+          "titre": "Critical PwnEscape Linux Kernel Vulnerability Lets Guest VMs Read Host Memory",
+          "lien": "https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "aussi": [
+        {
+          "source": "CERT Santé",
+          "titre": "Linux - CVE-2026-99999",
+          "lien": "https://cyberveille.esante.gouv.fr/alertes/linux-cve-2026-99999-2026-10-16"
+        },
+        {
+          "source": "CERT Santé",
+          "titre": "Linux - CVE-2026-98171",
+          "lien": "https://cyberveille.esante.gouv.fr/alertes/linux-cve-2026-98171-2026-10-08"
+        }
+      ],
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1373",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1373",
+      "titre": "Multiples vulnérabilités dans les produits Red Hat",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Red Hat. Certaines d'entre elles permettent à un attaquant de provoquer un contournement de la politique de sécurité, un déni de service et un problème de sécurité non spécifié par l'éditeur.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1373/",
+      "date": "2026-10-23",
+      "editeurs": [
+        "Red Hat"
+      ],
+      "suivis": [
+        "Linux"
+      ],
+      "cves": [
+        "CVE-2026-80887",
+        "CVE-2026-68480",
+        "CVE-2026-98260",
+        "CVE-2025-38147",
+        "CVE-2026-68245",
+        "CVE-2026-63993",
+        "CVE-2026-63924",
+        "CVE-2026-68086",
+        "CVE-2026-31581",
+        "CVE-2026-89811",
+        "CVE-2026-52935",
+        "CVE-2026-43450"
+      ],
+      "nbCves": 50,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0079,
+      "epssCve": "CVE-2026-99999",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1371",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1371",
+      "titre": "Multiples vulnérabilités dans Microsoft Edge",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Microsoft Edge. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1371/",
+      "date": "2026-10-23",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-113054",
+        "CVE-2026-113084",
+        "CVE-2026-113273",
+        "CVE-2026-113091",
+        "CVE-2026-113174",
+        "CVE-2026-113107",
+        "CVE-2026-113315",
+        "CVE-2026-113245",
+        "CVE-2026-113241",
+        "CVE-2026-113231",
+        "CVE-2026-113168",
+        "CVE-2026-113008"
+      ],
+      "nbCves": 353,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.006,
+      "epssCve": "CVE-2026-113303",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1357",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1357",
+      "titre": "Multiples vulnérabilités dans Google Chrome",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Google Chrome. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1357/",
+      "date": "2026-10-21",
+      "editeurs": [
+        "Google"
+      ],
+      "suivis": [
+        "Google Chrome"
+      ],
+      "cves": [
+        "CVE-2026-113054",
+        "CVE-2026-113084",
+        "CVE-2026-113273",
+        "CVE-2026-113091",
+        "CVE-2026-113174",
+        "CVE-2026-113107",
+        "CVE-2026-113315",
+        "CVE-2026-113245",
+        "CVE-2026-113241",
+        "CVE-2026-113231",
+        "CVE-2026-113168",
+        "CVE-2026-113008"
+      ],
+      "nbCves": 353,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.006,
+      "epssCve": "CVE-2026-113303",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1361",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1361",
+      "titre": "Vulnérabilité dans les produits Mozilla",
+      "resume": "Une vulnérabilité a été découverte dans les produits Mozilla. Elle permet à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1361/",
+      "date": "2026-10-22",
+      "editeurs": [
+        "Mozilla"
+      ],
+      "suivis": [
+        "Mozilla"
+      ],
+      "cves": [
+        "CVE-2026-113470"
+      ],
+      "nbCves": 1,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0046,
+      "epssCve": "CVE-2026-113470",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1346",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1346",
+      "titre": "Multiples vulnérabilités dans les produits Mozilla",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Mozilla. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire, une atteinte à la confidentialité des données et un déni de service.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1346/",
+      "date": "2026-10-21",
+      "editeurs": [
+        "Mozilla"
+      ],
+      "suivis": [
+        "Mozilla"
+      ],
+      "cves": [
+        "CVE-2026-113400",
+        "CVE-2026-113470",
+        "CVE-2026-113868",
+        "CVE-2026-113867",
+        "CVE-2026-113866",
+        "CVE-2026-113401",
+        "CVE-2026-113399",
+        "CVE-2026-113869"
+      ],
+      "nbCves": 8,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0046,
+      "epssCve": "CVE-2026-113470",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certsante:10259",
+      "source": "CERT Santé",
+      "type": "avis",
+      "titre": "Dell - CVE-2026-82166",
+      "resume": "Il s’agit d’une vulnérabilité dans Dell Application Store, une application cliente de Dell pour Windows. Dell Application Store est une application cliente de Dell pour Windows...",
+      "lien": "https://cyberveille.esante.gouv.fr/alertes/dell-cve-2026-82166-2026-10-20",
+      "date": "2026-10-20",
+      "editeurs": [
+        "Dell"
+      ],
+      "suivis": [
+        "Microsoft",
+        "Dell"
+      ],
+      "cves": [
+        "CVE-2026-82166"
+      ],
+      "nbCves": 1,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0041,
+      "epssCve": "CVE-2026-82166",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1339",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1339",
+      "titre": "Multiples vulnérabilités dans Stormshield Network Security",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Stormshield Network Security. Certaines d'entre elles permettent à un attaquant de provoquer une atteinte à l'intégrité des données, une injection de code indirecte à distance (XSS) et un contournement de la politique de sécurité.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1339/",
+      "date": "2026-10-19",
+      "editeurs": [
+        "Stormshield"
+      ],
+      "suivis": [
+        "Stormshield"
+      ],
+      "cves": [
+        "CVE-2026-111090"
+      ],
+      "nbCves": 1,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0012,
+      "epssCve": "CVE-2026-111090",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "aussi": [
+        {
+          "source": "CERT Santé",
+          "titre": "Stormshield - CVE-2026-111090",
+          "lien": "https://cyberveille.esante.gouv.fr/alertes/stormshield-cve-2026-111090-2026-10-20"
+        }
+      ],
+      "doublonDe": null
+    }
+  ],
+  "autresCritiques": [
+    {
+      "id": "certfr:CERTFR-2026-AVI-1378",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1378",
+      "titre": "Multiples vulnérabilités dans les produits IBM",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits IBM. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1378/",
+      "date": "2026-10-23",
+      "editeurs": [
+        "IBM"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-26007",
+        "CVE-2026-54293",
+        "CVE-2026-53540",
+        "CVE-2026-5588",
+        "CVE-2026-54283",
+        "CVE-2026-59935",
+        "CVE-2026-40466",
+        "CVE-2026-82417",
+        "CVE-2026-27205",
+        "CVE-2026-31958",
+        "CVE-2026-101904",
+        "CVE-2026-59283"
+      ],
+      "nbCves": 208,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-48710",
+        "CVE-2023-44487",
+        "CVE-2026-34197",
+        "CVE-2020-11023"
+      ],
+      "epssMax": 1,
+      "epssCve": "CVE-2023-44487",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1370",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1370",
+      "titre": "Multiples vulnérabilités dans les produits Tenable",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Tenable. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1370/",
+      "date": "2026-10-23",
+      "editeurs": [
+        "Tenable"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-109619",
+        "CVE-2026-109618"
+      ],
+      "nbCves": 2,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 1,
+      "epssCve": "CVE-2026-109619",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1359",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1359",
+      "titre": "Multiples vulnérabilités dans PHP",
+      "resume": "De multiples vulnérabilités ont été découvertes dans PHP. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1359/",
+      "date": "2026-10-21",
+      "editeurs": [
+        "PHP"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-109619",
+        "CVE-2026-109618"
+      ],
+      "nbCves": 2,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 1,
+      "epssCve": "CVE-2026-109619",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1351",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1351",
+      "titre": "Multiples vulnérabilités dans Oracle MySQL",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Oracle MySQL. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confidentialité des données.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1351/",
+      "date": "2026-10-21",
+      "editeurs": [
+        "Oracle"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-101721",
+        "CVE-2026-101632",
+        "CVE-2026-101629",
+        "CVE-2026-101611",
+        "CVE-2026-101731",
+        "CVE-2025-10148",
+        "CVE-2026-34180",
+        "CVE-2026-83404",
+        "CVE-2026-101618",
+        "CVE-2026-42766",
+        "CVE-2026-9076",
+        "CVE-2026-13608"
+      ],
+      "nbCves": 160,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.7479,
+      "epssCve": "CVE-2025-15467",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1350",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1350",
+      "titre": "Multiples vulnérabilités dans Oracle Java SE",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Oracle Java SE. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confidentialité des données.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1350/",
+      "date": "2026-10-21",
+      "editeurs": [
+        "Oracle"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-91333",
+        "CVE-2026-91335",
+        "CVE-2026-28901",
+        "CVE-2026-43804",
+        "CVE-2026-91382",
+        "CVE-2026-20664",
+        "CVE-2026-83380",
+        "CVE-2026-91394",
+        "CVE-2026-39044",
+        "CVE-2026-87255",
+        "CVE-2026-91334",
+        "CVE-2026-20665"
+      ],
+      "nbCves": 115,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.7066,
+      "epssCve": "CVE-2024-4367",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1355",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1355",
+      "titre": "Multiples vulnérabilités dans Oracle Weblogic",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Oracle Weblogic. Elles permettent à un attaquant de provoquer un déni de service à distance, une atteinte à la confidentialité des données et une atteinte à l'intégrité des données.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1355/",
+      "date": "2026-10-21",
+      "editeurs": [
+        "Oracle"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-41855",
+        "CVE-2026-59645",
+        "CVE-2026-41853",
+        "CVE-2026-41854",
+        "CVE-2026-41839",
+        "CVE-2026-83399",
+        "CVE-2026-12817",
+        "CVE-2025-7962",
+        "CVE-2026-41844",
+        "CVE-2026-41845",
+        "CVE-2026-83379",
+        "CVE-2026-41842"
+      ],
+      "nbCves": 29,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.6882,
+      "epssCve": "CVE-2023-43622",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "aussi": [
+        {
+          "source": "CERT Santé",
+          "titre": "Oracle - CVE-2026-83399",
+          "lien": "https://cyberveille.esante.gouv.fr/alertes/oracle-cve-2026-83399-2026-10-21"
+        }
+      ],
+      "doublonDe": null
+    },
+    {
+      "id": "certsante:10277",
+      "source": "CERT Santé",
+      "type": "avis",
+      "titre": "Arista Networks - CVE-2026-114625",
+      "resume": "Il s’agit d’une vulnérabilité d’injection SQL dans l’interface web de VeloCloud Orchestrator (VCO) On-Prem. VeloCloud Orchestrator (VCO) est la console centrale de gestion des...",
+      "lien": "https://cyberveille.esante.gouv.fr/alertes/arista-networks-cve-2026-114625-2026-10-23",
+      "date": "2026-10-23",
+      "editeurs": [
+        "Arista Networks"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-114625"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-114625"
+      ],
+      "epssMax": 0.0103,
+      "epssCve": "CVE-2026-114625",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    }
+  ],
+  "menaces": [
+    {
+      "id": "certfr:CERTFR-2026-CTI-008",
+      "source": "CERT-FR",
+      "type": "cti",
+      "reference": "CERTFR-2026-CTI-008",
+      "titre": "Violations de données applicatives - Retour d’expérience du CERT-FR (20 octobre 2026)",
+      "resume": "En 2025, le CERT-FR a suivi près de 200 violations de données issues d’applications web. Dans de nombreux cas, ces exfiltrations ont été permises par des actions attaquantes d’un faible niveau de complexité, sans exploitation de vulnérabilité technique. Les divulgations de données ont des impacts...",
+      "lien": "https://www.cert.ssi.gouv.fr/cti/CERTFR-2026-CTI-008/",
+      "date": "2026-10-20",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "info",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-ACT-044",
+      "source": "CERT-FR",
+      "type": "actualite",
+      "reference": "CERTFR-2026-ACT-044",
+      "titre": "Bulletin d'actualité CERTFR-2026-ACT-044 (19 octobre 2026)",
+      "resume": "Ce bulletin d'actualité du CERT-FR revient sur les vulnérabilités significatives de la semaine passée pour souligner leurs criticités. Il ne remplace pas l'analyse de l'ensemble des avis et alertes publiés par le CERT-FR dans le cadre d'une analyse de risques pour prioriser l'application des...",
+      "lien": "https://www.cert.ssi.gouv.fr/actualite/CERTFR-2026-ACT-044/",
+      "date": "2026-10-19",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "info",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    }
+  ],
+  "signauxPresse": [
+    {
+      "id": "actu:https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html",
+      "source": "The Hacker News",
+      "type": "actu",
+      "titre": "Critical FortiSIEM Flaw Gets Public Exploit PoC for Unauthenticated Remote Code Execution",
+      "resume": "Cybersecurity researchers have released a proof-of-concept (PoC) exploit for a recently patched critical security flaw impacting Fortinet FortiSIEM that could result in arbitrary code execution. The vulnerability, tracked as CVE-2026-106173 (CVSS score: 9.4), is a critical path…",
+      "lien": "https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html",
+      "date": "2026-10-20",
+      "editeurs": [],
+      "suivis": [
+        "Fortinet"
+      ],
+      "cves": [
+        "CVE-2026-106173"
+      ],
+      "nbCves": 1,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0046,
+      "epssCve": "CVE-2026-106173",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "exécution de code à distance",
+        "faille critique"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://www.bleepingcomputer.com/news/security/hpe-patches-eight-max-severity-rce-and-auth-bypass-aos-flaws/",
+      "source": "BleepingComputer",
+      "type": "actu",
+      "titre": "HPE patches eight max severity RCE and auth bypass AOS flaws",
+      "resume": "Hewlett Packard Enterprise (HPE) released security updates to patch 72 vulnerabilities in the Aruba Operating System (ArubaOS), including eight maximum-severity authentication bypass and code execution issues. [...]",
+      "lien": "https://www.bleepingcomputer.com/news/security/hpe-patches-eight-max-severity-rce-and-auth-bypass-aos-flaws/",
+      "date": "2026-10-23",
+      "editeurs": [],
+      "suivis": [
+        "HPE / Aruba"
+      ],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "exécution de code à distance"
+      ],
+      "relais": [
+        {
+          "source": "BleepingComputer",
+          "titre": "GitLab warns of new max severity code execution vulnerability",
+          "lien": "https://www.bleepingcomputer.com/news/security/gitlab-warns-of-new-max-severity-code-execution-vulnerability/"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://thehackernews.com/2026/10/critical-flaw-in-pythons-popular-pillow.html",
+      "source": "The Hacker News",
+      "type": "actu",
+      "titre": "Critical Flaw in Python’s Popular Pillow Image Library Allows Code Execution via a Crafted Image",
+      "resume": "Pillow, the most widely used image library for Python, can be made to run operating system commands on a server by specifying the name of a file it is told to open. The flaw, CVE-2026-112900, is in the way Pillow handles EPS images, which it opens by passing the file's name to…",
+      "lien": "https://thehackernews.com/2026/10/critical-flaw-in-pythons-popular-pillow.html",
+      "date": "2026-10-23",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-112900"
+      ],
+      "nbCves": 1,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0106,
+      "epssCve": "CVE-2026-112900",
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "faille critique"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html",
+      "source": "The Hacker News",
+      "type": "actu",
+      "titre": "Unpatched Tailscale SSH Flaws Could Let a Hacked Device Reach Root on Other Servers",
+      "resume": "A single hacked device on a Tailscale network can be used to gain root access to other servers it can reach, according to a security researcher who published the findings this week. The attack requires two things: Tailscale SSH set up to allow port forwarding, and an attacker…",
+      "lien": "https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html",
+      "date": "2026-10-25",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "faille non corrigée"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://www.bleepingcomputer.com/news/security/abandoned-popcorn-time-app-exposed-millions-of-device-to-rce-attacks/",
+      "source": "BleepingComputer",
+      "type": "actu",
+      "titre": "Abandoned Popcorn Time app exposed millions of devices to RCE attacks",
+      "resume": "Researchers remotely disabled a vulnerable updater in the abandoned Time4Popcorn app, a fork of the Popcorn Time BitTorrent client, closing a security flaw that could have allowed attackers to execute malicious code with elevated privileges on millions of computers. [...]",
+      "lien": "https://www.bleepingcomputer.com/news/security/abandoned-popcorn-time-app-exposed-millions-of-device-to-rce-attacks/",
+      "date": "2026-10-23",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "exécution de code à distance"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://thehackernews.com/2026/10/ruby-fixes-three-regex-engine-bugs.html",
+      "source": "The Hacker News",
+      "type": "actu",
+      "titre": "Ruby Fixes Three Regex Engine Bugs Responsible for Four Critical GitLab RCE Flaws",
+      "resume": "Ruby has released versions 4.0.9, 3.4.12, and 3.3.13 to fix three bugs in Onigmo, the regular expression engine built into the language. The bugs lie behind four critical security flaws that GitLab patched over the past month. GitLab found that a specially crafted pattern could…",
+      "lien": "https://thehackernews.com/2026/10/ruby-fixes-three-regex-engine-bugs.html",
+      "date": "2026-10-23",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "exécution de code à distance",
+        "faille critique"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://www.clubic.com/actualite-635551-oups-ce-bug-sur-signal-permettait-d-ecouter-la-conversation-meme-apres-avoir-raccroche.html",
+      "source": "Clubic",
+      "type": "actu",
+      "titre": "Oups, ce bug sur Signal permettait d'écouter la conversation même après avoir raccroché",
+      "resume": "Une faille critique corrigée dans la bibliothèque d’appels de Signal permettait à un correspondant de continuer à capter votre audio après que vous aviez raccroché. Le correctif existe depuis début septembre, mais la vulnérabilité vient seulement d’être rendue publique.",
+      "lien": "https://www.clubic.com/actualite-635551-oups-ce-bug-sur-signal-permettait-d-ecouter-la-conversation-meme-apres-avoir-raccroche.html",
+      "date": "2026-10-23",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "faille critique"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://thehackernews.com/2026/10/two-cvss-90-linux-ksmbd-rce-flaws.html",
+      "source": "The Hacker News",
+      "type": "actu",
+      "titre": "Two CVSS 9.0 Linux KSMBD RCE Flaws Disclosed on Public Mailing Lists Before Kernel Fixes",
+      "resume": "Linux servers running KSMBD, the kernel's built-in SMB server, are exposed to two publicly reported remote code execution flaws rated 9.0 by Trend Micro's Zero Day Initiative, with no fix yet in the mainline kernel. One of them, ZDI-CAN-33774, can be triggered before any network…",
+      "lien": "https://thehackernews.com/2026/10/two-cvss-90-linux-ksmbd-rce-flaws.html",
+      "date": "2026-10-22",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "zero-day",
+        "exécution de code à distance",
+        "faille critique"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://thehackernews.com/2026/10/critical-gitlab-flaw-cvss-100-could.html",
+      "source": "The Hacker News",
+      "type": "actu",
+      "titre": "Critical GitLab Flaw (CVSS 10.0) Could Allow Unauthenticated RCE Across 12 Years of Releases",
+      "resume": "GitLab released fixes on October 21 for a flaw that lets an attacker run code on a self-managed server without logging in, and it affects every version of the software going back to 7.0, released in 2014. The fix matters even for administrators who patched nine days earlier: the…",
+      "lien": "https://thehackernews.com/2026/10/critical-gitlab-flaw-cvss-100-could.html",
+      "date": "2026-10-21",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "exécution de code à distance",
+        "faille critique"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://thehackernews.com/2026/10/unpatched-broadcom-wi-fi-flaw-lets.html",
+      "source": "The Hacker News",
+      "type": "actu",
+      "titre": "Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run Code as Root on Routers",
+      "resume": "A flaw in Broadcom's Wi-Fi setup software lets an attacker within radio range run code as root on Broadcom-based routers, without the network password or any pairing step, security researcher Quentin Kaiser disclosed on October 16. He showed the attack working against home…",
+      "lien": "https://thehackernews.com/2026/10/unpatched-broadcom-wi-fi-flaw-lets.html",
+      "date": "2026-10-19",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "faille non corrigée"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    }
+  ]
+}
