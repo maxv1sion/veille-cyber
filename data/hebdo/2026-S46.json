@@ -1,0 +1,2107 @@
+{
+  "semaine": "2026-S46",
+  "debut": "2026-11-09",
+  "fin": "2026-11-15",
+  "genere": "2026-11-16T04:35:22.343Z",
+  "chiffres": {
+    "alertes": 0,
+    "avisCertFr": 59,
+    "avisCertSante": 6,
+    "kevAjoutees": 12,
+    "critiques": 25,
+    "signauxPresse": 13,
+    "surParcSuivi": 38
+  },
+  "alertes": [],
+  "kev": [
+    {
+      "id": "kev:CVE-2026-123039",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-123039",
+      "titre": "Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability",
+      "resume": "Check Point Firewall, Multi-Domain Security Management Server, Scalable Platforms, Security Gateway, and Security Management Server contain an incorrect permissions assignment for critical resources vulnerability when the Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root. Action requise : Apply mitigations in accordance with…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-123039",
+      "date": "2026-11-13",
+      "editeurs": [
+        "Check Point"
+      ],
+      "suivis": [
+        "Check Point"
+      ],
+      "cves": [
+        "CVE-2026-123039"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-123039"
+      ],
+      "epssMax": 0.0219,
+      "epssCve": "CVE-2026-123039",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-124194",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-124194",
+      "titre": "Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability",
+      "resume": "Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-124194",
+      "date": "2026-11-10",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-124194"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-124194"
+      ],
+      "epssMax": 0.0162,
+      "epssCve": "CVE-2026-124194",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-20320",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-20320",
+      "titre": "Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability",
+      "resume": "Cisco BroadWorks contains an improper restriction of XML external entity reference vulnerability that could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-20320",
+      "date": "2026-11-10",
+      "editeurs": [
+        "Cisco"
+      ],
+      "suivis": [
+        "Cisco"
+      ],
+      "cves": [
+        "CVE-2026-20320"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-20320"
+      ],
+      "epssMax": 0.0098,
+      "epssCve": "CVE-2026-20320",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "BleepingComputer",
+          "titre": "CISA flags Cisco BroadWorks flaw as actively exploited in attacks",
+          "lien": "https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches",
+          "lien": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-125350",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-125350",
+      "titre": "Google Chromium Use-After-Free Vulnerability",
+      "resume": "Google Chromium contains a use-after-free vulnerability in the XML component that could allow a remote attacker to execute arbitrary code inside the sandbox via a specially crafted webpage. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-125350",
+      "date": "2026-11-10",
+      "editeurs": [
+        "Google"
+      ],
+      "suivis": [
+        "Google Chrome"
+      ],
+      "cves": [
+        "CVE-2026-125350"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-125350"
+      ],
+      "epssMax": 0.0096,
+      "epssCve": "CVE-2026-125350",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-123158",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-123158",
+      "titre": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability",
+      "resume": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-123158",
+      "date": "2026-11-09",
+      "editeurs": [
+        "OpenBSD"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-123158"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-123158"
+      ],
+      "epssMax": 0.189,
+      "epssCve": "CVE-2026-123158",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-116606",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-116606",
+      "titre": "Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+      "resume": "Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration. This vulnerability can be chained with CVE-2026-111560. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-116606",
+      "date": "2026-11-10",
+      "editeurs": [
+        "Barracuda Networks"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-116606"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-116606"
+      ],
+      "epssMax": 0.1095,
+      "epssCve": "CVE-2026-116606",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-111560",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-111560",
+      "titre": "Barracuda Networks Multiple Products OS Command Injection Vulnerability",
+      "resume": "Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command injection vulnerability. This vulnerability could allow an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed. This vulnerability can be chained with CVE-2026-116606…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-111560",
+      "date": "2026-11-10",
+      "editeurs": [
+        "Barracuda Networks"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-111560"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-111560"
+      ],
+      "epssMax": 0.0908,
+      "epssCve": "CVE-2026-111560",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-116779",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-116779",
+      "titre": "SignalWire FreeSwitch Code Injection Vulnerability",
+      "resume": "SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-116779",
+      "date": "2026-11-09",
+      "editeurs": [
+        "SignalWire"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-116779"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-116779"
+      ],
+      "epssMax": 0.0247,
+      "epssCve": "CVE-2026-116779",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-111793",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-111793",
+      "titre": "Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability",
+      "resume": "Openwave Messaging Limited Webtop Media Transcoder contains an incorrect resource transfer between spheres vulnerability that may allow an authenticated user to process and convert unintended document types if bypassing the Webmail experience. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes).…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-111793",
+      "date": "2026-11-10",
+      "editeurs": [
+        "Openwave Messaging Limited"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-111793"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-111793"
+      ],
+      "epssMax": 0.0064,
+      "epssCve": "CVE-2026-111793",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-123218",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-123218",
+      "titre": "IBM Aspera Faspex Incorrect Authorization Vulnerability",
+      "resume": "IBM Aspera Faspex contains an incorrect authorization vulnerability that could allow an authenticated user to craft a specific message to bypass authorization, causing privilege escalations. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-123218",
+      "date": "2026-11-09",
+      "editeurs": [
+        "IBM"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-123218"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-123218"
+      ],
+      "epssMax": 0.0054,
+      "epssCve": "CVE-2026-123218",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "The Hacker News",
+          "titre": "Critical Zoom Workplace Flaw Could Allow Unauthenticated Remote Privilege Escalation",
+          "lien": "https://thehackernews.com/2026/11/critical-zoom-workplace-flaw-could.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-102895",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-102895",
+      "titre": "GPUStack Improper Authentication Vulnerability",
+      "resume": "GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-102895",
+      "date": "2026-11-09",
+      "editeurs": [
+        "GPUStack"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-102895"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-102895"
+      ],
+      "epssMax": 0.0052,
+      "epssCve": "CVE-2026-102895",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-114713",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-114713",
+      "titre": "UnrealIRCd Improper Neutralization of Delimiters Vulnerability",
+      "resume": "UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-114713",
+      "date": "2026-11-13",
+      "editeurs": [
+        "UnrealIRCd"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-114713"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-114713"
+      ],
+      "epssMax": 0.0051,
+      "epssCve": "CVE-2026-114713",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "The Hacker News",
+          "titre": "Attackers Exploit UnrealIRCd Flaw That Enables Server-Level Command Injection",
+          "lien": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    }
+  ],
+  "parcSuivi": [
+    {
+      "id": "certfr:CERTFR-2026-AVI-1501",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1501",
+      "titre": "Multiples vulnérabilités dans les produits Check Point",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Check Point. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1501/",
+      "date": "2026-11-12",
+      "editeurs": [
+        "Check Point"
+      ],
+      "suivis": [
+        "Check Point"
+      ],
+      "cves": [
+        "CVE-2026-109619",
+        "CVE-2026-109618"
+      ],
+      "nbCves": 2,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-109619",
+        "CVE-2026-109618"
+      ],
+      "epssMax": 1,
+      "epssCve": "CVE-2026-109619",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1486",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1486",
+      "titre": "Multiples vulnérabilités dans les produits VMware",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits VMware. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1486/",
+      "date": "2026-11-09",
+      "editeurs": [
+        "VMware"
+      ],
+      "suivis": [
+        "VMware / Broadcom"
+      ],
+      "cves": [
+        "CVE-2025-6395",
+        "CVE-2026-90828",
+        "CVE-2026-75595",
+        "CVE-2026-14671",
+        "CVE-2026-14380",
+        "CVE-2026-12061",
+        "CVE-2026-53910",
+        "CVE-2026-54293",
+        "CVE-2025-8715",
+        "CVE-2026-56404",
+        "CVE-2026-58055",
+        "CVE-2026-49978"
+      ],
+      "nbCves": 1431,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2025-48384",
+        "CVE-2026-111497"
+      ],
+      "epssMax": 0.9166,
+      "epssCve": "CVE-2019-9193",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1526",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1526",
+      "titre": "Multiples vulnérabilités dans Apple HomeView Software",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Apple HomeView Software. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une atteinte à la confidentialité des données et une atteinte à l'intégrité des données.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1526/",
+      "date": "2026-11-13",
+      "editeurs": [
+        "Apple"
+      ],
+      "suivis": [
+        "Apple"
+      ],
+      "cves": [
+        "CVE-2026-113969",
+        "CVE-2026-113963",
+        "CVE-2026-113970",
+        "CVE-2026-113964",
+        "CVE-2026-113965",
+        "CVE-2026-113961",
+        "CVE-2026-111497",
+        "CVE-2026-113960",
+        "CVE-2026-113968"
+      ],
+      "nbCves": 9,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-111497"
+      ],
+      "epssMax": 0.8264,
+      "epssCve": "CVE-2026-111497",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1536",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1536",
+      "titre": "Multiples vulnérabilités dans le noyau Linux de Red Hat",
+      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de Red Hat. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1536/",
+      "date": "2026-11-13",
+      "editeurs": [
+        "Red Hat"
+      ],
+      "suivis": [
+        "Linux"
+      ],
+      "cves": [
+        "CVE-2026-80887",
+        "CVE-2026-26007",
+        "CVE-2026-74283",
+        "CVE-2026-74669",
+        "CVE-2026-52929",
+        "CVE-2026-59995",
+        "CVE-2026-98260",
+        "CVE-2026-50252",
+        "CVE-2026-53374",
+        "CVE-2025-38147",
+        "CVE-2026-68245",
+        "CVE-2026-64268"
+      ],
+      "nbCves": 145,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-111497"
+      ],
+      "epssMax": 0.8264,
+      "epssCve": "CVE-2026-111497",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "The Hacker News",
+          "titre": "Critical Red Hat Quay Flaw Lets Attackers Read and Overwrite All Private Container Images in a Registry",
+          "lien": "https://thehackernews.com/2026/11/critical-red-hat-quay-flaw-lets.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1524",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1524",
+      "titre": "Vulnérabilité dans les produits Kaspersky",
+      "resume": "Une vulnérabilité a été découverte dans les produits Kaspersky. Elle permet à un attaquant de provoquer un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1524/",
+      "date": "2026-11-12",
+      "editeurs": [
+        "Kaspersky"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-111497"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-111497"
+      ],
+      "epssMax": 0.8264,
+      "epssCve": "CVE-2026-111497",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1487",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1487",
+      "titre": "Multiples vulnérabilités dans les produits Apple",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Apple. Certaines d'entre elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données, une atteinte à l'intégrité des données et un contournement de la politique de sécurité.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1487/",
+      "date": "2026-11-10",
+      "editeurs": [
+        "Apple"
+      ],
+      "suivis": [
+        "Apple"
+      ],
+      "cves": [
+        "CVE-2026-113969",
+        "CVE-2026-113963",
+        "CVE-2026-113970",
+        "CVE-2026-113971",
+        "CVE-2026-113964",
+        "CVE-2026-113965",
+        "CVE-2026-113961",
+        "CVE-2026-111497",
+        "CVE-2026-113960",
+        "CVE-2026-113968"
+      ],
+      "nbCves": 10,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-111497"
+      ],
+      "epssMax": 0.8264,
+      "epssCve": "CVE-2026-111497",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1482",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1482",
+      "titre": "Multiples vulnérabilités dans les produits Synology",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Synology. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confidentialité des données.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1482/",
+      "date": "2026-11-09",
+      "editeurs": [
+        "Synology"
+      ],
+      "suivis": [
+        "Synology"
+      ],
+      "cves": [
+        "CVE-2026-96652",
+        "CVE-2026-96654",
+        "CVE-2026-96656",
+        "CVE-2026-96655",
+        "CVE-2026-111497"
+      ],
+      "nbCves": 5,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-96652",
+        "CVE-2026-96654",
+        "CVE-2026-96656",
+        "CVE-2026-96655",
+        "CVE-2026-111497"
+      ],
+      "epssMax": 0.8264,
+      "epssCve": "CVE-2026-111497",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1529",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1529",
+      "titre": "Multiples vulnérabilités dans les produits Check Point",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Check Point. Elles permettent à un attaquant de provoquer une élévation de privilèges et un contournement de la politique de sécurité.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1529/",
+      "date": "2026-11-13",
+      "editeurs": [
+        "Check Point"
+      ],
+      "suivis": [
+        "Check Point"
+      ],
+      "cves": [
+        "CVE-2026-123039",
+        "CVE-2026-107484",
+        "CVE-2026-120490"
+      ],
+      "nbCves": 3,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-123039"
+      ],
+      "epssMax": 0.0838,
+      "epssCve": "CVE-2026-120490",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "The Hacker News",
+          "titre": "Hackers Exploit PHP2Shell Flaws in Check Point Gateways to Deploy TSGA Backdoor and Wipe ESXi Files",
+          "lien": "https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1537",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1537",
+      "titre": "Multiples vulnérabilités dans le noyau Linux d'Ubuntu",
+      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux d'Ubuntu. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire, une atteinte à l'intégrité des données et un contournement de la politique de sécurité.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1537/",
+      "date": "2026-11-13",
+      "editeurs": [
+        "Ubuntu"
+      ],
+      "suivis": [
+        "Linux"
+      ],
+      "cves": [
+        "CVE-2022-3114",
+        "CVE-2022-23036",
+        "CVE-2022-23037",
+        "CVE-2022-1205",
+        "CVE-2025-39743",
+        "CVE-2025-39779",
+        "CVE-2025-39810",
+        "CVE-2025-39863",
+        "CVE-2025-38069",
+        "CVE-2025-38237",
+        "CVE-2023-52676",
+        "CVE-2022-50303"
+      ],
+      "nbCves": 4223,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-53266",
+        "CVE-2026-53362"
+      ],
+      "epssMax": 0.0787,
+      "epssCve": "CVE-2025-21759",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "The Hacker News",
+          "titre": "Red Hat Patches 9.8-Rated Linux TCP RCE Flaw While Ubuntu Releases Fixes for Testing",
+          "lien": "https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1511",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1511",
+      "titre": "Multiples vulnérabilités dans Microsoft Office",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Microsoft Office. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une atteinte à la confidentialité des données. Microsoft indique que la vulnérabilité CVE-2026-124194 est activement exploitée.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1511/",
+      "date": "2026-11-12",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-116925",
+        "CVE-2026-110060",
+        "CVE-2026-124178",
+        "CVE-2026-118296",
+        "CVE-2026-112721",
+        "CVE-2026-118297",
+        "CVE-2026-112724",
+        "CVE-2026-124228",
+        "CVE-2026-123380",
+        "CVE-2026-123381",
+        "CVE-2026-109503",
+        "CVE-2026-109496"
+      ],
+      "nbCves": 176,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-124194"
+      ],
+      "epssMax": 0.019,
+      "epssCve": "CVE-2026-124229",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "aussi": [
+        {
+          "source": "CERT Santé",
+          "titre": "Microsoft Outlook - CVE-2026-124194",
+          "lien": "https://cyberveille.esante.gouv.fr/alertes/microsoft-outlook-cve-2026-124194-2026-11-12"
+        }
+      ],
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1488",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1488",
+      "titre": "Multiples vulnérabilités dans Google Chrome",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Google Chrome. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur. Google indique que la vulnérabilité CVE-2026-125350 est activement exploitée.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1488/",
+      "date": "2026-11-10",
+      "editeurs": [
+        "Google"
+      ],
+      "suivis": [
+        "Google Chrome"
+      ],
+      "cves": [
+        "CVE-2026-125344",
+        "CVE-2026-125349",
+        "CVE-2026-125345",
+        "CVE-2026-125346",
+        "CVE-2026-121208",
+        "CVE-2026-121184",
+        "CVE-2026-121076",
+        "CVE-2026-121233",
+        "CVE-2026-125348",
+        "CVE-2026-125342",
+        "CVE-2026-125343",
+        "CVE-2026-121095"
+      ],
+      "nbCves": 16,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-125350"
+      ],
+      "epssMax": 0.0096,
+      "epssCve": "CVE-2026-125350",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "Clubic",
+          "titre": "Google corrige en urgence une faille zero-day dans Chrome, déjà exploitée par des pirates",
+          "lien": "https://www.clubic.com/actualite-638548-google-corrige-en-urgence-une-faille-zero-day-dans-chrome-deja-exploitee-par-des-pirates.html"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
+          "lien": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "aussi": [
+        {
+          "source": "CERT Santé",
+          "titre": "Google - CVE-2026-125350",
+          "lien": "https://cyberveille.esante.gouv.fr/alertes/google-cve-2026-125350-2026-11-10"
+        }
+      ],
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1483",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1483",
+      "titre": "Multiples vulnérabilités dans Sonicwall SonicOS",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Sonicwall SonicOS. Certaines d'entre elles permettent à un attaquant de provoquer un déni de service à distance, une atteinte à la confidentialité des données et un contournement de la politique de sécurité. Sonicwall indique que la vulnérabilité CVE-2026-19868 est activement exploitée.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1483/",
+      "date": "2026-11-09",
+      "editeurs": [
+        "Sonicwall"
+      ],
+      "suivis": [
+        "SonicWall"
+      ],
+      "cves": [
+        "CVE-2026-107155",
+        "CVE-2026-77708",
+        "CVE-2026-19703",
+        "CVE-2026-82308",
+        "CVE-2026-77709",
+        "CVE-2026-107154",
+        "CVE-2026-19868"
+      ],
+      "nbCves": 7,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-19868"
+      ],
+      "epssMax": 0.0075,
+      "epssCve": "CVE-2026-107155",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "Clubic",
+          "titre": "SonicWall : une faille permet de contourner la double authentification des VPN, des attaques déjà confirmées",
+          "lien": "https://www.clubic.com/actualite-638359-sonicwall-une-faille-permet-de-contourner-la-double-authentification-des-vpn-des-attaques-deja-confirmees.html"
+        },
+        {
+          "source": "BleepingComputer",
+          "titre": "SonicWall warns of new SSL-VPN MFA bypass flaw exploited in attacks",
+          "lien": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks/"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "CISA Flags SonicWall SonicOS MFA Bypass Flaw Amid Reports of Possible Exploitation",
+          "lien": "https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "aussi": [
+        {
+          "source": "CERT Santé",
+          "titre": "SonicWall - CVE-2026-19868",
+          "lien": "https://cyberveille.esante.gouv.fr/alertes/sonicwall-cve-2026-19868-2026-11-09"
+        }
+      ],
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1506",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1506",
+      "titre": "Multiples vulnérabilités dans les produits Ivanti",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Ivanti. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confidentialité des données.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1506/",
+      "date": "2026-11-12",
+      "editeurs": [
+        "Ivanti"
+      ],
+      "suivis": [
+        "Ivanti"
+      ],
+      "cves": [
+        "CVE-2026-123179",
+        "CVE-2026-107405",
+        "CVE-2026-83528",
+        "CVE-2026-105427",
+        "CVE-2026-105669",
+        "CVE-2026-121653",
+        "CVE-2026-105813",
+        "CVE-2026-105425",
+        "CVE-2026-105426",
+        "CVE-2026-18128",
+        "CVE-2026-123181",
+        "CVE-2026-121683"
+      ],
+      "nbCves": 13,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0262,
+      "epssCve": "CVE-2026-105425",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "aussi": [
+        {
+          "source": "CERT Santé",
+          "titre": "Ivanti - CVE-2026-121653",
+          "lien": "https://cyberveille.esante.gouv.fr/alertes/ivanti-cve-2026-121653-2026-11-12"
+        }
+      ],
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1515",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1515",
+      "titre": "Multiples vulnérabilités dans les produits Microsoft",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Microsoft. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1515/",
+      "date": "2026-11-12",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-109499",
+        "CVE-2026-119981",
+        "CVE-2026-116931",
+        "CVE-2026-118105",
+        "CVE-2026-111300",
+        "CVE-2026-62903",
+        "CVE-2026-118151",
+        "CVE-2026-109497",
+        "CVE-2026-110045",
+        "CVE-2026-66801",
+        "CVE-2026-109466",
+        "CVE-2026-118747"
+      ],
+      "nbCves": 161,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0194,
+      "epssCve": "CVE-2026-118116",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1513",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1513",
+      "titre": "Multiples vulnérabilités dans Microsoft Windows",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Microsoft Windows. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1513/",
+      "date": "2026-11-12",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-105017",
+        "CVE-2026-96970",
+        "CVE-2026-96980",
+        "CVE-2026-88242",
+        "CVE-2026-113860",
+        "CVE-2026-118225",
+        "CVE-2026-119866",
+        "CVE-2026-118123",
+        "CVE-2026-118735",
+        "CVE-2026-119921",
+        "CVE-2026-113769",
+        "CVE-2026-118213"
+      ],
+      "nbCves": 737,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0188,
+      "epssCve": "CVE-2026-113815",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1512",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1512",
+      "titre": "Multiples vulnérabilités dans Microsoft .Net",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Microsoft .Net. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1512/",
+      "date": "2026-11-12",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-118745",
+        "CVE-2026-114155",
+        "CVE-2026-114146",
+        "CVE-2026-118746",
+        "CVE-2026-105544",
+        "CVE-2026-109478",
+        "CVE-2026-109476",
+        "CVE-2026-114149",
+        "CVE-2026-114156",
+        "CVE-2026-114158",
+        "CVE-2026-114154",
+        "CVE-2026-118749"
+      ],
+      "nbCves": 22,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0149,
+      "epssCve": "CVE-2026-114151",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1514",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1514",
+      "titre": "Multiples vulnérabilités dans Microsoft Azure",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Microsoft Azure. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une atteinte à la confidentialité des données.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1514/",
+      "date": "2026-11-12",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-113822",
+        "CVE-2026-118288",
+        "CVE-2026-119989",
+        "CVE-2026-118742",
+        "CVE-2026-114161",
+        "CVE-2026-105734",
+        "CVE-2026-114162",
+        "CVE-2026-109467",
+        "CVE-2026-112745",
+        "CVE-2026-120783",
+        "CVE-2026-121668",
+        "CVE-2026-113823"
+      ],
+      "nbCves": 17,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0131,
+      "epssCve": "CVE-2026-113823",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1521",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1521",
+      "titre": "Multiples vulnérabilités dans les produits Palo Alto Networks",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Palo Alto Networks. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1521/",
+      "date": "2026-11-12",
+      "editeurs": [
+        "Palo Alto Networks"
+      ],
+      "suivis": [
+        "Palo Alto Networks"
+      ],
+      "cves": [
+        "CVE-2026-110167",
+        "CVE-2026-110139",
+        "CVE-2026-118359",
+        "CVE-2026-110145",
+        "CVE-2026-110915",
+        "CVE-2026-110914",
+        "CVE-2026-76027",
+        "CVE-2026-0325",
+        "CVE-2026-110159",
+        "CVE-2026-110149",
+        "CVE-2026-0329",
+        "CVE-2026-0330"
+      ],
+      "nbCves": 71,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0057,
+      "epssCve": "CVE-2026-0328",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1497",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1497",
+      "titre": "Multiples vulnérabilités dans les produits SAP",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits SAP. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confidentialité des données.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1497/",
+      "date": "2026-11-10",
+      "editeurs": [
+        "SAP"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-109794",
+        "CVE-2026-109800",
+        "CVE-2026-120014",
+        "CVE-2026-109805",
+        "CVE-2026-89125",
+        "CVE-2026-76973",
+        "CVE-2026-109796",
+        "CVE-2026-76976",
+        "CVE-2026-109808",
+        "CVE-2026-76966",
+        "CVE-2026-120010",
+        "CVE-2026-109802"
+      ],
+      "nbCves": 45,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0048,
+      "epssCve": "CVE-2026-120009",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "aussi": [
+        {
+          "source": "CERT Santé",
+          "titre": "SAP - CVE-2026-76964",
+          "lien": "https://cyberveille.esante.gouv.fr/alertes/sap-cve-2026-76964-2026-11-10"
+        }
+      ],
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1518",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1518",
+      "titre": "Vulnérabilité dans NetApp ONTAP tools pour VMware vSphere 10",
+      "resume": "Une vulnérabilité a été découverte dans NetApp ONTAP tools pour VMware vSphere 10. Elle permet à un attaquant de provoquer un déni de service à distance et une atteinte à l'intégrité des données.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1518/",
+      "date": "2026-11-12",
+      "editeurs": [
+        "NetApp"
+      ],
+      "suivis": [
+        "VMware / Broadcom"
+      ],
+      "cves": [
+        "CVE-2023-28840"
+      ],
+      "nbCves": 1,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0256,
+      "epssCve": "CVE-2023-28840",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1499",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1499",
+      "titre": "Multiples vulnérabilités dans les produits Fortinet",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Fortinet. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire, une élévation de privilèges et une atteinte à la confidentialité des données.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1499/",
+      "date": "2026-11-12",
+      "editeurs": [
+        "Fortinet"
+      ],
+      "suivis": [
+        "Fortinet"
+      ],
+      "cves": [
+        "CVE-2026-126261",
+        "CVE-2026-126228",
+        "CVE-2026-126235",
+        "CVE-2026-126183",
+        "CVE-2026-126225",
+        "CVE-2026-126232",
+        "CVE-2026-126260",
+        "CVE-2026-26248",
+        "CVE-2026-126214",
+        "CVE-2026-126179",
+        "CVE-2026-126262",
+        "CVE-2026-126253"
+      ],
+      "nbCves": 52,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0156,
+      "epssCve": "CVE-2026-126231",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "aussi": [
+        {
+          "source": "CERT Santé",
+          "titre": "Fortinet - CVE-2026-126259",
+          "lien": "https://cyberveille.esante.gouv.fr/alertes/fortinet-cve-2026-126259-2026-11-12"
+        }
+      ],
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1535",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1535",
+      "titre": "Multiples vulnérabilités dans le noyau Linux de SUSE",
+      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de SUSE. Certaines d'entre elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données, une atteinte à l'intégrité des données et un contournement de la politique de sécurité.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1535/",
+      "date": "2026-11-13",
+      "editeurs": [
+        "SUSE"
+      ],
+      "suivis": [
+        "Linux"
+      ],
+      "cves": [
+        "CVE-2025-38237",
+        "CVE-2025-40100",
+        "CVE-2024-53073",
+        "CVE-2024-49974",
+        "CVE-2025-38117",
+        "CVE-2025-38576",
+        "CVE-2025-38632",
+        "CVE-2026-98164",
+        "CVE-2026-68383",
+        "CVE-2026-68436",
+        "CVE-2026-68447",
+        "CVE-2026-72073"
+      ],
+      "nbCves": 1515,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0147,
+      "epssCve": "CVE-2026-74469",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1527",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1527",
+      "titre": "Multiples vulnérabilités dans VMware Tanzu Greenplum",
+      "resume": "De multiples vulnérabilités ont été découvertes dans VMware Tanzu Greenplum. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1527/",
+      "date": "2026-11-13",
+      "editeurs": [
+        "VMware"
+      ],
+      "suivis": [
+        "VMware / Broadcom"
+      ],
+      "cves": [
+        "CVE-2026-94265",
+        "CVE-2026-42309",
+        "CVE-2026-96636",
+        "CVE-2026-112392",
+        "CVE-2026-87863",
+        "CVE-2026-107928",
+        "CVE-2026-86414",
+        "CVE-2026-96778",
+        "CVE-2026-112398",
+        "CVE-2026-96644",
+        "CVE-2026-96637",
+        "CVE-2026-112896"
+      ],
+      "nbCves": 66,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.013,
+      "epssCve": "CVE-2026-112900",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1493",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1493",
+      "titre": "Multiples vulnérabilités dans Synology DSM",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Synology DSM. Certaines d'entre elles permettent à un attaquant de provoquer un déni de service à distance, une atteinte à la confidentialité des données et une falsification de requêtes côté serveur (SSRF).",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1493/",
+      "date": "2026-11-10",
+      "editeurs": [
+        "Synology"
+      ],
+      "suivis": [
+        "Synology"
+      ],
+      "cves": [
+        "CVE-2026-18596",
+        "CVE-2026-74857",
+        "CVE-2026-86343",
+        "CVE-2026-76954",
+        "CVE-2026-81557",
+        "CVE-2026-124993",
+        "CVE-2026-92379",
+        "CVE-2026-75785",
+        "CVE-2026-19414",
+        "CVE-2026-16550",
+        "CVE-2026-81559",
+        "CVE-2026-81584"
+      ],
+      "nbCves": 27,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0092,
+      "epssCve": "CVE-2026-18792",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "The Hacker News",
+          "titre": "Synology NAS Devices Targeted in Ransomware Attacks Exploiting Patched DSM Flaw",
+          "lien": "https://thehackernews.com/2026/11/synology-nas-devices-targeted-in.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "aussi": [
+        {
+          "source": "CERT Santé",
+          "titre": "Synology - CVE-2026-76954",
+          "lien": "https://cyberveille.esante.gouv.fr/alertes/synology-cve-2026-76954-2026-11-12"
+        }
+      ],
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1503",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1503",
+      "titre": "Multiples vulnérabilités dans HPE Aruba Networking Private 5G Core",
+      "resume": "De multiples vulnérabilités ont été découvertes dans HPE Aruba Networking Private 5G Core. Certaines d'entre elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données, une atteinte à l'intégrité des données et un contournement de la politique de sécurité.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1503/",
+      "date": "2026-11-12",
+      "editeurs": [
+        "HPE Aruba Networking"
+      ],
+      "suivis": [
+        "HPE / Aruba"
+      ],
+      "cves": [
+        "CVE-2026-95784",
+        "CVE-2026-95781",
+        "CVE-2026-49759",
+        "CVE-2026-95785",
+        "CVE-2026-33228",
+        "CVE-2026-95786",
+        "CVE-2026-95783",
+        "CVE-2026-95782",
+        "CVE-2026-95780"
+      ],
+      "nbCves": 9,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0086,
+      "epssCve": "CVE-2026-33228",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    }
+  ],
+  "autresCritiques": [
+    {
+      "id": "certfr:CERTFR-2026-AVI-1495",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1495",
+      "titre": "Multiples vulnérabilités dans Siemens SIMATIC",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Siemens SIMATIC. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance et un contournement de la politique de sécurité.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1495/",
+      "date": "2026-11-10",
+      "editeurs": [
+        "Siemens"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-58114",
+        "CVE-2026-59082",
+        "CVE-2026-111497"
+      ],
+      "nbCves": 3,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-111497"
+      ],
+      "epssMax": 0.8264,
+      "epssCve": "CVE-2026-111497",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    }
+  ],
+  "menaces": [
+    {
+      "id": "certfr:CERTFR-2026-CTI-010",
+      "source": "CERT-FR",
+      "type": "cti",
+      "reference": "CERTFR-2026-CTI-010",
+      "titre": "Point de situation de l’opération REACTIV – octobre 2026 (12 novembre 2026)",
+      "resume": "Face à l’intensification des attaques cybercriminelles liées à des violations de données affectant les services de l’État, le Premier ministre a demandé le 1er septembre 2026 à l’Agence nationale de la sécurité des systèmes d’information (ANSSI) de mettre en place une capacité renforcée de...",
+      "lien": "https://www.cert.cyber.gouv.fr/cti/CERTFR-2026-CTI-010/",
+      "date": "2026-11-12",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "info",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-CTI-009",
+      "source": "CERT-FR",
+      "type": "cti",
+      "reference": "CERTFR-2026-CTI-009",
+      "titre": "Activités cyber offensives ciblant la France menées par des acteurs iraniens liés au CGRI (09 novembre 2026)",
+      "resume": "Les membres du **Centre de Coordination des Crises Cyber (C4)** \\* ont observé plusieurs attaques à but de déstabilisation menées à l’encontre des intérêts français, qu’ils sont en mesure d’imputer **aux unités cyber-offensives Shahid Shoostari et Shahid Kaveh, opérant au sein du Centre...",
+      "lien": "https://www.cert.cyber.gouv.fr/cti/CERTFR-2026-CTI-009/",
+      "date": "2026-11-09",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "info",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-ACT-047",
+      "source": "CERT-FR",
+      "type": "actualite",
+      "reference": "CERTFR-2026-ACT-047",
+      "titre": "Bulletin d'actualité CERTFR-2026-ACT-047 (09 novembre 2026)",
+      "resume": "Ce bulletin d'actualité du CERT-FR revient sur les vulnérabilités significatives de la semaine passée pour souligner leurs criticités. Il ne remplace pas l'analyse de l'ensemble des avis et alertes publiés par le CERT-FR dans le cadre d'une analyse de risques pour prioriser l'application des...",
+      "lien": "https://www.cert.cyber.gouv.fr/actualite/CERTFR-2026-ACT-047/",
+      "date": "2026-11-09",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "info",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    }
+  ],
+  "signauxPresse": [
+    {
+      "id": "actu:https://www.bleepingcomputer.com/news/security/new-windows-signdrop-zero-day-gives-hackers-system-privileges/",
+      "source": "BleepingComputer",
+      "type": "actu",
+      "titre": "New Windows SignDrop zero-day gives hackers SYSTEM privileges",
+      "resume": "Security researcher Abdelhamid Naceri (also known as Nightmare Eclipse) has released a new Windows zero-day exploit that can let attackers gain SYSTEM privileges. [...]",
+      "lien": "https://www.bleepingcomputer.com/news/security/new-windows-signdrop-zero-day-gives-hackers-system-privileges/",
+      "date": "2026-11-12",
+      "editeurs": [],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "zero-day"
+      ],
+      "relais": [
+        {
+          "source": "The Hacker News",
+          "titre": "New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access",
+          "lien": "https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://thehackernews.com/2026/11/new-n-central-exploits-work-against.html",
+      "source": "The Hacker News",
+      "type": "actu",
+      "titre": "New N-central Exploits Work Against Patched Servers, Enable Root RCE and Windows SYSTEM Access",
+      "resume": "N-able on Thursday said it's investigating a new public disclosure containing claims of additional vulnerabilities in on-premise versions of N-central running version 2026.4.1 HF2. \"Based on our initial review, the server issue described depends on a non-default configuration in…",
+      "lien": "https://thehackernews.com/2026/11/new-n-central-exploits-work-against.html",
+      "date": "2026-11-12",
+      "editeurs": [],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "exécution de code à distance"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://www.clubic.com/actualite-638749-microsoft-corrige-1-235-failles-lors-du-patch-tuesday-de-novembre-2026-dont-un-zero-day-outlook.html",
+      "source": "Clubic",
+      "type": "actu",
+      "titre": "Microsoft corrige 1 235 failles lors du Patch Tuesday de novembre 2026, dont un zero-day Outlook",
+      "resume": "Des pirates ont piégé des fichiers de message Outlook pour récupérer de quoi se connecter à votre place sur un réseau Windows. Microsoft a corrigé cette faille, exploitée avant la sortie du correctif, avec plus de 1 200 autres dans son Patch Tuesday de novembre.",
+      "lien": "https://www.clubic.com/actualite-638749-microsoft-corrige-1-235-failles-lors-du-patch-tuesday-de-novembre-2026-dont-un-zero-day-outlook.html",
+      "date": "2026-11-11",
+      "editeurs": [],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "zero-day"
+      ],
+      "relais": [
+        {
+          "source": "Clubic",
+          "titre": "Vous n’arrivez pas à installer le Patch Tuesday de novembre sur Windows 11 ? Le correctif est en route",
+          "lien": "https://www.clubic.com/actualite-638944-vous-n-arrivez-pas-a-installer-le-patch-tuesday-de-novembre-sur-windows-11-le-correctif-est-en-route.html"
+        },
+        {
+          "source": "LeMagIT",
+          "titre": "Patch Tuesday de novembre : encore une cuvée spectaculaire",
+          "lien": "https://www.lemagit.fr/actualites/366654645/Patch-Tuesday-de-Novembre-encore-une-cuvee-spectaculaire"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/",
+      "source": "BleepingComputer",
+      "type": "actu",
+      "titre": "Microsoft November 2026 Patch Tuesday fixes 1,235 flaws, Outlook zero-day",
+      "resume": "Today is Microsoft's November 2026 Patch Tuesday, with security updates addressing a record-breaking 1,235 flaws, including one actively exploited Microsoft Outlook zero-day vulnerability. [...]",
+      "lien": "https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/",
+      "date": "2026-11-10",
+      "editeurs": [],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "exploitation active",
+        "zero-day"
+      ],
+      "relais": [
+        {
+          "source": "BleepingComputer",
+          "titre": "Microsoft says November security updates cause printing issues",
+          "lien": "https://www.bleepingcomputer.com/news/microsoft/microsoft-says-november-security-updates-cause-printing-issues/"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://www.bleepingcomputer.com/news/security/google-patches-eighth-chrome-zero-day-exploited-in-attacks-this-year/",
+      "source": "BleepingComputer",
+      "type": "actu",
+      "titre": "Google patches eighth Chrome zero-day exploited in attacks this year",
+      "resume": "Google has released emergency security updates to patch a new Chrome vulnerability exploited in zero-day attacks, the eighth such flaw since the start of the year. [...]",
+      "lien": "https://www.bleepingcomputer.com/news/security/google-patches-eighth-chrome-zero-day-exploited-in-attacks-this-year/",
+      "date": "2026-11-10",
+      "editeurs": [],
+      "suivis": [
+        "Google Chrome"
+      ],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "exploitation active",
+        "zero-day",
+        "correctif d'urgence"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://www.clubic.com/actualite-638656-apple-corrige-une-faille-critique-dans-imessage-faites-votre-mise-a-jour-rapidement.html",
+      "source": "Clubic",
+      "type": "actu",
+      "titre": "Apple corrige une faille critique dans iMessage, faites votre mise à jour rapidement",
+      "resume": "Une mise à jour importante est à faire sur vos appareils Apple, corrigeant des failles majeures d'iMessage. Ces dernières pourraient compromettre la confidentialité de vos conversations de groupe.",
+      "lien": "https://www.clubic.com/actualite-638656-apple-corrige-une-faille-critique-dans-imessage-faites-votre-mise-a-jour-rapidement.html",
+      "date": "2026-11-10",
+      "editeurs": [],
+      "suivis": [
+        "Apple"
+      ],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "faille critique"
+      ],
+      "relais": [
+        {
+          "source": "The Hacker News",
+          "titre": "Apple Patches iMessage Group Chat Privacy Flaws and Bluetooth Pairing Vulnerabilities",
+          "lien": "https://thehackernews.com/2026/11/apple-patches-imessage-group-chat.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html",
+      "source": "The Hacker News",
+      "type": "actu",
+      "titre": "PTC Patches Critical Windchill and FlexPLM Flaw That Could Enable Remote Code Execution",
+      "resume": "PTC has released patches for a new critical vulnerability impacting Windchill and FlexPLM software that, if successfully exploited, could result in remote code execution. The security flaw, tracked as CVE-2026-126325, carries a CVSS v4 score of 9.2 out of a maximum of 10.0. It…",
+      "lien": "https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html",
+      "date": "2026-11-12",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-126325"
+      ],
+      "nbCves": 1,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0051,
+      "epssCve": "CVE-2026-126325",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "exécution de code à distance",
+        "faille critique"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/",
+      "source": "BleepingComputer",
+      "type": "actu",
+      "titre": "New N-able \"4EverAble2Shell\" zero-day exploited hours after PoC released",
+      "resume": "Hackers are actively exploiting a newly disclosed N-able N-central zero-day vulnerability dubbed \"4EverAble2Shell\" to compromise servers and deploy cryptocurrency miners, with researchers reporting at least 21 affected systems, including 19 running the company's latest security…",
+      "lien": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/",
+      "date": "2026-11-12",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "zero-day"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://www.bleepingcomputer.com/news/security/n-able-releases-security-hotfixes-for-zero-day-vulnerabilities/",
+      "source": "BleepingComputer",
+      "type": "actu",
+      "titre": "N-able releases security hotfixes for zero-day vulnerabilities",
+      "resume": "N-able released hotfixes to address zero-day bugs affecting its N-central remote monitoring and management (RMM) platform, which were publicly disclosed over the weekend and forced it to take vulnerable hosted environments offline. [...]",
+      "lien": "https://www.bleepingcomputer.com/news/security/n-able-releases-security-hotfixes-for-zero-day-vulnerabilities/",
+      "date": "2026-11-11",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "zero-day"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://www.bleepingcomputer.com/news/security/critical-xen-orchestra-auth-bypass-flaw-exploited-to-hijack-vm-servers/",
+      "source": "BleepingComputer",
+      "type": "actu",
+      "titre": "Critical Xen Orchestra auth bypass flaw exploited to hijack VM servers",
+      "resume": "A critical authentication bypass vulnerability in Xen Orchestra is being actively exploited in attacks that could grant administrator privileges and allow takeover of XCP-ng virtualization hosts. [...]",
+      "lien": "https://www.bleepingcomputer.com/news/security/critical-xen-orchestra-auth-bypass-flaw-exploited-to-hijack-vm-servers/",
+      "date": "2026-11-10",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "exploitation active",
+        "faille critique"
+      ],
+      "relais": [
+        {
+          "source": "The Hacker News",
+          "titre": "Hackers Exploit Critical Xen Orchestra Auth Bypass Flaw to Gain Admin Access",
+          "lien": "https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "Critical Pre-Auth MongoDB Flaw (CVE-2026-118383) Can Crash Lagging Servers on Failover",
+          "lien": "https://thehackernews.com/2026/11/critical-pre-auth-mongodb-flaw-cve-2026.html"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "Web3Auth Flaw Exploited to Steal Keplr Crypto, Provider Empties Other Wallets for Safety",
+          "lien": "https://thehackernews.com/2026/11/web3auth-flaw-exploited-to-steal-keplr.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
+      "source": "The Hacker News",
+      "type": "actu",
+      "titre": "SGLang RCE Exploit Breaches NEAR AI, Steals Data From 18 Agents and About 100 Users",
+      "resume": "An attacker exploited a remote code execution flaw in SGLang, an open-source inference engine, and ran code on one of NEAR AI's inference servers last Sunday. The attacker could also have seen requests being processed on that server that day, including requests sent in…",
+      "lien": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
+      "date": "2026-11-10",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "exécution de code à distance"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://thehackernews.com/2026/11/n-able-takes-hosted-n-central-offline.html",
+      "source": "The Hacker News",
+      "type": "actu",
+      "titre": "N-able Takes N-central Cloud Offline After Researcher Discloses 33 Zero-Days with PoC Exploits",
+      "resume": "N-able said it has taken N-central Hosted Environments offline and is urging on-premises customers to shut down their servers until further notice following the public disclosure of over 30 vulnerabilities collectively tracked as Able2Shell. \"As a precautionary measure, we are…",
+      "lien": "https://thehackernews.com/2026/11/n-able-takes-hosted-n-central-offline.html",
+      "date": "2026-11-10",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "zero-day"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published/",
+      "source": "BleepingComputer",
+      "type": "actu",
+      "titre": "N-able takes cloud platform offline after 30+ \"zero-days\" published",
+      "resume": "N-able has taken its hosted N-central environments offline and urged on-premises customers to shut down their servers after a security researcher publicly disclosed more than 30 alleged zero-day vulnerabilities, including exploits that could let attackers take over vulnerable…",
+      "lien": "https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published/",
+      "date": "2026-11-09",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "zero-day"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    }
+  ]
+}
