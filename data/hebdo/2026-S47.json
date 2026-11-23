@@ -1,0 +1,1947 @@
+{
+  "semaine": "2026-S47",
+  "debut": "2026-11-16",
+  "fin": "2026-11-22",
+  "genere": "2026-11-23T12:43:19.834Z",
+  "chiffres": {
+    "alertes": 2,
+    "avisCertFr": 59,
+    "avisCertSante": 14,
+    "kevAjoutees": 9,
+    "critiques": 23,
+    "signauxPresse": 13,
+    "surParcSuivi": 23
+  },
+  "alertes": [
+    {
+      "id": "certfr:CERTFR-2026-ALE-016",
+      "source": "CERT-FR",
+      "type": "alerte",
+      "reference": "CERTFR-2026-ALE-016",
+      "titre": "Vulnérabilité dans Oracle Java SE",
+      "resume": "Le 17 novembre 2026, Oracle a publié un avis de sécurité concernant la vulnérabilité CVE-2026-114938, surnommée java4shell, qui affecte le décodeur Base64 de OpenJDK sur les processeurs x86-64 supportant AVX-512 VBMI. Celle-ci permet à un attaquant de provoquer une exécution de code arbitraire à distance et un déni de service à distance. Cette vulnérabilité ne peut être exploitée qu'en…",
+      "lien": "https://cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-016/",
+      "date": "2026-11-18",
+      "editeurs": [
+        "Oracle"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-114938"
+      ],
+      "nbCves": 1,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.4564,
+      "epssCve": "CVE-2026-114938",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "BleepingComputer",
+          "titre": "Critical Java4Shell flaw allows RCE attacks on major Java applications",
+          "lien": "https://www.bleepingcomputer.com/news/security/critical-java4shell-flaw-allows-rce-attacks-on-major-java-applications/"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "Java4Shell Flaw (CVE-2026-114938) Enables Pre-Auth RCE in Jira, Jenkins, Keycloak and More",
+          "lien": "https://thehackernews.com/2026/11/java4shell-cve-2026-114938-enables-pre.html"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "CISA Urges Immediate Patching of Java4Shell Flaw That Could Allow Remote Code Execution",
+          "lien": "https://thehackernews.com/2026/11/cisa-urges-immediate-patching-of.html"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "Oracle to Patch 11 Java Flaws Today as Critical OpenJDK RCE (CVE-2026-114938) Report Emerges",
+          "lien": "https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "aussi": [
+        {
+          "source": "CERT Santé",
+          "titre": "Java SE - CVE-2026-114938",
+          "lien": "https://cyberveille.esante.gouv.fr/alertes/java-se-cve-2026-114938-2026-11-18"
+        }
+      ],
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-ALE-017",
+      "source": "CERT-FR",
+      "type": "alerte",
+      "reference": "CERTFR-2026-ALE-017",
+      "titre": "Multiples vulnérabilités dans F5 NGINX",
+      "resume": "Le 18 novembre 2026, F5 a publié deux avis de sécurité concernant les vulnérabilités CVE-2026-123633 et CVE-2026-123007. Celles-ci affectent NGINX Open Source et NGINX Plus permettent à un attaquant non authentifié d'exécuter du code à distance, en utilisant le protocole HTTP en version 2. Le CERT-FR a connaissance d'une preuve de concept publique pour la vulnérabilité CVE-2026-123007.…",
+      "lien": "https://cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-017/",
+      "date": "2026-11-18",
+      "editeurs": [
+        "F5"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-123007",
+        "CVE-2026-123633"
+      ],
+      "nbCves": 2,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.2986,
+      "epssCve": "CVE-2026-123007",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "The Hacker News",
+          "titre": "10-Year-Old NGINX HTTP/2 Flaw Lets Unauthenticated Attackers Execute Code on Servers",
+          "lien": "https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html"
+        },
+        {
+          "source": "BleepingComputer",
+          "titre": "Critical NGINX ‘NGINX2Root’ bugs let attackers hijack servers",
+          "lien": "https://www.bleepingcomputer.com/news/security/critical-nginx-nginx2root-bugs-let-attackers-hijack-servers/"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "aussi": [
+        {
+          "source": "CERT Santé",
+          "titre": "NGINX2Root - CVE-2026-123007",
+          "lien": "https://cyberveille.esante.gouv.fr/alertes/nginx2root-cve-2026-123007-2026-11-19"
+        }
+      ],
+      "doublonDe": null
+    }
+  ],
+  "kev": [
+    {
+      "id": "kev:CVE-2026-123890",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-123890",
+      "titre": "VMWare vCenter Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+      "resume": "Broadcom VMware vCenter contains an authentication bypass using an alternate path or channel vulnerability in the VMware Directory Service that allows an unauthenticated attacker with network access to vCenter to bypass authentication and gain unauthorized access to the system. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-123890",
+      "date": "2026-11-20",
+      "editeurs": [
+        "Broadcom"
+      ],
+      "suivis": [
+        "VMware / Broadcom"
+      ],
+      "cves": [
+        "CVE-2026-123890"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-123890"
+      ],
+      "epssMax": 0.0353,
+      "epssCve": "CVE-2026-123890",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "The Hacker News",
+          "titre": "Critical VMware vCenter Zero-Day Flaw Lets Network Attackers Bypass Authentication",
+          "lien": "https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "BO Team Exploits Log4Shell in VMware vCenter, Compromises Russian Firm's Code-Signing Server",
+          "lien": "https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2024-10441",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2024-10441",
+      "titre": "Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability",
+      "resume": "Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2024-10441",
+      "date": "2026-11-18",
+      "editeurs": [
+        "Synology"
+      ],
+      "suivis": [
+        "Synology"
+      ],
+      "cves": [
+        "CVE-2024-10441"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2024-10441"
+      ],
+      "epssMax": 0.0242,
+      "epssCve": "CVE-2024-10441",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-76466",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-76466",
+      "titre": "Cisco Expressway Series Use of Hard-coded Credentials Vulnerability",
+      "resume": "Cisco Expressway Series contains a use of hard-coded credentials vulnerability that allows an unauthenticated, remote attacker with persistent cookies and network access to execute commands as root on a clustered device via the database service. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes).…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-76466",
+      "date": "2026-11-20",
+      "editeurs": [
+        "Cisco"
+      ],
+      "suivis": [
+        "Cisco"
+      ],
+      "cves": [
+        "CVE-2026-76466"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-76466"
+      ],
+      "epssMax": 0.0219,
+      "epssCve": "CVE-2026-76466",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "BleepingComputer",
+          "titre": "ASUS warns of critical hard-coded key flaw in Control Center Express",
+          "lien": "https://www.bleepingcomputer.com/news/security/asus-warns-of-critical-hard-coded-key-flaw-in-control-center-express/"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "Hackers Exploit Critical Cisco Expressway Flaw, Breach Four Devices and Reach Internal Network",
+          "lien": "https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-40217",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-40217",
+      "titre": "BerriAI LiteLLM Unprotected Alternate Channel Vulnerability",
+      "resume": "BerriAI LiteLLM contains an unprotected alternate channel vulnerability that could allow remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-40217",
+      "date": "2026-11-18",
+      "editeurs": [
+        "BerriAI"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-40217"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-40217"
+      ],
+      "epssMax": 0.689,
+      "epssCve": "CVE-2026-40217",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-90817",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-90817",
+      "titre": "Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability",
+      "resume": "Vanderbilt University Research Electronic Data Capture (REDCap) contains a code injection vulnerability which could allow an unauthenticated attacker to execute arbitrary code on the server. An attacker could exploit this via crafted HTTP requests that access an unintended controller route from a public survey context and supply a crafted file-path or stream parameter during data import processing. Exploitation requires knowledge of a valid public survey hash. Action requise : Apply mitigations…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-90817",
+      "date": "2026-11-18",
+      "editeurs": [
+        "Vanderbilt University"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-90817"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-90817"
+      ],
+      "epssMax": 0.2566,
+      "epssCve": "CVE-2026-90817",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-129448",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-129448",
+      "titre": "Apache Roller Deserialization of Untrusted Data Vulnerability",
+      "resume": "Apache Roller contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via the XML-RPC endpoint, which accepts and deserializes vendor extension types before authentication. This CVE covers the same underlying vulnerability as CVE-2026-82384 but applies to a broader range of affected versions. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-129448",
+      "date": "2026-11-20",
+      "editeurs": [
+        "Apache"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-129448"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-129448"
+      ],
+      "epssMax": 0.0546,
+      "epssCve": "CVE-2026-129448",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-90436",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-90436",
+      "titre": "Apache Axis Unsafe Reflection Vulnerability",
+      "resume": "Apache Axis contains an unsafe reflection vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code via a crafted SOAP fault message that causes Axis to load and instantiate an attacker-specified class when a suitable class is available on the application classpath. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version. Action requise : Apply mitigations in…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-90436",
+      "date": "2026-11-18",
+      "editeurs": [
+        "Apache"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-90436"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-90436"
+      ],
+      "epssMax": 0.0183,
+      "epssCve": "CVE-2026-90436",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2025-42884",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2025-42884",
+      "titre": "SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability",
+      "resume": "SAP NetWeaver Enterprise Portal contains an improper neutralization of special elements in data query logic vulnerability that allows an unauthenticated attacker to disclose or modify server information via injected JNDI environment properties or a URL used during JNDI lookup operations. Action requise : Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2025-42884",
+      "date": "2026-11-20",
+      "editeurs": [
+        "SAP"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2025-42884"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2025-42884"
+      ],
+      "epssMax": 0.0071,
+      "epssCve": "CVE-2025-42884",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "kev:CVE-2026-115731",
+      "source": "CISA KEV",
+      "type": "kev",
+      "reference": "CVE-2026-115731",
+      "titre": "Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability",
+      "resume": "Perforce Puppet Enterprise contains a deserialization of untrusted data vulnerability in Puppet’s report-processing code that allows a client with any CA-signed agent certificate to execute arbitrary code on the Puppet Server as the service user by submitting a report containing a crafted rich-data type through a PUT request. If the certificate authority automatically signs requests without strong verification, an unauthenticated network attacker can obtain a valid certificate and exploit the…",
+      "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-115731",
+      "date": "2026-11-17",
+      "editeurs": [
+        "Perforce"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-115731"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-115731"
+      ],
+      "epssMax": 0.0069,
+      "epssCve": "CVE-2026-115731",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "The Hacker News",
+          "titre": "Hackers Exploiting Critical Puppet RCE Flaw Affecting Enterprise Management Servers",
+          "lien": "https://thehackernews.com/2026/11/hackers-exploiting-critical-puppet-rce.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    }
+  ],
+  "parcSuivi": [
+    {
+      "id": "certfr:CERTFR-2026-AVI-1592",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1592",
+      "titre": "Multiples vulnérabilités dans le noyau Linux de Red Hat",
+      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de Red Hat. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1592/",
+      "date": "2026-11-20",
+      "editeurs": [
+        "Red Hat"
+      ],
+      "suivis": [
+        "Linux"
+      ],
+      "cves": [
+        "CVE-2026-97494",
+        "CVE-2026-53049",
+        "CVE-2026-63974",
+        "CVE-2026-68326",
+        "CVE-2026-72298",
+        "CVE-2026-89638",
+        "CVE-2026-74488",
+        "CVE-2026-72003",
+        "CVE-2026-97496",
+        "CVE-2026-97427",
+        "CVE-2024-49952",
+        "CVE-2026-64508"
+      ],
+      "nbCves": 53,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-111497"
+      ],
+      "epssMax": 0.9993,
+      "epssCve": "CVE-2026-111497",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1596",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1596",
+      "titre": "Multiples vulnérabilités dans le noyau Linux d'Ubuntu",
+      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux d'Ubuntu. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire, une atteinte à l'intégrité des données et un déni de service.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1596/",
+      "date": "2026-11-20",
+      "editeurs": [
+        "Ubuntu"
+      ],
+      "suivis": [
+        "Linux"
+      ],
+      "cves": [
+        "CVE-2026-80776",
+        "CVE-2026-80887",
+        "CVE-2026-98000",
+        "CVE-2026-80967",
+        "CVE-2026-80547",
+        "CVE-2026-98274",
+        "CVE-2026-74632",
+        "CVE-2026-98532",
+        "CVE-2026-98190",
+        "CVE-2026-74452",
+        "CVE-2026-98672",
+        "CVE-2026-93259"
+      ],
+      "nbCves": 4158,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.8213,
+      "epssCve": "CVE-2026-98432",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1593",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1593",
+      "titre": "Multiples vulnérabilités dans le noyau Linux de SUSE",
+      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de SUSE. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire, une atteinte à la confidentialité des données et une atteinte à l'intégrité des données.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1593/",
+      "date": "2026-11-20",
+      "editeurs": [
+        "SUSE"
+      ],
+      "suivis": [
+        "Linux"
+      ],
+      "cves": [
+        "CVE-2026-80887",
+        "CVE-2026-80967",
+        "CVE-2026-98190",
+        "CVE-2026-74452",
+        "CVE-2026-98499",
+        "CVE-2026-74649",
+        "CVE-2026-99150",
+        "CVE-2026-89980",
+        "CVE-2026-97494",
+        "CVE-2026-72258",
+        "CVE-2026-80973",
+        "CVE-2026-98311"
+      ],
+      "nbCves": 1240,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.8213,
+      "epssCve": "CVE-2026-98432",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1598",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1598",
+      "titre": "Multiples vulnérabilités dans les produits VMware",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits VMware. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une injection SQL (SQLi). Google et Mandiant indiquent que la vulnérabilité CVE-2026-123890 est activement exploitée (cf. section Documentation).",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1598/",
+      "date": "2026-11-20",
+      "editeurs": [
+        "VMware"
+      ],
+      "suivis": [
+        "VMware / Broadcom"
+      ],
+      "cves": [
+        "CVE-2026-123890",
+        "CVE-2026-123891",
+        "CVE-2026-123893",
+        "CVE-2026-123894",
+        "CVE-2026-123892",
+        "CVE-2026-119618"
+      ],
+      "nbCves": 6,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-123890"
+      ],
+      "epssMax": 0.1582,
+      "epssCve": "CVE-2026-119618",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "BleepingComputer",
+          "titre": "Apache HTTP Server patches critical HTTP/2 remote code execution flaw",
+          "lien": "https://www.bleepingcomputer.com/news/security/apache-http-server-patches-critical-http-2-remote-code-execution-flaw/"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "Critical Apache HTTP/2 Flaw Could Let Unauthenticated Attackers Execute Code Remotely",
+          "lien": "https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html"
+        },
+        {
+          "source": "BleepingComputer",
+          "titre": "VMware patches vCenter zero-day exploited in attacks since September",
+          "lien": "https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal Data",
+          "lien": "https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "aussi": [
+        {
+          "source": "CERT Santé",
+          "titre": "VMware vCenter - CVE-2026-123890",
+          "lien": "https://cyberveille.esante.gouv.fr/alertes/vmware-vcenter-cve-2026-123890-2026-11-20"
+        }
+      ],
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1546",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1546",
+      "titre": "Multiples vulnérabilités dans Microsoft Edge",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Microsoft Edge. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1546/",
+      "date": "2026-11-16",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-125344",
+        "CVE-2026-126916",
+        "CVE-2026-126865",
+        "CVE-2026-126868",
+        "CVE-2026-126856",
+        "CVE-2026-126845",
+        "CVE-2026-126849",
+        "CVE-2026-126847",
+        "CVE-2026-126910",
+        "CVE-2026-126859",
+        "CVE-2026-126901",
+        "CVE-2026-126895"
+      ],
+      "nbCves": 72,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-125350"
+      ],
+      "epssMax": 0.0096,
+      "epssCve": "CVE-2026-125350",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "Clubic",
+          "titre": "Google corrige en urgence une faille zero-day dans Chrome, déjà exploitée par des pirates",
+          "lien": "https://www.clubic.com/actualite-638548-google-corrige-en-urgence-une-faille-zero-day-dans-chrome-deja-exploitee-par-des-pirates.html"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
+          "lien": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1582",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1582",
+      "titre": "Multiples vulnérabilités dans les produits Citrix",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Citrix. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1582/",
+      "date": "2026-11-20",
+      "editeurs": [
+        "Citrix"
+      ],
+      "suivis": [
+        "Citrix / NetScaler"
+      ],
+      "cves": [
+        "CVE-2026-100080",
+        "CVE-2024-21963",
+        "CVE-2026-99287",
+        "CVE-2026-114938",
+        "CVE-2026-99288",
+        "CVE-2026-100081",
+        "CVE-2026-99286",
+        "CVE-2026-100082"
+      ],
+      "nbCves": 8,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.4564,
+      "epssCve": "CVE-2026-114938",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1584",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1584",
+      "titre": "Vulnérabilité dans les produits Palo Alto Networks",
+      "resume": "Une vulnérabilité a été découverte dans les produits Palo Alto Networks. Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1584/",
+      "date": "2026-11-20",
+      "editeurs": [
+        "Palo Alto Networks"
+      ],
+      "suivis": [
+        "Palo Alto Networks"
+      ],
+      "cves": [
+        "CVE-2026-114938"
+      ],
+      "nbCves": 1,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.4564,
+      "epssCve": "CVE-2026-114938",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1568",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1568",
+      "titre": "Vulnérabilité dans VMware Tanzu",
+      "resume": "Une vulnérabilité a été découverte dans VMware Tanzu. Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1568/",
+      "date": "2026-11-19",
+      "editeurs": [
+        "VMware"
+      ],
+      "suivis": [
+        "VMware / Broadcom"
+      ],
+      "cves": [
+        "CVE-2026-114938"
+      ],
+      "nbCves": 1,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.4564,
+      "epssCve": "CVE-2026-114938",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1573",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1573",
+      "titre": "Multiples vulnérabilités dans les produits Cisco",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Cisco. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1573/",
+      "date": "2026-11-19",
+      "editeurs": [
+        "Cisco"
+      ],
+      "suivis": [
+        "Cisco"
+      ],
+      "cves": [
+        "CVE-2026-76421",
+        "CVE-2026-114938",
+        "CVE-2026-76430",
+        "CVE-2026-76416",
+        "CVE-2026-76414",
+        "CVE-2026-76411",
+        "CVE-2026-76515",
+        "CVE-2026-76415",
+        "CVE-2026-76422",
+        "CVE-2026-76417",
+        "CVE-2026-76516"
+      ],
+      "nbCves": 11,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.4564,
+      "epssCve": "CVE-2026-114938",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1590",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1590",
+      "titre": "Multiples vulnérabilités dans Siemens Industrial Edge ",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Siemens Industrial Edge. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1590/",
+      "date": "2026-11-20",
+      "editeurs": [
+        "Siemens"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-123634",
+        "CVE-2026-123007",
+        "CVE-2026-113425",
+        "CVE-2026-121810",
+        "CVE-2026-123633"
+      ],
+      "nbCves": 5,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.2986,
+      "epssCve": "CVE-2026-123007",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1543",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1543",
+      "titre": "Vulnérabilité dans VMware Tanzu",
+      "resume": "Une vulnérabilité a été découverte dans VMware Tanzu. Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1543/",
+      "date": "2026-11-16",
+      "editeurs": [
+        "VMware"
+      ],
+      "suivis": [
+        "VMware / Broadcom"
+      ],
+      "cves": [
+        "CVE-2026-119618"
+      ],
+      "nbCves": 1,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.1582,
+      "epssCve": "CVE-2026-119618",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1555",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1555",
+      "titre": "Multiples vulnérabilités dans Microsoft SharePoint",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Microsoft SharePoint. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance et une élévation de privilèges.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1555/",
+      "date": "2026-11-17",
+      "editeurs": [
+        "Microsoft"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-124223",
+        "CVE-2026-124222"
+      ],
+      "nbCves": 2,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0157,
+      "epssCve": "CVE-2026-124223",
+      "rce": true,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certsante:10368",
+      "source": "CERT Santé",
+      "type": "avis",
+      "titre": "Dell - CVE-2026-116443",
+      "resume": "Il s’agit d’une vulnérabilité dans le service TFTP du NAS du composant SDNAS de Dell PowerStore. Dell PowerStore est une famille de baies de stockage de données de Dell Technologies...",
+      "lien": "https://cyberveille.esante.gouv.fr/alertes/dell-cve-2026-116443-2026-11-19",
+      "date": "2026-11-19",
+      "editeurs": [
+        "Dell"
+      ],
+      "suivis": [
+        "Dell"
+      ],
+      "cves": [
+        "CVE-2026-116443"
+      ],
+      "nbCves": 1,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0084,
+      "epssCve": "CVE-2026-116443",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certsante:10352",
+      "source": "CERT Santé",
+      "type": "avis",
+      "titre": "Dell - CVE-2026-116443",
+      "resume": "Il s’agit d’une vulnérabilité dans le service NAS TFTP de PowerStore SDNAS. Dell PowerStore est une baie de stockage d’entreprise conçue pour la gestion de données à hautes...",
+      "lien": "https://cyberveille.esante.gouv.fr/alertes/dell-cve-2026-116443-2026-11-16",
+      "date": "2026-11-16",
+      "editeurs": [
+        "Dell"
+      ],
+      "suivis": [
+        "Dell"
+      ],
+      "cves": [
+        "CVE-2026-116443"
+      ],
+      "nbCves": 1,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0084,
+      "epssCve": "CVE-2026-116443",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1595",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1595",
+      "titre": "Multiples vulnérabilités dans le noyau Linux de Debian LTS",
+      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de Debian LTS. Elles permettent à un attaquant de provoquer une élévation de privilèges, une atteinte à la confidentialité des données et un déni de service.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1595/",
+      "date": "2026-11-20",
+      "editeurs": [
+        "Debian"
+      ],
+      "suivis": [
+        "Linux"
+      ],
+      "cves": [
+        "CVE-2026-98672",
+        "CVE-2026-89702",
+        "CVE-2026-93163",
+        "CVE-2026-89580",
+        "CVE-2026-99150",
+        "CVE-2026-99204",
+        "CVE-2026-80650",
+        "CVE-2026-99256",
+        "CVE-2024-41031",
+        "CVE-2026-97494",
+        "CVE-2026-72325",
+        "CVE-2026-93186"
+      ],
+      "nbCves": 1271,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.008,
+      "epssCve": "CVE-2026-72130",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1594",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1594",
+      "titre": "Multiples vulnérabilités dans le noyau Linux de Debian",
+      "resume": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de Debian. Elles permettent à un attaquant de provoquer une élévation de privilèges, une atteinte à la confidentialité des données et un déni de service.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1594/",
+      "date": "2026-11-20",
+      "editeurs": [
+        "Debian"
+      ],
+      "suivis": [
+        "Linux"
+      ],
+      "cves": [
+        "CVE-2026-98176",
+        "CVE-2026-99122",
+        "CVE-2026-99086",
+        "CVE-2026-98715",
+        "CVE-2026-99274",
+        "CVE-2026-98978",
+        "CVE-2026-99287",
+        "CVE-2026-92499",
+        "CVE-2026-98674",
+        "CVE-2026-98853",
+        "CVE-2026-98683",
+        "CVE-2026-99172"
+      ],
+      "nbCves": 43,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0059,
+      "epssCve": "CVE-2026-99288",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1559",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1559",
+      "titre": "Multiples vulnérabilités dans Google Chrome",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Google Chrome. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1559/",
+      "date": "2026-11-18",
+      "editeurs": [
+        "Google"
+      ],
+      "suivis": [
+        "Google Chrome"
+      ],
+      "cves": [
+        "CVE-2026-131030",
+        "CVE-2026-131095",
+        "CVE-2026-131023",
+        "CVE-2026-130945",
+        "CVE-2026-130914",
+        "CVE-2026-131087",
+        "CVE-2026-131099",
+        "CVE-2026-131078",
+        "CVE-2026-131016",
+        "CVE-2026-131051",
+        "CVE-2026-130977",
+        "CVE-2026-130922"
+      ],
+      "nbCves": 204,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.005,
+      "epssCve": "CVE-2026-130975",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1560",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1560",
+      "titre": "Multiples vulnérabilités dans Mozilla Firefox",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Mozilla Firefox. Elles permettent à un attaquant de provoquer une élévation de privilèges et un problème de sécurité non spécifié par l'éditeur.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1560/",
+      "date": "2026-11-18",
+      "editeurs": [
+        "Mozilla"
+      ],
+      "suivis": [
+        "Mozilla"
+      ],
+      "cves": [
+        "CVE-2026-130020",
+        "CVE-2026-130021"
+      ],
+      "nbCves": 2,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0024,
+      "epssCve": "CVE-2026-130020",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certsante:10361",
+      "source": "CERT Santé",
+      "type": "avis",
+      "titre": "7-Zip - CVE-2026-130067",
+      "resume": "Il s’agit d’une vulnérabilité dans 7-Zip File Manager sous Windows, au niveau de la détection des noms de fichiers trompeurs. 7-Zip est un logiciel libre d’archivage de fichiers. Il...",
+      "lien": "https://cyberveille.esante.gouv.fr/alertes/7-zip-cve-2026-130067-2026-11-17",
+      "date": "2026-11-17",
+      "editeurs": [
+        "7-Zip"
+      ],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [
+        "CVE-2026-130067"
+      ],
+      "nbCves": 1,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.0013,
+      "epssCve": "CVE-2026-130067",
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1545",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1545",
+      "titre": "Vulnérabilité dans Citrix App Layering",
+      "resume": "Une vulnérabilité a été découverte dans Citrix App Layering. Elle permet à un attaquant de provoquer un contournement de la politique de sécurité.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1545/",
+      "date": "2026-11-16",
+      "editeurs": [
+        "Citrix"
+      ],
+      "suivis": [
+        "Citrix / NetScaler"
+      ],
+      "cves": [
+        "CVE-2026-122990"
+      ],
+      "nbCves": 1,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "moyenne",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    }
+  ],
+  "autresCritiques": [
+    {
+      "id": "certfr:CERTFR-2026-AVI-1542",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1542",
+      "titre": "Multiples vulnérabilités dans les produits Trend Micro",
+      "resume": "De multiples vulnérabilités ont été découvertes dans les produits Trend Micro. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une atteinte à la confidentialité des données.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1542/",
+      "date": "2026-11-16",
+      "editeurs": [
+        "Trend Micro"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-111789",
+        "CVE-2026-111782",
+        "CVE-2026-111787",
+        "CVE-2026-111788",
+        "CVE-2026-109619",
+        "CVE-2026-111784",
+        "CVE-2026-111775",
+        "CVE-2026-109618",
+        "CVE-2026-111779",
+        "CVE-2026-111786",
+        "CVE-2026-111777",
+        "CVE-2026-111778"
+      ],
+      "nbCves": 20,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-109619",
+        "CVE-2026-109618"
+      ],
+      "epssMax": 1,
+      "epssCve": "CVE-2026-109619",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1564",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1564",
+      "titre": "Multiples vulnérabilités dans Oracle PeopleSoft",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Oracle PeopleSoft. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une atteinte à la confidentialité des données et une atteinte à l'intégrité des données.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1564/",
+      "date": "2026-11-18",
+      "editeurs": [
+        "Oracle"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-114937",
+        "CVE-2026-114933",
+        "CVE-2024-38949",
+        "CVE-2026-106072",
+        "CVE-2026-106074",
+        "CVE-2026-114932",
+        "CVE-2026-114934",
+        "CVE-2026-114935",
+        "CVE-2026-114862",
+        "CVE-2026-105482",
+        "CVE-2026-114927",
+        "CVE-2024-41311"
+      ],
+      "nbCves": 23,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-111497"
+      ],
+      "epssMax": 0.9993,
+      "epssCve": "CVE-2026-111497",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1551",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1551",
+      "titre": "Vulnérabilité dans Juniper Networks Junos OS Evolved",
+      "resume": "Une vulnérabilité a été découverte dans Juniper Networks Junos OS Evolved. Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1551/",
+      "date": "2026-11-17",
+      "editeurs": [
+        "Juniper Networks"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-98432"
+      ],
+      "nbCves": 1,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.8213,
+      "epssCve": "CVE-2026-98432",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1583",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1583",
+      "titre": "Multiples vulnérabilités dans Tenable Security Center ",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Tenable Security Center. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une injection SQL (SQLi) et un contournement de la politique de sécurité.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1583/",
+      "date": "2026-11-20",
+      "editeurs": [
+        "Tenable"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-14671",
+        "CVE-2026-131884",
+        "CVE-2026-131882",
+        "CVE-2025-66199",
+        "CVE-2026-131896",
+        "CVE-2026-94265",
+        "CVE-2026-16239",
+        "CVE-2026-15742",
+        "CVE-2026-6469",
+        "CVE-2026-80255",
+        "CVE-2026-34180",
+        "CVE-2026-131898"
+      ],
+      "nbCves": 209,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.7479,
+      "epssCve": "CVE-2025-15467",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1580",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1580",
+      "titre": "Multiples vulnérabilités dans PHP",
+      "resume": "De multiples vulnérabilités ont été découvertes dans PHP. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1580/",
+      "date": "2026-11-19",
+      "editeurs": [
+        "PHP"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-48841",
+        "CVE-2026-129496",
+        "CVE-2026-129474",
+        "CVE-2026-129506",
+        "CVE-2026-129438",
+        "CVE-2026-129291",
+        "CVE-2026-128064",
+        "CVE-2026-15353",
+        "CVE-2026-115560",
+        "CVE-2026-127960",
+        "CVE-2026-129289",
+        "CVE-2026-128090"
+      ],
+      "nbCves": 18,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.5643,
+      "epssCve": "CVE-2026-115560",
+      "rce": true,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "BleepingComputer",
+          "titre": "PHP security updates fix 18 flaws, including critical RCE bugs",
+          "lien": "https://www.bleepingcomputer.com/news/security/php-security-updates-fix-18-flaws-including-critical-rce-bugs/"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "PHP Fixes 7 Critical Flaws, Including Bugs That Could Allow Remote Code Execution",
+          "lien": "https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "PHP Warns of Critical Security Flaws Affecting All Supported Versions, Fixes Coming November 19",
+          "lien": "https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "phpAfterShell Explained: How Hackers Could Turn a PHP Session Flaw Into Code Execution",
+          "lien": "https://thehackernews.com/2026/11/phpaftershell-explained-how-hackers.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "aussi": [
+        {
+          "source": "CERT Santé",
+          "titre": "phpAftershell - CVE-2026-126714",
+          "lien": "https://cyberveille.esante.gouv.fr/alertes/phpaftershell-cve-2026-126714-2026-11-20"
+        }
+      ],
+      "doublonDe": null
+    },
+    {
+      "id": "certfr:CERTFR-2026-AVI-1550",
+      "source": "CERT-FR",
+      "type": "avis",
+      "reference": "CERTFR-2026-AVI-1550",
+      "titre": "Multiples vulnérabilités dans Tenable Identity Exposure",
+      "resume": "De multiples vulnérabilités ont été découvertes dans Tenable Identity Exposure. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
+      "lien": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1550/",
+      "date": "2026-11-17",
+      "editeurs": [
+        "Tenable"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-88086",
+        "CVE-2026-88081",
+        "CVE-2022-29072",
+        "CVE-2026-118779",
+        "CVE-2026-85888",
+        "CVE-2026-48112",
+        "CVE-2023-31102",
+        "CVE-2026-84783",
+        "CVE-2026-6429",
+        "CVE-2026-88082",
+        "CVE-2026-88084",
+        "CVE-2026-92392"
+      ],
+      "nbCves": 52,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": 0.5399,
+      "epssCve": "CVE-2023-31102",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    },
+    {
+      "id": "certsante:10366",
+      "source": "CERT Santé",
+      "type": "avis",
+      "titre": "Apache - CVE-2026-129448",
+      "resume": "Il s’agit d’une vulnérabilité de désérialisation de données non fiables dans le point de terminaison XML-RPC d’Apache Roller. Apache Roller est un serveur de blogs multi...",
+      "lien": "https://cyberveille.esante.gouv.fr/alertes/apache-cve-2026-129448-2026-11-18",
+      "date": "2026-11-18",
+      "editeurs": [
+        "Apache"
+      ],
+      "suivis": [],
+      "cves": [
+        "CVE-2026-129448"
+      ],
+      "nbCves": 1,
+      "kev": true,
+      "cvesKev": [
+        "CVE-2026-129448"
+      ],
+      "epssMax": 0.0546,
+      "epssCve": "CVE-2026-129448",
+      "rce": false,
+      "priorite": "critique",
+      "cloturee": null,
+      "rancongiciel": false,
+      "presse": [
+        {
+          "source": "BleepingComputer",
+          "titre": "Apache warns of Roller RCE vulnerability exploited in attacks",
+          "lien": "https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks/"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "Critical Apache Roller RCE Flaw Under Active Exploitation, No Authentication Required",
+          "lien": "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html"
+        },
+        {
+          "source": "The Hacker News",
+          "titre": "Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge",
+          "lien": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    }
+  ],
+  "menaces": [
+    {
+      "id": "certfr:CERTFR-2026-ACT-048",
+      "source": "CERT-FR",
+      "type": "actualite",
+      "reference": "CERTFR-2026-ACT-048",
+      "titre": "Bulletin d'actualité CERTFR-2026-ACT-048 (16 novembre 2026)",
+      "resume": "Ce bulletin d'actualité du CERT-FR revient sur les vulnérabilités significatives de la semaine passée pour souligner leurs criticités. Il ne remplace pas l'analyse de l'ensemble des avis et alertes publiés par le CERT-FR dans le cadre d'une analyse de risques pour prioriser l'application des...",
+      "lien": "https://www.cert.cyber.gouv.fr/actualite/CERTFR-2026-ACT-048/",
+      "date": "2026-11-16",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "info",
+      "cloturee": null,
+      "rancongiciel": false,
+      "officiel": null,
+      "officielInfo": null,
+      "doublonDe": null
+    }
+  ],
+  "signauxPresse": [
+    {
+      "id": "actu:https://thehackernews.com/2026/11/sonicwall-warns-gen-6-firewalls-wont.html",
+      "source": "The Hacker News",
+      "type": "actu",
+      "titre": "SonicWall Warns Gen 6 Firewalls Won't Get Security Patches, Even for Critical Flaws",
+      "resume": "SonicWall has urged all customers still running Generation 6 firewalls to retire and replace them immediately and stop exposing the devices on the internet edge, citing security risks fueled by AI-assisted attacks. \"Attackers now use automation and AI to find and exploit…",
+      "lien": "https://thehackernews.com/2026/11/sonicwall-warns-gen-6-firewalls-wont.html",
+      "date": "2026-11-20",
+      "editeurs": [],
+      "suivis": [
+        "SonicWall"
+      ],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "faille critique"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html",
+      "source": "The Hacker News",
+      "type": "actu",
+      "titre": "New Unpatched Windows 0-Day FastUnlock Lets Someone Holding a Locked PC Run Programs on It",
+      "resume": "A newly disclosed unpatched zero-day technique called FastUnlock lets someone with physical access to a locked Windows computer start programs without signing in. Whoever uses it gets only a limited account, not administrator control of the machine. The method was posted…",
+      "lien": "https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html",
+      "date": "2026-11-20",
+      "editeurs": [],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "zero-day",
+        "faille non corrigée"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2016-reaches-end-of-support-in-60-days/",
+      "source": "BleepingComputer",
+      "type": "actu",
+      "titre": "Microsoft: Windows Server 2016 reaches end of support in 60 days",
+      "resume": "Microsoft has reminded customers again that Windows Server 2016 will stop receiving security updates after it reaches the end of support in two months. [...]",
+      "lien": "https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2016-reaches-end-of-support-in-60-days/",
+      "date": "2026-11-16",
+      "editeurs": [],
+      "suivis": [
+        "Microsoft"
+      ],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "zero-day"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html",
+      "source": "The Hacker News",
+      "type": "actu",
+      "titre": "Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
+      "resume": "Suspected China-linked hackers used autonomous AI agents to find a previously unknown flaw in MONAI Label, an open-source medical imaging server, and gain root access to a university server, Amazon Threat Intelligence said this week. The flaw allows an attacker with no account…",
+      "lien": "https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html",
+      "date": "2026-11-21",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "zero-day"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://www.bleepingcomputer.com/news/security/f5-releases-emergency-patches-for-critical-big-ip-rce-flaws/",
+      "source": "BleepingComputer",
+      "type": "actu",
+      "titre": "F5 releases emergency patches for critical BIG-IP RCE flaws",
+      "resume": "US cybersecurity company F5 warned customers to patch five critical BIG-IP vulnerabilities that attackers can exploit to trigger denial-of-service (DoS) or gain remote code execution. [...]",
+      "lien": "https://www.bleepingcomputer.com/news/security/f5-releases-emergency-patches-for-critical-big-ip-rce-flaws/",
+      "date": "2026-11-20",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "exécution de code à distance",
+        "correctif d'urgence"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/",
+      "source": "BleepingComputer",
+      "type": "actu",
+      "titre": "Hackers use autonomous AI tool Cairn to find zero-day, take over server",
+      "resume": "Threat actors used the open-source AI penetration-testing framework Cairn to find a previously unknown vulnerability in a medical imaging application. [...]",
+      "lien": "https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/",
+      "date": "2026-11-20",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "zero-day"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaw-warns-exploits-may-surface-quickly/",
+      "source": "BleepingComputer",
+      "type": "actu",
+      "titre": "Drupal patches critical RCE flaw, warns exploits may surface quickly",
+      "resume": "The Drupal Security Team has patched a critical remote code execution vulnerability that can let attackers take over vulnerable sites. [...]",
+      "lien": "https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaw-warns-exploits-may-surface-quickly/",
+      "date": "2026-11-19",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "exécution de code à distance",
+        "faille critique"
+      ],
+      "relais": [
+        {
+          "source": "The Hacker News",
+          "titre": "Drupal Patches Critical Installer Flaw That Could Give Unauthenticated Attackers Control of Sites",
+          "lien": "https://thehackernews.com/2026/11/drupal-patches-critical-installer-flaw.html"
+        }
+      ],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://thehackernews.com/2026/11/f5-warns-6-critical-big-ip-flaws-can.html",
+      "source": "The Hacker News",
+      "type": "actu",
+      "titre": "F5 Warns 6 Critical BIG-IP Flaws Can Crash Traffic in Specific Setups, May Allow RCE",
+      "resume": "Six critical vulnerabilities in F5 BIG-IP allow an attacker to crash the Traffic Management Microkernel (TMM) without logging in, disrupting traffic until the TMM restarts. Each flaw needs a specific setup on a virtual server: an iRule that uses a particular command, or an APM…",
+      "lien": "https://thehackernews.com/2026/11/f5-warns-6-critical-big-ip-flaws-can.html",
+      "date": "2026-11-18",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "exécution de code à distance",
+        "faille critique"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://thehackernews.com/2026/11/researchers-claim-two-rce-exploits-that.html",
+      "source": "The Hacker News",
+      "type": "actu",
+      "titre": "Researchers Claim Two RCE Exploits That Bypass Telegram’s New Android Defenses",
+      "resume": "A malicious widget can bypass the security filter that Telegram added to its Android app last week and run code outside it, according to NebuSec, a security company. Widgets are small interactive blocks that bots send inside chat messages, and their JavaScript runs on the user's…",
+      "lien": "https://thehackernews.com/2026/11/researchers-claim-two-rce-exploits-that.html",
+      "date": "2026-11-17",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "exécution de code à distance"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://thehackernews.com/2026/11/connectwise-warns-screenconnect-attacks.html",
+      "source": "The Hacker News",
+      "type": "actu",
+      "titre": "ConnectWise Warns ScreenConnect Attacks Continue as SCKit Targets Unpatched Systems",
+      "resume": "ConnectWise on Monday said it completed its investigation into unauthorized access targeting partner ScreenConnect environments, and recommended customers to ensure that the technician client is running version 26.6.5 or later. The company said additional activity targeting…",
+      "lien": "https://thehackernews.com/2026/11/connectwise-warns-screenconnect-attacks.html",
+      "date": "2026-11-17",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "faille non corrigée"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://thehackernews.com/2026/11/n-able-patches-17-n-central-flaws-as.html",
+      "source": "The Hacker News",
+      "type": "actu",
+      "titre": "N-able Patches 17 N-central Flaws as Attackers Exploit Earlier Bugs to Deploy Crypto Miners",
+      "resume": "N-able has released a new security update to address additional critical security flaws impacting N-central. Describing N-central 2026.4 Hotfix 3 as a critical security update, the company said it includes a number of security patches and fixes that enhance the security of the…",
+      "lien": "https://thehackernews.com/2026/11/n-able-patches-17-n-central-flaws-as.html",
+      "date": "2026-11-17",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "faille critique"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://www.bleepingcomputer.com/news/security/google-project-zero-cuts-bug-disclosure-deadline-to-30-days-amid-ai-threats/",
+      "source": "BleepingComputer",
+      "type": "actu",
+      "titre": "Google Project Zero cuts bug disclosures to 30 days amid AI threats",
+      "resume": "Google Project Zero will replace its \"90+30\" disclosure policy with shorter, fixed deadlines in response to AI-accelerated vulnerability discovery and exploitation. [...]",
+      "lien": "https://www.bleepingcomputer.com/news/security/google-project-zero-cuts-bug-disclosure-deadline-to-30-days-amid-ai-threats/",
+      "date": "2026-11-16",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "zero-day"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    },
+    {
+      "id": "actu:https://thehackernews.com/2026/11/six-unpatched-danfoss-refrigeration.html",
+      "source": "The Hacker News",
+      "type": "actu",
+      "titre": "Six Unpatched Danfoss Refrigeration Controller Flaws Could Allow Remote Takeover Without Login",
+      "resume": "Six flaws in Danfoss AK-SM800A refrigeration controllers could let a remote attacker take over a controller without logging in, Dutch security consultancy Midnight Blue said earlier this week. No patch is available, and the researchers say the newest firmware, version 5.4.0,…",
+      "lien": "https://thehackernews.com/2026/11/six-unpatched-danfoss-refrigeration.html",
+      "date": "2026-11-16",
+      "editeurs": [],
+      "suivis": [],
+      "cves": [],
+      "nbCves": 0,
+      "kev": false,
+      "cvesKev": [],
+      "epssMax": null,
+      "epssCve": null,
+      "rce": false,
+      "priorite": "haute",
+      "cloturee": null,
+      "rancongiciel": false,
+      "signaux": [
+        "faille non corrigée"
+      ],
+      "relais": [],
+      "officiel": null,
+      "officielInfo": null,
+      "principal": true,
+      "doublonDe": null
+    }
+  ]
+}
